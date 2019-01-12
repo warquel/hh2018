@@ -15,37 +15,919 @@
     <link href="hh2018.css" rel="stylesheet">
   </head>
   <body>
-    <header>
-      <!-- Fixed navbar -->
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="#">Holiday Hack 2018 - WarDog</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon">dfsdfsd</span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#objs" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Objectives</a>
-              <div class="dropdown-menu" aria-labelledby="dropdown01">
-                <a class="dropdown-item" href="#obj1">1</a>
-                <a class="dropdown-item" href="#obj2">2</a>
-                <a class="dropdown-item" href="#obj3">3</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#npc" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">NPCs</a>
-              <div class="dropdown-menu" aria-labelledby="dropdown02">
-                <a class="dropdown-item" href="#npc-santa">Santa</a>
-                <a class="dropdown-item" href="#npc-bushy">Bushy Everygreen</a>
-                <a class="dropdown-item" href="#npc-elf">elf</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#trivia">Trivia</a>
-            </li>
-          </ul>
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark p-0">
+      <a class="navbar-brand p-2" href="#">Holday Hack 2018</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item p-2">
+            <a class="nav-link" href="#narrative">Narrative</a>
+          </li>
+          <li class="nav-item p-2">
+            <a class="nav-link" href="#answers">Answers</a>
+          </li>
+          <li class="nav-item p-2">
+            <a class="nav-link" href="#trivia">Trivia</a>
+          </li>
+          <li class="nav-item p-2">
+            <a class="nav-link" href="#hints">Hints</a>
+          </li>
+          <li class="nav-item dropdown p-2">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Characters
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#npcSanta"><img src="images/santa.png" height="30px"> Santa</a>
+              <a class="dropdown-item" href="#npcHans"><img src="images/hans.png" height="30px"> Hans</a>
+              <a class="dropdown-item" href="#npcBushy"><img src="images/elf-bushy-evergreen.png" height="30px"> Bushy Evergreen</a>
+              <a class="dropdown-item" href="#npcMinty"><img src="images/elf-minty-candycane.png" height="30px"> Minty Candycane</a>
+              <a class="dropdown-item" href="#npcTangle"><img src="images/elf-tangle-coalbox.png" height="30px"> Tangle Coalbox</a>
+              <a class="dropdown-item" href="#npcWunorse"><img src="images/elf-wunorse-openslae.png" height="30px"> Wunorse Openslae</a>
+              <a class="dropdown-item" href="#npcHolly"><img src="images/elf-holly-evergreen.png" height="30px"> Holly Evergreen</a>
+              <a class="dropdown-item" href="#npcPepper"><img src="images/elf-pepper-minstix.png" height="30px"> Pepper Minstix</a>
+              <a class="dropdown-item" href="#npcSparkle"><img src="images/elf-sparkle-redberry.png" height="30px"> Sparkle Redberry</a>
+              <a class="dropdown-item" href="#npcSugar"><img src="images/elf-sugarplum-mary.png" height="30px"> SugarPlum Mary</a>
+              <a class="dropdown-item" href="#npcAlabaster"><img src="images/elf-alabaster-snowball.png" height="30px"> Alabaster Snowball</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown p-2">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Objectives
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#obj1">1</a>
+              <a class="dropdown-item" href="#obj2">2</a>
+              <a class="dropdown-item" href="#obj3">3</a>
+              <a class="dropdown-item" href="#obj4">4</a>
+              <a class="dropdown-item" href="#obj5">5</a>
+              <a class="dropdown-item" href="#obj6">6</a>
+              <a class="dropdown-item" href="#obj7">7</a>
+              <a class="dropdown-item" href="#obj8">8</a>
+              <a class="dropdown-item" href="#obj91">9.1</a>
+              <a class="dropdown-item" href="#obj92">9.2</a>
+              <a class="dropdown-item" href="#obj93">9.3</a>
+              <a class="dropdown-item" href="#obj93">9.4</a>
+              <a class="dropdown-item" href="#objx">10</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown p-2">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Terminals
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <h6 class"dropdown-header">&nbsp;Cranberry Pi</h6>
+              <a class="dropdown-item" href="#termViescape">Essential Editor Skills</a>
+              <a class="dropdown-item" href="#termPwshmenu">The Name Game</a>
+              <a class="dropdown-item" href="#termViminfo">Lethal ForensicELFication</a>
+              <a class="dropdown-item" href="#termPlaintextCreds">Stall Mucking Report</a>
+              <a class="dropdown-item" href="#termHTTP2">CURLing Master</a>
+              <a class="dropdown-item" href="#termSprayDetect">Yule Log Analysis</a>
+              <a class="dropdown-item" href="#termGitpasshist">Dev Ops Fail</a>
+              <a class="dropdown-item" href="#termPythonDockerChallenge">Python Escape from LA</a>
+              <div class="dropdown-divider"></div>
+              <h6 class"dropdown-header">&nbsp;Misc Terminals</h6>
+              <a class="dropdown-item" href="#termVentMaze">Google Ventilation</a>
+              <a class="dropdown-item" href="#termDoorPasscode">Door Passcode</a>
+              <a class="dropdown-item" href="#termScanomatic">Scan-O-Matic</a>
+              <a class="dropdown-item" href="#termSnort">Snort Challenge</a>
+              <a class="dropdown-item" href="#termHoHoHoDaddy">HoHoHo Daddy</a>
+              <a class="dropdown-item" href="#termPianoLock">Piano Lock</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown p-2">
+            <a class="nav-link dropdown-toggle" href="#artefacts" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Artefacts/Materials
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#wanc">wannacookie.ps1</a>
+              <a class="dropdown-item" href="#sling">Slingshot Linux</a>
+              <a class="dropdown-item" href="#zip">Zipped file</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container m-4 p-4">
+      <div class="jumbotron m-4">
+        <h1>SANS Holiday Hack 2018 Solutions</h1>
+        <hr class="my-4">
+        <h3>Report by Warren Raquel</h3>
+      </div>
+    </div>
+
+    <div class="container m-4 p-4">
+      <div class="text-center border rounded m-4 p-4">
+        <img align="center" width=400px src="images/kringlecon_invitation.png">
+        <h1><a id="narrative">Narrative</h1>
+        <p>As you walk through the gates, a familiar red-suited holiday figure warmly welcomes all of his special visitors to KringleCon.</p>
+        <p>Suddenly, all elves in the castle start looking very nervous. You can overhear some of them talking with worry in their voices.</p>
+        <p>The toy soldiers, who were always gruff, now seem especially determined as they lock all the exterior entrances to the building and barricade all the doors. No one can get out! And the toy soldiers' grunts take on an increasingly sinister tone.</p>
+        <p>The toy soldiers act even more aggressively. They are searching for something -- something very special inside of Santa’s castle -- and they will stop at NOTHING until they find it. Hans seems to be directing their activities.</p>
+        <p>In the main lobby on the bottom floor of Santa's castle, Hans calls everyone around to deliver a speech. Make sure you visit Hans to hear his speech.</p>
+        <p>The toy soldiers continue behaving very rudely, grunting orders to the guests and to each other in vaguely Germanic phrases. Suddenly, one of the toy soldiers appears wearing a grey sweatshirt that has written on it in red pen, "NOW I HAVE A ZERO-DAY. HO-HO-HO."</p>
+        <p>A rumor spreads among the elves that Alabaster has lost his badge. Several elves say, "What do you think someone could do with that?"</p>
+        <p>Hans has started monologuing again. Please visit him in Santa's lobby for a status update.</p>
+        <p>Great work! You have blocked access to Santa's treasure... for now. Please visit Hans in Santa's Secret Room for an update.</p>
+        <p>And then suddenly, Hans slips and falls into a snowbank. His nefarious plan thwarted, he's now just cold and wet.</p>
+        <p>But Santa still has more questions for you to solve!</p>
+        <p>Congrats! You have solved the hardest challenge! Please visit Santa and Hans inside Santa's Secret Room for an update on your amazing accomplishment!</p>
+      </div>
+    </div>
+
+    <div class="container m-4 p-4">
+      <h1><a id="answers"></a>Answers</h1>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Objective</th>
+            <th scope="col">Question</th>
+            <th scope="col">Answer</th>
+          </td>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"><a href="#obj1">1</a></th>
+            <td>What phrase is revealed when you answer all of the KringleCon Holiday Hack History questions? <i>For hints on achieving this objective, please visit <a href="#npcBushy">Bushy Evergreen</a> and help him with the <a href="#termViescape"><b>Essential Editor Skills</b></a> Cranberry Pi terminal challenge.</i></td>
+            <td class="text-nowrap" data-toggle="tooltip" title="John McClane says this to Hans Gruber after shooting him">Happy Trails</td>
+          <tr>
+          <tr>
+            <th scope="row"><a href="#obj2">2</a></th>
+            <td>Who submitted (First Last) the rejected talk titled Data Loss for Rainbow Teams: A Path in the Darkness? Please analyze the CFP site to find out. <i>For hints on achieving this objective, please visit <a href="#npcMinty">Minty Candycane</a> and help her with the <a href="#termPwshmenu"><b>The Name Game</b></a> Cranberry Pi terminal challenge.</i></td>
+            <td class="text-nowrap">John McClane</td>
+          <tr>
+          <tr>
+            <th scope="row"><a href="#obj3">3</a></th>
+            <td>The KringleCon Speaker Unpreparedness room is a place for frantic speakers to furiously complete their presentations. The room is protected by a door passcode. Upon entering the correct passcode, what message is presented to the speaker? <i>For hints on achieving this objective, please visit <a href="#npcTangle">Tangle Coalbox</a> and help him with the <a href="#termViminfo"><b>Lethal ForensicELFication</b></a> Cranberry Pi terminal challenge.</i></td>
+            <td class="text-nowrap">Welcome unprepared speaker!</td>
+          <tr>
+          <tr>
+            <th scope="row"><a href="#obj4">4</a></th>
+            <td>Retrieve the encrypted ZIP file from the <a href="#artGitZip">North Pole Git repository</a>. What is the password to open this file? <i>For hints on achieving this objective, please visit <a href="#npcWunorse">Wunorse Openslae</a> and help him with <a href="#termPlaintextCreds"><b>Stall Mucking Report</b></a> Cranberry Pi terminal challenge.</td>
+            <td class="text-nowrap" data-toggle="tooltip" title="John McClane's catch phrase from Die Hard">Yippee-ki-yay</td>
+          <tr>
+          <tr>
+            <th scope="row"><a href="#obj5">5</a></th>
+            <td>Using the data set contained in this SANS Slingshot Linux image, find a reliable path from a Kerberoastable user to the Domain Admins group. What’s the user’s logon name (in username@domain.tld format)? Remember to avoid RDP as a control path as it depends on separate local privilege escalation flaws. <i>For hints on achieving this objective, please visit <a href="#npcHolly">Holly Evergreen</a> and help her with the <a href="#termHTTP2"><b>CURLing Master</b></a> Cranberry Pi terminal challenge.</i></td>
+            <td class="text-nowrap">LDUBEJ00320@AD.KRINGLECASTLE.COM</td>
+          <tr>
+          <tr>
+            <th scope="row"><a href="#obj6">6</a></th>
+            <td>Bypass the authentication mechanism associated with the room near Pepper Minstix. <a href="#artBadge">A sample employee badge is available</a>. What is the access control number revealed by the <a href="#termScanomatic">door authentication panel</a>? <i>For hints on achieving this objective, please visit <a href="#npcPepper">Pepper Minstix</a> and help her with the <a href="#termSprayDetect"><b>Yule Log Analysis</b></a> Cranberry Pi terminal challenge.</i></td>
+            <td class="text-nowrap" data-toggle="tooltip" title="Release date of Die Hard">19880715</td>
+          <tr>
+          <tr>
+            <th scope="row"><a href="#obj7">7</a></th>
+            <td>Santa uses an Elf Resources website to look for talented information security professionals. <a href="https://careers.kringlecastle.com/">Gain access to the website</a> and fetch the document <code>C:\candidate_evaluation.docx</code>. Which terrorist organization is secretly supported by the job applicant whose name begins with "K"? <i>For hints on achieving this objective, please visit <a href="#npcSparkle">Sparkle Redberry</a> and help her with the <a href="#termGitpasshist"><b>Dev Ops Fail</b></a> Cranberry Pi terminal challenge.</i></td>
+            <td class="text-nowrap" data-toggle="tooltip" title="Akin to Fancy Bear, a suspected Russian state backed espionage group">Fancy Beaver</td>
+          <tr>
+          <tr>
+            <th scope="row"><a href="#obj8">8</a></th>
+            <td>Santa has introduced a <a href="https://packalyzer.kringlecastle.com/">web-based packet capture and analysis tool</a> to support the elves and their information security work. Using the system, access and decrypt HTTP/2 network activity. What is the name of the song described in the document sent from Holly Evergreen to Alabaster Snowball? <i>For hints on achieving this objective, please visit <a href="#npcSugar">SugarPlum Mary</a> and help her with the <a href="#termPythonDockerChallenge"><b>Python Escape from LA</b></a> Cranberry Pi terminal challenge.</i></td>
+            <td class="text-nowrap">mary had a little lamb</td>
+          <tr>
+          <tr>
+            <th scope="row"><a href="#obj91">9.1</a></th>
+            <td>
+              Alabaster Snowball is in dire need of your help. Santa's file server has been hit with malware. Help Alabaster Snowball deal with the malware on Santa's server by completing several tasks. For hints on achieving this objective, please visit Shinny Upatree and help him with the Sleigh Bell Lottery Cranberry Pi terminal challenge.<br/>
+              <br/>
+              To start, assist Alabaster by accessing (clicking) the snort terminal below:</br>
+              </br>
+              <a href="#termSnort"><img src="images/snort.png"></a><br/>
+              </br>
+              Then create a rule that will catch all new infections. What is the success message displayed by the Snort terminal?
+            </td>
+            <td>Snort is alerting on all ransomware and only the ransomware!</td>
+          <tr>
+          <tr>
+            <th scope="row"><a href="#obj92">9.2</a></th>
+            <td>After completing the prior question, Alabaster gives you a document he suspects downloads the malware. What is the domain name the malware in the document downloads from?</td>
+            <td class="text-nowrap" data-toggle="tooltip" title="ROT13 and reversed HANSGRUBER">erohetfanu.com</td>
+          <tr>
+          <tr>
+            <th scope="row"><a href="#obj93">9.3</a></th>
+            <td>
+              Analyze the full malware source code to find a kill-switch and activate it at the North Pole's domain registrar <a href="#termHoHoHoDaddy">HoHoHo Daddy</a>.<br/>
+              <br/>
+              What is the full sentence text that appears on the domain registration success message (bottom sentence)?
+            </td>
+            <td class="text-nowrap">Successfully registered yippeekiyaa.aaay!</td>
+          <tr>
+          <tr>
+            <th scope="row"><a href="#obj94">9.4</a></th>
+            <td>After activating the kill-switch domain in the last question, Alabaster gives you <a href="#artZipFile">a zip file</a> with a memory dump and encrypted password database. Use these files to decrypt Alabaster's password database. What is the password entered in the database for the <b>Vault</b> entry?</td>
+            <td class="text-nowrap" data-toggle="tooltip" title="From the Overture of The Marriage of Figaro and the piano unlock key for Willy Wonka's Chocolate Factory">ED#ED#EED#EF#G#F#G#ABA#BA#B</td>
+          <tr>
+          <tr>
+            <th scope="row"><a href="#objx">10</a></th>
+            <td>Use what you have learned from previous challenges to open the <a href="#termPianoLock">door to Santa's vault</a>. What message do you get when you unlock the door?</td>
+            <td class="text-nowrap">You have unlocked Santa's vault!</td>
+          <tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="container m-4 p-4">
+      <h1><a id="trivia"></a>Trivia</h1>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Artefact</th>
+            <th scope="col">Signficance</th>
+          </td>
+        </thead>
+        <tbody>
+          <tr>
+            <td>"Python Escape from LA"</td>
+            <td>This is a reference to the 1996 movie <a href="https://www.imdb.com/title/tt0116225/">"Escape from L.A."</a> starring the legendary Kurt Russel (who, BTW, recently starred as Santa on Netflix's Christmas Chronicles) as the main protagonist, <b>Snake Plissken</b>. On a personal note <a href="https://twitter.com/PostMortemMG/status/1070766697026543616/photo/1">this would be a kick-ass cross-over for next year.</a></td>
+          </tr>
+          <tr>
+            <td>WannaCookie Author "Bill Clay"</td>
+            <td>In the source html, <a href="#artWannaSource">source.html</a>, the author is cited as "Bill Clay". This is in reference to Hans Gruber in Die Hard. When John McClane happens upon Alan Rickman's character alone and unarmed, Alan uses a bad American accent to say his name is <a href="https://www.youtube.com/watch?v=c7SoiiZtRa0">"Clay... Bill Clay"</a>. Rumor is that this scene was quickly added after producers heard Alan's "American accent".</td>
+          </tr>
+          <tr>
+            <td>erohetfanu</td>
+            <td>If you <code>echo erohetfanu | rev | tr 'A-Za-z' 'N-ZA-Mn-za-m'</code> the result is <code>hansgruber</code>. As a matter of fact, all domains in the provided pcaps in the snort challange are anagrams of erohetfanu with different tlds.</td>
+          </tr>
+          <tr>
+            <td><a id="trivPianoLock"></a>Piano Lock</td>
+            <td>The piano lock is taken straight from the 1971 classic, <a href="https://www.imdb.com/title/tt0067992/>""Willy Wonka & the Chocolate Factory"</a>. <a href="https://www.youtube.com/watch?v=5g4r-FbGivk">Mr. Wonka plays a few notes on a small piano keyboard which in turn opens a giant door into his factory.</a> Mrs. Teevee casually recognizes the tune as "Rachmaninoff", however, this is incorrect. The tune is actually from the Mozart's overture to "The Marriage of Figaro". Alabaster is also incorrect in assuming it's Rachmaninoff.</td>
+          </tr>
+          <tr>
+            <td>19880715</td>
+            <td>This is the release date, July 15, 1988, of Die Hard starring Bruce Willis and Alan Rickman</td>
+          </tr>
+          <tr>
+            <td>Fancy Beaver</td>
+            <td>This alludes to Fancy Bear, a cyber espionage group purportedly backed by the Russian government.</td>
+          </tr>
+          <tr>
+            <td>Yippee-ki-yay</td>
+            <td>This is John McClane's (main protagonist of the movie Die Hard) catch phrase</td>
+          </tr>
+          <tr>
+            <td>Happy Trails</td>
+            <td>This is said to Hans after John McClane shoots him in the final scenes of Die Hard</td>
+          </tr>
+          <tr>
+            <td>Google Vent Maze</td>
+            <td>This is a direct reference to John McClane moving around the air ducts of Nakatomi Plaza in the movie Die Hard</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="container m-4 p-4">
+      <h1><a id="hints"></a>Hints</h1>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Source</th>
+            <th scope="col">Hint</th>
+            <th scope="col">Application</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="#npcBushy">Bushy Evergreen</a></td>
+            <td>Vi Editor Basics: <a href="https://kb.iu.edu/d/afcz">Indiana University Vi Tutorials</a></td>
+            <td><a href="#termViescape"><b>Essential Editor Skills</b></a></td>
+          </tr>
+          <tr>
+            <td><a href="#npcMinty">Minty Candycane</a></td>
+            <td>SQLite3 .dump'ing: <a href="https://www.digitalocean.com/community/questions/how-do-i-dump-an-sqlite-database">SQLite3 Data Dump</a></td>
+            <td><a href="#termPwshmenu"><b>The Name Game</b></a></td>
+          </tr>
+          <tr>
+            <td><a href="#npcMinty">Minty Candycane</a></td>
+            <td>PowerShell Command Injection: <a href="https://ss64.com/ps/call.html">PowerShell Call/& Operator</a></td>
+            <td><a href="#termPwshmenu"><b>The Name Game</b></a></td>
+          </tr>
+          <tr>
+            <td><a href="#npcMinty">Minty Candycane</a></td>
+            <td><a href="https://portswigger.net/kb/issues/00600100_directory-listing">Website Directory Browsing</a></td>
+            <td><a href="#termPwshmenu"><b>The Name Game</b></a></td>
+          </tr>
+          <tr>
+            <td><a href="#npcMinty">Minty Candycane</a></td>
+            <td>Finding Browsable Directories: <i>On a website, finding browsable directories is sometimes as simple as removing characters from the end of a URL.</i></td>
+            <td><a href="#termPwshmenu"><b>The Name Game</b></a></td>
+          </tr>
+          <tr>
+            <td><a href="#npcTangle">Tangle Coalbox</a></td>
+            <td>Vim Artifacts: <a href="https://tm4n6.com/2017/11/15/forensic-relevance-of-vim-artifacts/">Forensic Relevance of Vim Artifacts</a></td>
+            <td><a href="#termViminfo"><b>Lethal ForensicELFication</b></a></td>
+          </tr>
+          <tr>
+            <td><a href="#npcTangle">Tangle Coalbox</a></td>
+            <td><a href="https://hackaday.com/2018/06/18/opening-a-ford-with-a-robot-and-the-de-bruijn-sequence/">Opening a Ford with a Robot and the de Bruijn Sequence</a></td>
+            <td><a href="#termDoorPasscode"><b>Door Passcode</b></a></td>
+          </tr>
+          <tr>
+            <td><a href="#npcTangle">Tangle Coalbox</a></td>
+            <td><a href="de Bruijn Sequence Generator">http://www.hakank.org/comb/debruijn.cgi</a></td>
+            <td><a href="#termDoorPasscode"><b>Door Passcode</b></a></td>
+          </tr>
+
+          <tr>
+            <td><a href="#npcHolly">Holly Evergreen</a></td>
+            <td><a href="https://youtu.be/gOpsLiJFI1o">Bloodhound Demo</a></td>
+            <td>app</td>
+          </tr>
+          <tr>
+            <td><a href="#npcWunorse">Wunorse Openslae</a></td>
+            <td>Plaintext Credentials in Commands: <a href="https://blog.rackspace.com/passwords-on-the-command-line-visible-to-ps">Keeping Command Line Passwords Out of PS</a></td>
+            <td>app</td>
+          </tr>
+          <tr>
+            <td><a href="#npcHolly">Holly Evergreen</a></td>
+            <td><a href="https://developers.google.com/web/fundamentals/performance/http2/">HTTP/2.0 Basics</a></td>
+            <td>app</td>
+          </tr>
+          <tr>
+            <td><a href="#npcShinny">Shinny Upatree</a></td>
+            <td><a href="https://pen-testing.sans.org/blog/2018/12/11/using-gdb-to-call-random-functions">Using gdb to Call Random Functions!</a></td>
+            <td>app</td>
+          </tr>
+          <tr>
+            <td><a href="#npcSparkle">Sparkle Redberry</a></td>
+            <td><a href="https://www.owasp.org/index.php/CSV_Injection">OWASP CSV Injection Page</a></td>
+            <td>app</td>
+          </tr>
+          <tr>
+            <td><a href="#npcWunorse">Wunorse Openslae</a></td>
+            <td><a href="https://youtu.be/myKrWVaq3Cw?t=185">Brian Hostetler is giving a great Trufflehog talk upstairs</a></td>
+            <td>app</td>
+          </tr>
+          <tr>
+            <td><a href="#npcPepper">Pepper Minstix</a></td>
+            <td>Password Spraying: <a href="https://securityweekly.com/2017/07/21/tsw11/">Password Spraying with MailSniper.ps1</a></td>
+            <td>app</td>
+          </tr>
+          <tr>
+            <td><a href="#npcSparkle">Sparkle Redberry</a></td>
+            <td>CSV Injection Talk: <a href="https://www.youtube.com/watch?v=Z3qpcKVv2Bg">Somehow Brian Hostetler is giving a talk on CSV injection WHILE he's giving a talk on Trufflehog. Whatta' guy!</a></td>
+            <td>app</td>
+          </tr>
+          <tr>
+            <td><a href="#npcSparkle">Sparkle Redberry</a></td>
+            <td><a href="https://gist.github.com/hofmannsven/6814451">Git Cheat Sheet</a></td>
+            <td>app</td>
+          </tr>
+          <tr>
+            <td><a href="#npcPepper">Pepper Minstix</a></td>
+            <td><a href="https://www.owasp.org/index.php/SQL_Injection_Bypassing_WAF#Auth_Bypass">SQL Injection</a></td>
+            <td>app</td>
+          </tr>
+          <tr>
+            <td><a href="#npcAlabaster">Alabaster Snowball</a></td>
+            <td>Malware Reverse Engineering: <a href="https://www.youtube.com/watch?v=wd12XRq2DNk">Whoa, Chris Davis' talk on PowerShell malware is crazy pants! You should check it out!</a></td>
+            <td>app</td>
+          </tr>
+          <tr>
+            <td><a href="#npcPepper">Pepper Minstix</a></td>
+            <td>Barcode Creation: <a href="https://www.the-qrcode-generator.com/">Creating QR Codes</a></td>
+            <td>app</td>
+          </tr>
+          <tr>
+            <td><a href="#npcSugar">SugarPlum Mary</a></td>
+            <td>Python Escape: <a href="https://www.youtube.com/watch?v=ZVx2Sxl3B9c">Check out Mark Baggett's talk upstairs</a></td>
+            <td>app</td>
+          </tr>
+          <tr>
+            <td><a href="#npcSparkle">Sparkle Redberry</a></td>
+            <td>Finding Passwords in Git: <a href="https://en.internetwache.org/dont-publicly-expose-git-or-how-we-downloaded-your-websites-sourcecode-an-analysis-of-alexas-1m-28-07-2015/">Search Git for Passwords</a></td>
+            <td>app</td>
+          </tr>
+          <tr>
+            <td><a href="#npcAlabaster">Alabaster Snowball</a></td>
+            <td>Dropper Download: Word docm macros can be extracted using <a href="https://github.com/decalage2/oletools/wiki/olevba">olevba</a>. Perhaps we can use this to grab the ransomware source.</td>
+            <td>app</td>
+          </tr>
+          <tr>
+            <td><a href="#npcHolly">Holly Evergreen</a></td>
+            <td><a href="https://github.com/BloodHoundAD/BloodHound">Bloodhound Tool</a></td>
+            <td>app</td>
+          </tr>
+          <tr>
+            <td><a href="#npcWunorse">Wunorse Openslae</a></td>
+            <td><a href="https://github.com/dxa4481/truffleHog">Trufflehog Tool</a></td>
+            <td>app</td>
+          </tr>
+          <tr>
+            <td><a href="#npcSugar">SugarPlum Mary</a></td>
+            <td>HTTP/2.0 Intro and Decryption: <a href="https://www.youtube.com/watch?v=9E-8HkDs-kQ">Did you see Chris' & Chris' talk on HTTP/2.0?</a></td>
+            <td>app</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="container m-4 p-4">
+      <h1><a id="obj"></a>Objectives</h1>
+
+      <div class="border p-2 m-2">
+        <h2><a id="obj1"></a>Objective 1</h2>
+        <div>
+          <p>What phrase is revealed when you answer all of the <a href="https://www.holidayhackchallenge.com/2018/challenges/osint_challenge_windows.html">KringleCon Holiday Hack History questions</a>? <i>For hints on achieving this objective, please visit <a href="#npcBushy">Bushy Evergreen</a> and help him with the <a href="#termViescape"><b>Essential Editor Skills</b></a> Cranberry Pi terminal challenge.</i></p>
         </div>
-      </nav>
-    </header>
+      </div>
+
+      <div class="border p-2 m-2">
+        <h2><a id="obj2"></a>Objective 2</h2>
+        <p>Who submitted (First Last) the rejected talk titled <b>Data Loss for Rainbow Teams: A Path in the Darkness</b>? <a href="https://cfp.kringlecastle.com/">Please analyze the CFP site to find out</a>. <i>For hints on achieving this objective, please visit <a href="#npcMinty">Minty Candycane</a> and help her with the <a href="#termPwshmenu"><b>The Name Game</b></a> Cranberry Pi terminal challenge.</i></p>
+      </div>
+
+      <div class="border p-2 m-2">
+        <h2><a id="obj3"></a>Objective 3</h2>
+        <p>The KringleCon Speaker Unpreparedness room is a place for frantic speakers to furiously complete their presentations. The room is protected by a <a href="https://doorpasscoden.kringlecastle.com/">door passcode</a>. Upon entering the correct passcode, what message is presented to the speaker? <i>For hints on achieving this objective, please visit <a href="#npcTangle">Tangle Coalbox</a> and help him with the <a href="#termViminfo"><b>Lethal ForensicELFication</b></a> Cranberry Pi terminal challenge.</i></p>
+      </div>
+
+      <div class="border p-2 m-2">
+        <h2><a id="obj4"></a>Objective 4</h2>
+        <p>Retrieve the encrypted ZIP file from the <a href="https://git.kringlecastle.com/Upatree/santas_castle_automation">North Pole Git repository</a>. What is the password to open this file? <i>For hints on achieving this objective, please visit <a href="#npcWunorse">Wunorse Openslae</a> and help him with <a href="#termPlaintextCreds"><b>Stall Mucking Report</b></a> Cranberry Pi terminal challenge.</p>
+      </div>
+
+      <div class="border p-2 m-2">
+        <h2><a id="obj5"></a>Objective 5</h2>
+        <p>Using the data set contained in this <a href="https://download.holidayhackchallenge.com/HHC2018-DomainHack_2018-12-19.ova">SANS Slingshot Linux image</a>, find a reliable path from a Kerberoastable user to the Domain Admins group. What’s the user’s logon name (in username@domain.tld format)? Remember to avoid RDP as a control path as it depends on separate local privilege escalation flaws. <i>For hints on achieving this objective, please visit <a href="#npcHolly">Holly Evergreen</a> and help her with the <a href="#termHTTP2"><b>CURLing Master</b></a> Cranberry Pi terminal challenge.</i></p>
+      </div>
+
+      <div class="border p-2 m-2">
+        <h2><a id="obj6"></a>Objective 6</h2>
+        <p>Bypass the authentication mechanism associated with the room near Pepper Minstix. <a href="https://www.holidayhackchallenge.com/2018/challenges/alabaster_badge.jpg">A sample employee badge is available</a>. What is the access control number revealed by the <a href="https://scanomatic.kringlecastle.com/index.html">door authentication panel</a>? <i>For hints on achieving this objective, please visit <a href="#npcPepper">Pepper Minstix</a> and help her with the <a href="#termSprayDetect"><b>Yule Log Analysis</b></a> Cranberry Pi terminal challenge.</i></p>
+      </div>
+
+      <div class="border p-2 m-2">
+        <h2><a id="obj7"></a>Objective 7</h2>
+        <p>Santa uses an Elf Resources website to look for talented information security professionals. <a href="https://careers.kringlecastle.com/">Gain access to the website</a> and fetch the document <code>C:\candidate_evaluation.docx</code>. Which terrorist organization is secretly supported by the job applicant whose name begins with "K"? <i>For hints on achieving this objective, please visit <a href="#npcSparkle">Sparkle Redberry</a> and help her with the <a href="#termGitpasshist"><b>Dev Ops Fail</b></a> Cranberry Pi terminal challenge.</i></p>
+      </div>
+
+      <div class="border p-2 m-2">
+        <h2><a id="obj8"></a>Objective 8</h2>
+        <p>Santa has introduced a <a href="https://packalyzer.kringlecastle.com/">web-based packet capture and analysis tool</a> to support the elves and their information security work. Using the system, access and decrypt HTTP/2 network activity. What is the name of the song described in the document sent from Holly Evergreen to Alabaster Snowball? <i>For hints on achieving this objective, please visit <a href="#npcSugar">SugarPlum Mary</a> and help her with the <a href="#termPythonDockerChallenge"><b>Python Escape from LA</b></a> Cranberry Pi terminal challenge.</i></p>
+      </div>
+
+      <div class="border p-2 m-2">
+        <h2><a id="obj91"></a>Objective 9.1</h2>
+        <p>Alabaster Snowball is in dire need of your help. Santa's file server has been hit with malware. Help Alabaster Snowball deal with the malware on Santa's server by completing several tasks. For hints on achieving this objective, please visit Shinny Upatree and help him with the Sleigh Bell Lottery Cranberry Pi terminal challenge.</p>
+
+        <p>To start, assist Alabaster by accessing (clicking) the snort terminal below:</p>
+
+        <p><a href="https://docker.kringlecon.com/?challenge=snort"><img src="images/snort.png"></a></p>
+
+        <p>Then create a rule that will catch all new infections. What is the success message displayed by the Snort terminal?</p>
+      </div>
+
+      <div class="border p-2 m-2">
+        <h2><a id="obj92"></a>Objective 9.2</h2>
+        <p>After completing the prior question, Alabaster gives you a document he suspects downloads the malware. What is the domain name the malware in the document downloads from?</p>
+      </div>
+
+      <div class="border p-2 m-2">
+        <h2><a id="obj93"></a>Objective 9.3</h2>
+        <p>Analyze the full malware source code to find a kill-switch and activate it at the North Pole's domain registrar <a href="https://hohohodaddy.kringlecastle.com/index.html">HoHoHo Daddy</a>.</p>
+        <p>What is the full sentence text that appears on the domain registration success message (bottom sentence)?</p>
+      </div>
+
+      <div class="border p-2 m-2">
+        <h2><a id="obj94"></a>Objective 9.4</h2>
+        <p>After activating the kill-switch domain in the last question, Alabaster gives you <a href="https://www.holidayhackchallenge.com/2018/challenges/forensic_artifacts.zip">a zip file</a> with a memory dump and encrypted password database. Use these files to decrypt Alabaster's password database. What is the password entered in the database for the <b>Vault</b> entry?</p>
+      </div>
+
+      <div class="border p-2 m-2">
+        <h2><a id="objx"></a>Objective 10</h2>
+        <p>Use what you have learned from previous challenges to open the <a href="https://pianolockn.kringlecastle.com/">door to Santa's vault</a>. What message do you get when you unlock the door?</p>
+      </div>
+    </div>
+
+    <div class="container m-4 p-4">
+      <h1><a id="npc"></a>Characters</h1>
+        <p>These are the dialogs from the different characters in Kringle Con.</p>
+
+      <div class="row border p-2 m-2">
+        <div class="col-3">
+          <h2><a id="npcSanta"></a>Santa</h2>
+          <img src="images/santa.png">
+        </div>
+        <div class="col-9">
+          <blockquote class="blockquote border rounded p-2">
+            <p class="mb-2">Welcome, my friends! Welcome to my castle! Would you come forward please?</p>
+            <p class="mb-2">Welcome. It’s nice to have you here! I’m so glad you could come. This is going to be such an exciting day!</p>
+            <p class="mb-2">I hope you enjoy it. I think you will.</p>
+            <p class="mb-2">Today is the start of KringleCon, our new conference for cyber security practitioners and hackers around the world.</p>
+            <p class="mb-2">KringleCon is designed to share tips and tricks to help leverage our skills to make the world a better, safer place.</p>
+            <p class="mb-2">Remember to look around, enjoy some talks by world-class speakers, and mingle with our other guests.</p>
+            <p class="mb-2">And, if you are interested in the background of this con, please check out Ed Skoudis’ talk called <a href="https://youtu.be/31JsKzsbFUo">START HERE</a>.</p>
+            <p class="mb-2">Delighted to meet you. Overjoyed! Enraptured! Entranced! Are we ready? Yes! In we go!</p>
+            <p class="mb-2">Oh, and as you enjoy the conference, click on your badge to see a series of objectives for you to conquer!</p>
+            <footer class="blockquote-footer text-right">Santa as you approach the castle</footer>
+          </blockquote>
+          <blockquote class="blockquote border rounded p-2">
+            <p class="mb-2">HO HO HO!!!</p>
+            <p class="mb-2">You did a great job, but keep going!</p>
+            <p class="mb-2">Solve all remaining objectives in your badge.</p>
+            <footer class="blockquote-footer text-right">Santa after stopping Hans</footer>
+          </blockquote>
+          <blockquote class="blockquote border rounded p-2">
+            <p class="mb-2">You DID IT! You completed the hardest challenge. You see, Hans and the soldiers work for ME. I had to test you. And you passed the test!</p>
+            <p class="mb-2">You WON! Won what, you ask? Well, the jackpot, my dear! The grand and glorious jackpot!</p>
+            <p class="mb-2">You see, I finally found you!</p>
+            <p class="mb-2">I came up with the idea of KringleCon to find someone like you who could help me defend the North Pole against even the craftiest attackers.</p>
+            <p class="mb-2">That’s why we had so many different challenges this year.</p>
+            <p class="mb-2">We needed to find someone with skills all across the spectrum.</p>
+            <p class="mb-2">I asked my friend Hans to play the role of the bad guy to see if you could solve all those challenges and thwart the plot we devised.</p>
+            <p class="mb-2">And you did!</p>
+            <p class="mb-2">Oh, and those brutish toy soldiers? They are really just some of my elves in disguise.</p>
+            <p class="mb-2">See what happens when they take off those hats?</p>
+            <p class="mb-2">Based on your victory… next year, I’m going to ask for your help in defending my whole operation from evil bad guys.</p>
+            <p class="mb-2">And welcome to my vault room. Where's my treasure? Well, my treasure is Christmas joy and good will.</p>
+            <p class="mb-2">You did such a GREAT job! And remember what happened to the people who suddenly got everything they ever wanted?</p>
+            <p class="mb-2">They lived happily ever after.</p>
+            <footer class="blockquote-footer text-right">Santa after accessing the Vault</footer>
+          </blockquote>
+        </div>
+      </div>
+
+      <div class="row border rounded p-2 m-2">
+        <div class="row">
+          <div class="col-3">
+            <h2><a id="npcHans"></a>Hans</h2>
+            <img src="images/hans.png">
+          </div>
+          <div class="col-9">
+            <blockquote class="blockquote border rounded p-2">
+              <p class="mb-2">Ladies and Gentlemen…</p>
+              <p class="mb-2">Ladies and Gentlemen…</p>
+              <p class="mb-2">Due to the North Pole’s legacy of providing coal as presents around the globe ...</p>
+              <p class="mb-2">... they are about to be taught a lesson in the real use of POWER.</p>
+              <p class="mb-2">You will be witnesses.</p>
+              <p class="mb-2">Now, Santa… that's a nice suit… John Philips, North Pole. I have two myself. Rumor has it Alabaster buys his there.</p>
+              <p class="mb-2">I have comrades in arms around the world who are languishing in prison.</p>
+              <p class="mb-2">The Elvin State Department enjoys rattling its saber for its own ends. Now it can rattle it for ME.</p>
+              <p class="mb-2">The following people are to be released from their captors.</p>
+              <p class="mb-2">In the Dungeon for Errant Reindeer, the seven members of the New Arietes Front.</p>
+              <p class="mb-2">In Whoville Prison, the imprisoned leader of ATNAS Corporation, Miss Cindy Lou Who.</p>
+              <p class="mb-2">In the Land of Oz, Glinda the Good Witch.</p>
+              <footer class="blockquote-footer text-right">Hans after solving <a href="#obj4">objective 4</a></footer>
+            </blockquote>
+            <blockquote class="blockquote border rounded p-2">
+              <p class="mb-2">So, you’ve figured out my plan – it’s not about freeing those prisoners.</p>
+              <p class="mb-2">The toy soldiers and I are here to steal the contents of Santa’s vault!</p>
+              <p class="mb-2">You think that after all my posturing, all my little speeches, that I’m nothing but a common thief.</p>
+              <p class="mb-2">But, I tell you -- I am an exceptional thief.</p>
+              <p class="mb-2">And since I've moved up to kidnapping all of you, you should be more polite!</p>
+              <footer class="blockquote-footer text-right">Hans after solving <a href="#obj6">objective 6</a></footer>
+            </blockquote>
+          </div>
+          <div class="col-3">
+            <img src="images/hans_snow_150.png">
+          </div>
+          <div class="col-9">
+            <blockquote class="blockquote border rounded p-2">
+              <p class="mb-2">You’ve found me and blocked my access to Santa’s treasure.</p>
+              <p class="mb-2">You’ve done well in foiling me. But, I’ve still got a chance.</p>
+              <p class="mb-2">When you steal six hundred dollars, you can disappear. When you steal all of Santa’s treasure, they will find you… unless….</p>
+              <p class="mb-2">(muffled yelling)</p>
+              <footer class="blockquote-footer text-right">Hans when defeated</footer>
+            </blockquote>
+          </div>
+          <div class="col-3">
+            <img src="images/hans_smile.PNG">
+          </div>
+          <div class="col-9">
+            <blockquote class="blockquote border rounded p-2">
+              <p class="mb-2">It’s a pleasure to see you again.</p>
+              <p class="mb-2">Congratulations.</p>
+              <footer class="blockquote-footer text-right">Hans in the Vault</footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+
+      <div class="row border rounded p-2 m-2">
+        <div class="col-3">
+          <h2><a id="npcBushy"></a>Bushy Evergreen</h2>
+          <img src="images/elf-bushy-evergreen.png">
+        </div>
+        <div class="col-9">
+          <blockquote class="blockquote border rounded p-2">
+            <p class="mb-2">Hi, I'm Bushy Evergreen.</p>
+            <p class="mb-2">I'm glad you're here, I'm the target of a terrible trick.</p>
+            <p class="mb-2">Pepper says his editor is the best, but I don't understand why.</p>
+            <p class="mb-2">He's forcing me to learn vi.</p>
+            <p class="mb-2">He gave me a link, I'm supposed to learn the basics.</p>
+            <p class="mb-2">Can you assist me with one of the simple cases?</p>
+            <footer class="blockquote-footer text-right">Bushy Evergreen before solving <a href="#termViescape"><b>Essential Editor Skills</b></a></footer>
+          </blockquote>
+          <blockquote class="blockquote border rounded p-2">
+            <p class="mb-2">Wow, it seems so easy now that you've shown me how!</p>
+            <footer class="blockquote-footer text-right">Bushy Evergreen after solving <a href="#termViescape"><b>Essential Editor Skills</b></a></footer>
+          </blockquote>
+        </div>
+      </div>
+
+      <div class="row border rounded p-2 m-2">
+        <div class="col-3">
+          <h2><a id="npcMinty"></a>Minty Candycane</h2>
+          <img src="images/elf-minty-candycane.png">
+        </div>
+        <div class="col-9">
+          <blockquote class="blockquote border rounded p-2">
+            <p class="mb-2">Can you help me? I'm in a bit of a fix.</p>
+            <p class="mb-2">I need to make a nametag for an employee, but I can't remember his first name.</p>
+            <p class="mb-2">Maybe you can figure it out using this Cranberry Pi terminal?</p>
+            <p class="mb-2">The Santa's Castle Onboarding System? I think it's written in PowerShell, if I'm not mistaken.</p>
+            <p class="mb-2">PowerShell itself can be tricky when handling user input. Special characters such as & and ; can be used to inject commands.</p>
+            <p class="mb-2">I think that system is one of Alabaster's creations.</p>
+            <p class="mb-2">He's a little ... obsessed with SQLite database storage.</p>
+            <p class="mb-2">I don't know much about SQLite, just the .dump command.</p>
+            <footer class="blockquote-footer text-right">Minty Candycane before solving <a href="#termPwshmenu"><b>The Name Game</b></a></footer>
+          </blockquote>
+          <blockquote class="blockquote border rounded p-2">
+            <p class="mb-2">Thank you so much for your help! I've gotten Mr. Chan his name tag. I'd love to repay the favor.</p>
+            <p class="mb-2">Have you ever visited a website and seen a listing of files - like you're browsing a directory? Sometimes this is enabled on web servers.</p>
+            <p class="mb-2">This is generally unwanted behavior. You can find sleighloads of examples by searching the web for index.of.</p>
+            <p class="mb-2">On a website, it's sometimes as simple as removing characters from the end of a URL.</p>
+            <p class="mb-2">What a silly misconfiguration for leaking information!</p>
+            <footer class="blockquote-footer text-right">Minty Candycane after solving <a href="#termPwshmenu"><b>The Name Game</b></a></footer>
+          </blockquote>
+        </div>
+      </div>
+
+      <div class="row border rounded p-2 m-2">
+        <div class="col-3">
+          <h2><a id="npcTangle"></a>Tangle Coalbox</h2>
+          <img src="images/elf-tangle-coalbox.png">
+        </div>
+        <div class="col-9">
+          <blockquote class="blockquote border rounded p-2">
+            <p class="mb-2">Any chance you can help me with an investigation?</p>
+            <p class="mb-2">Elf Resources assigned me to look into a case, but it seems to require digital forensic skills.</p>
+            <p class="mb-2">Do you know anything about Linux terminal editors and digital traces they leave behind?</p>
+            <p class="mb-2">Apparently editors can leave traces of data behind, but where and how escapes me!</p>
+            <footer class="blockquote-footer text-right">Tangle Coalbox before solving <a href="#termViminfo"><b>Lethal ForensicELFication</b></a></footer>
+          </blockquote>
+          <blockquote class="blockquote border rounded p-2">
+            <p class="mb-2">Hey, thanks for the help with the investigation, gumshoe.</p>
+            <p class="mb-2">Have you been able to solve the lock with the funny shapes?</p>
+            <p class="mb-2">It reminds me of something called "de Bruijn Sequences."</p>
+            <p class="mb-2">You can optimize the guesses because there is no start and stop -- each new value is added to the end and the first is removed.</p>
+            <p class="mb-2">I've even seen de Bruijn sequence generators online.</p>
+            <p class="mb-2">Here the length of the alphabet is 4 (only 4 buttons) and the length of the PIN is 4 as well.</p>
+            <p class="mb-2">Mathematically this is k=4, n=4 to generate the de Bruijn sequence.</p>
+            <p class="mb-2">Math is like your notepad and pencil - can't leave home without it!</p>
+            <p class="mb-2">I heard Alabaster lost his badge! That's pretty bad. What do you think someone could do with that?</p>
+            <footer class="blockquote-footer text-right">Tangle Coalbox after solving <a href="#termViminfo"><b>Lethal ForensicELFication</b></a></footer>
+          </blockquote>
+        </div>
+      </div>
+
+      <div class="row border rounded p-2 m-2">
+        <div class="col-3">
+          <h2><a id="npcWunorse"></a>Wunorse Openslae</h2>
+          <img src="images/elf-wunorse-openslae.png">
+        </div>
+        <div class="col-9">
+          <blockquote class="blockquote border rounded p-2">
+            <p class="mb-2">Hi, I'm Wunorse Openslae</p>
+            <p class="mb-2">What was that password?</p>
+            <p class="mb-2">Golly, passwords may be the end of all of us. Good guys can't remember them, and bad guess can guess them!</p>
+            <p class="mb-2">I've got to upload my chore report to my manager's inbox, but I can't remember my password.</p>
+            <p class="mb-2">Still, with all the automated tasks we use, I'll bet there's a way to find it in memory...</p>
+            <footer class="blockquote-footer text-right">Wunorse Openslae before solving <a href="#termPlaintextCreds"><b>Stall Mucking Report</b></a></footer>
+          </blockquote>
+          <blockquote class="blockquote border rounded p-2">
+            <p class="mb-2">Thank goodness for command line passwords - and thanks for your help!</p>
+            <p class="mb-2">Speaking of good ways to find credentials, have you heard of Trufflehog?</p>
+            <p class="mb-2">It's a cool way to dig through repositories for passwords, RSA keys, and more.</p>
+            <p class="mb-2">I mean, no one EVER uploads sensitive credentials to public repositories, right? But if they did, this would be a great tool for finding them.</p>
+            <p class="mb-2">But hey, listen to me ramble. If you're interested in Trufflehog, you should check out Brian Hostetler's talk!</p>
+            <p class="mb-2">Have you tried the entropy=True option when running Trufflehog? It is amazing how much deeper it will dig!</p>
+            <p class="mb-2">Oh my! Santa’s castle… it’s under siege!</p>
+            <p class="mb-2">We’re trapped inside and can’t leave.</p>
+            <p class="mb-2">The toy soldiers are blocking all of the exits!</p>
+            <p class="mb-2">We are all prisoners!</p>
+            <footer class="blockquote-footer text-right">Wunorse Openslae after solving <a href="#termPlaintextCreds"><b>Stall Mucking Report</b></a></footer>
+          </blockquote>
+        </div>
+      </div>
+
+      <div class="row border rounded p-2 m-2">
+        <div class="col-3">
+          <h2><a id="npcHolly"></a>Holly Evergreen</h2>
+          <img src="images/elf-holly-evergreen.png">
+        </div>
+        <div class="col-9">
+          <blockquote class="blockquote border rounded p-2">
+            <p class="mb-2">Oh that Bushy!</p>
+            <p class="mb-2">Sorry to vent, but that brother of mine did something strange.</p>
+            <p class="mb-2">The trigger to restart the Candy Striper is apparently an arcane HTTP call or 2.</p>
+            <p class="mb-2">I sometimes wonder if all IT folk do strange things with their home networks...</p>
+            <footer class="blockquote-footer text-right">Holly Evergreen before solving <a href="#termHTTP2"><b>CURLing Master</b></a></footer>
+          </blockquote>
+          <blockquote class="blockquote border rounded p-2">
+            <p class="mb-2">Unencrypted HTTP/2? What was he thinking? Oh well.</p>
+            <p class="mb-2">Have you ever used Bloodhound for testing Active Directory implementations?</p>
+            <p class="mb-2">It's a merry little tool that can sniff AD and find paths to reaching privileged status on specific machines.</p>
+            <p class="mb-2">AD implementations can get so complicated that administrators may not even know what paths they've set up that attackers might exploit.</p>
+            <p class="mb-2">Have you seen anyone demo the tool before?</p>
+            <footer class="blockquote-footer text-right">Holly Evergreen after solving <a href="#termHTTP2"><b>CURLing Master</b></a></footer>
+          </blockquote>
+        </div>
+      </div>
+
+      <div class="row border rounded p-2 m-2">
+        <div class="col-3">
+          <h2><a id="npcPepper"></a>Pepper Minstix</h2>
+          <img src="images/elf-pepper-minstix.png">
+        </div>
+        <div class="col-9">
+          <blockquote class="blockquote border rounded p-2">
+            <p class="mb-2">Have you heard of password spraying? It seems we've been victim.</p>
+            <p class="mb-2">We fear that they were successful in accessing one of our Elf Web Access accounts, but we don't know which one.</p>
+            <p class="mb-2">Parsing through .evtx files can be tricky, but there's a Python script that can help you convert it into XML for easier grep'ing.</p>
+            <footer class="blockquote-footer text-right">Pepper Minstix before solving <a href="#termSprayDetect"><b>Yule Log Analysis</b></a></footer>
+          </blockquote>
+          <blockquote class="blockquote border rounded p-2">
+            <p class="mb-2">Well, that explains the odd activity in Minty's account. Thanks for your help!</p>
+            <p class="mb-2">All of the Kringle Castle employees have these cool cards with QR codes on them that give us access to restricted areas.</p>
+            <p class="mb-2">Unfortunately, the badge-scan-o-matic said my account was disabled when I tried scanning my badge.</p>
+            <p class="mb-2">I really needed access so I tried scanning several QR codes I made from my phone but the scanner kept saying "User Not Found".</p>
+            <p class="mb-2">I researched a SQL database error from scanning a QR code with special characters in it and found it may contain an injection vulnerability.</p>
+            <p class="mb-2">I was going to try some variations I found on OWASP but decided to stop so I don't tick-off Alabaster.</p>
+            <footer class="blockquote-footer text-right">Pepper Minstix after solving <a href="#termSprayDetect"><b>Yule Log Analysis</b></a></footer>
+          </blockquote>
+        </div>
+      </div>
+
+      <div class="row border rounded p-2 m-2">
+        <div class="col-3">
+          <h2><a id="npcSparkle"></a>Sparkle Redberry</h2>
+          <img src="images/elf-sparkle-redberry.png">
+        </div>
+        <div class="col-9">
+          <blockquote class="blockquote border rounded p-2">
+            <p class="mb-2">Ugh, can you believe that Elf Resources is poking around? Something about sensitive info in my git repo.</p>
+            <p class="mb-2">I mean, I may have uploaded something sensitive earlier, but it's no big deal. I overwrote it!</p>
+            <p class="mb-2">Care to check my Cranberry Pi terminal and prove me right?</p>
+            <footer class="blockquote-footer text-right">Sparkle Redberry before solving <a href="#termGitpasshist"><b>Dev Ops Fail</b></a></footer>
+          </blockquote>
+          <blockquote class="blockquote border rounded p-2">
+            <p class="mb-2">Oh my golly gracious - Tangle was right? It was still in there? How embarrassing!</p>
+            <p class="mb-2">Well, if I can try to redeem myself a bit, let me tell you about another challenge you can help us with.</p>
+            <p class="mb-2">I wonder if Tangle Coalbox has taken a good look at his own employee import system.</p>
+            <p class="mb-2">It takes CSV files as imports. That certainly can expedite a process, but there's danger to be had.</p>
+            <p class="mb-2">I'll bet, with the right malicious input, some naughty actor could exploit a vulnerability there.</p>
+            <p class="mb-2">I'm sure the danger can be mitigated. OWASP has guidance on what not to allow with such oploads.</p>
+            <footer class="blockquote-footer text-right">Sparkle Redberry after solving <a href="#termGitpasshist"><b>Dev Ops Fail</b></a></footer>
+          </blockquote>
+        </div>
+      </div>
+
+      <div class="row border rounded p-2 m-2">
+        <div class="col-3">
+          <h2><a id="npcSugar"></a>SugarPlum Mary</h2>
+          <img src="images/elf-sugarplum-mary.png">
+        </div>
+        <div class="col-9">
+          <blockquote class="blockquote border rounded p-2">
+            <p class="mb-2">I'm glad you're here; my terminal is trapped inside a python! Or maybe my python is trapped inside a terminal?
+            Can you please help me by escaping from the Python interpreter?</p>
+            <footer class="blockquote-footer text-right">SugarPlum Mary before solving <a href="#termPythonDockerChallenge"><b>Python Escape from LA</b></a></footer>
+          </blockquote>
+          <blockquote class="blockquote border rounded p-2">
+            <p class="mb-2">Yay, you did it! You escaped from the Python!</p>
+            <p class="mb-2">As a token of my gratitude, I would like to share a rumor I had heard about Santa's new web-based packet analyzer - Packalyzer.</p>
+            <p class="mb-2">Another elf told me that [Packalyzer](https://packalyzer.kringlecastle.com/) was rushed and deployed with development code sitting in the web root.</p>
+            <p class="mb-2">Apparently, he found this out by looking at HTML comments left behind and was able to grab the server-side source code.</p>
+            <p class="mb-2">There was suspicious-looking development code using environment variables to store SSL keys and open up directories.</p>
+            <p class="mb-2">This elf then told me that manipulating values in the URL gave back weird and descriptive errors.</p>
+            <p class="mb-2">I'm hoping these errors can't be used to compromise SSL on the website and steal logins.</p>
+            <p class="mb-2">On a tooootally unrelated note, have you seen the HTTP2 talk at at KringleCon by the Chrises? I never knew HTTP2 was so different!</p>
+            <footer class="blockquote-footer text-right">SugarPlum Mary after solving <a href="#termPythonDockerChallenge"><b>Python Escape from LA</b></a></footer>
+          </blockquote>
+        </div>
+      </div>
+
+      <div class="row border rounded p-2 m-2">
+        <div class="col-3">
+          <h2><a id="npcAlabaster"></a>Alabaster Snowball</h2>
+          <img src="images/elf-alabaster-snowball.png">
+        </div>
+        <div class="col-9">
+          <blockquote class="blockquote border rounded p-2">
+            <p class="mb-2">I came here to help but got locked in 'cause I dropped my "Alabaster Snowball" badge in a rush.</p>
+            <p class="mb-2">Help, all of our computers have been encrypted by ransomware!</p>
+            <footer class="blockquote-footer text-right">Alabaster Snowball after solving <a href="#termScanomatic"><b>Scan-O-Matic</b></a></footer>
+          </blockquote>
+          <blockquote class="blockquote border rounded p-2">
+            <p class="mb-2">Thank you so much! Snort IDS is alerting on each new ransomware infection in our network.</p>
+            <p class="mb-2">Hey, you're pretty good at this security stuff. Could you help me further with what I suspect is a malicious Word document?</p>
+            <p class="mb-2">All the elves were emailed a cookie recipe right before all the infections. Take this <a href="#artDocument">document</a> with a password of <b>elves</b> and find the domain it communicates with.</p>
+            <footer class="blockquote-footer text-right">Alabaster Snowball after solving <a href="#termSnort"><b>Snort Challenge</b></a></footer>
+          </blockquote>
+          <blockquote class="blockquote border rounded p-2">
+            <p class="mb-2">On a website, it's sometimes as simple as removing characters from the end of a URL.</p>
+            <p class="mb-2">What a silly misconfiguration for leaking information!</p>
+            <footer class="blockquote-footer text-right">Alabaster Snowball after solving <a href="#termPwshmenu"><b>The Name Game</b></a></footer>
+          </blockquote>
+          <blockquote class="blockquote border rounded p-2">
+            <p class="mb-2">Yippee-Ki-Yay! Now, I have a ma... kill-switch!</p>
+            <p class="mb-2">Now that we don't have to worry about new infections, I could sure use your L337 security skills for one last thing.</p>
+            <p class="mb-2">As I mentioned, I made the mistake of analyzing the malware on my host computer and the ransomware encrypted my password database.</p>
+            <p class="mb-2">Take this zip with a memory dump and my encrypted password database, and see if you can recover my passwords.</p>
+            <p class="mb-2">One of the passwords will unlock our access to the vault so we can get in before the hackers.</p>
+            <footer class="blockquote-footer text-right">Alabaster Snowball after solving <a href="#termHoHoHoDaddy"><b>HoHoHo Daddy</b></a></footer>
+          </blockquote>
+          <blockquote class="blockquote border rounded p-2" data-toggle="tooltip" title="Actually, it's Mozart">
+            <p class="mb-2">I'm seriously impressed by your security skills!</p>
+            <p class="mb-2">How could I forget that I used <a href="#trivPianoLock">Rachmaninoff</a> as my musical password?</p>
+            <p class="mb-2">Of course I transposed it it before I entered it into my database for extra security.</p>
+            <footer class="blockquote-footer text-right">Alabaster Snowball after solving <a href="#termPianoLock"><b>Piano Lock</b></a></footer>
+          </blockquote>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container m-4 p-4">
+      <h1><a id="term"></a>Terminals</h1>
+
+      <div class="border rounded p-2 m-2">
+        <h2><a id="termViescape"></a>Essential Editor Skills</h2>
+
+        <p>This is the walkthrough for <a href="https://docker.kringlecon.com/?challenge=http2"></a> Cranberry Pi Terminal.</p>
+      </div>
+      <div class="border rounded p-2 m-2">
+        <h2><a id="termPwshmenu"></a>The Name Game</h2>
+        <p>This is the walkthrough for <a href="https://docker.kringlecon.com/?challenge=http2"></a> Cranberry Pi Terminal.</p>
+      </div>
+      <div class="border rounded p-2 m-2">
+        <h2><a id="termViminfo"></a>Lethal ForensicELFication</h2>
+        <p>This is the walkthrough for <a href="https://docker.kringlecon.com/?challenge=http2"></a> Cranberry Pi Terminal.</p>
+      </div>
+      <div class="border rounded p-2 m-2">
+        <h2><a id="termPlaintextCreds"></a>Stall Mucking Report</h2>
+        <p>This is the walkthrough for <a href="https://docker.kringlecon.com/?challenge=http2"></a> Cranberry Pi Terminal.</p>
+      </div>
+      <div class="border rounded p-2 m-2">
+        <h2><a id="termHTTP2"></a>CURLing Master</h2>
+        <p>This is the walkthrough for <a href="https://docker.kringlecon.com/?challenge=http2"></a> Cranberry Pi Terminal.</p>
+      </div>
+      <div class="border rounded p-2 m-2">
+        <h2><a id="termSprayDetect"></a>Yule Log Analysis</h2>
+        <p>This is the walkthrough for <a href="https://docker.kringlecon.com/?challenge=http2"></a> Cranberry Pi Terminal.</p>
+      </div>
+      <div class="border rounded p-2 m-2">
+        <h2><a id="termGitpasshist"></a>Dev Ops Fail</h2>
+        <p>This is the walkthrough for <a href="https://docker.kringlecon.com/?challenge=http2"></a> Cranberry Pi Terminal.</p>
+      </div>
+      <div class="border rounded p-2 m-2">
+        <h2><a id="termPythonDockerChallenge"></a>Python Escape from LA</h2>
+        <p>This is the walkthrough for <a href="https://docker.kringlecon.com/?challenge=http2"></a> Cranberry Pi Terminal.</p>
+      </div>
+      <div class="border rounded p-2 m-2">
+        <h2><a id="termVentMaze"></a>Google Ventilation</h2>
+        <p>This is the walkthrough for <a href="https://docker.kringlecon.com/?challenge=http2"></a> Cranberry Pi Terminal.</p>
+      </div>
+      <div class="border rounded p-2 m-2">
+        <h2><a id="termDoorPasscode"></a>Door Passcode</h2>
+        <p>This is the walkthrough for <a href="https://docker.kringlecon.com/?challenge=http2"></a> Cranberry Pi Terminal.</p>
+      </div>
+      <div class="border rounded p-2 m-2">
+        <h2><a id="termScanomatic"></a>Scan-O-Matic</h2>
+        <p>This is the walkthrough for <a href="https://docker.kringlecon.com/?challenge=http2"></a> Cranberry Pi Terminal.</p>
+      </div>
+      <div class="border rounded p-2 m-2">
+        <h2><a id="termSnort"></a>Snort Challenge</h2>
+        <p>This is the walkthrough for <a href="https://docker.kringlecon.com/?challenge=http2"></a> Cranberry Pi Terminal.</p>
+      </div>
+      <div class="border rounded p-2 m-2">
+        <h2><a id="termHoHoHoDaddy"></a>HoHoHo Daddy</h2>
+        <p>This is the walkthrough for <a href="https://docker.kringlecon.com/?challenge=http2"></a> Cranberry Pi Terminal.</p>
+      </div>
+      <div class="border rounded p-2 m-2">
+        <h2><a id="termPianoLock"></a>Piano Lock</h2>
+        <p>This is the walkthrough for <a href="https://docker.kringlecon.com/?challenge=http2"></a> Cranberry Pi Terminal.</p>
+      </div>
+    </div>
+
+    <div class="container m-4 p-4">
+      <h1>Artefacts/Materials</h1>
+      <h2><a id="artBadge"></a>Sample Employee Badge</h2>
+      <img src="https://www.holidayhackchallenge.com/2018/challenges/alabaster_badge.jpg">
+      <h2><a id="artDocument"></a>Chocolate Chip Cookie Document</h2>
+      <a href="https://www.holidayhackchallenge.com/2018/challenges/CHOCOLATE_CHIP_COOKIE_RECIPE.zip">CHOCOLATE_CHIP_COOKIE_RECIPE.zip</a> with docm document and a password of <b>elves</b>
+      <h2><a id="artZipFile"></a>Memory Dump and WannaCookie encrypted database</h2>
+      <a href="https://www.holidayhackchallenge.com/2018/challenges/forensic_artifacts.zip">forensic_artifacts.zip</a>
+    </div>
+
+    <script src="js/jquery-3.2.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
