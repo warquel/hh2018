@@ -113,8 +113,16 @@
     <div class="container m-4 p-4">
       <div class="jumbotron m-4">
         <h1>SANS Holiday Hack 2018 Solutions</h1>
+        <p class="lead">Report by Warren Raquel</p>
+        <a href="https://www.holidayhackchallenge.com/2018/" class="btn btn-info">Holiday Hack 2018</a>
+        <a href="https://kringlecon.com/" class="btn btn-info">Kringle Con 2018</a>
         <hr class="my-4">
-        <h3>Report by Warren Raquel</h3>
+        <p>I am an Incident Response consultant at <a href="https://www.cisco.com/c/en/us/products/security/sas-incident-response.html">Cisco Security Incident Response Services Team</a>. Last year I was one of the contributors to the <a href="https://www.holidayhackchallenge.com/2017/winners/ncsa/report.html">Grand Prize winning entry for Holiday Hack 2017, Wintered</a> while a Senior Security Engineer at the <a href="http://www.ncsa.illinois.edu/">National Center for Supercomputing Applications</a>.</p>
+        <p>Below is my solo entry for this year's Holiday Hack, Kringle Con. Provided are details for how to solve all the challenges, strategies for how to attack each challenge, and little bits of trivia I discovered along the way.</p>
+        <p>I would like to thank SANS Counter Hack on all the hard work they put into these challenges every year. The amount of detail they put into these is impressive and certainly shows their passion for educating the community on a wide range of cyber security topics. This year's challenge was fun and challenging and I look forward to what they will come up with next year.</p>
+        <p>On a personal, please visit the <a href="https://www.t1international.com/">T1International</a> site to find out more about this non-profit run <b>by</b> people with, and impacted by type 1 diabetes <b>for</b> people with type 1 diabetes. Find out more about Type 1 diabetes and how you can help those who are unable to access insulin and diabetes supplies around the world.</p>
+        <hr class="my-4">
+        <p>This year's challenge appeared be steeply rooted in the seminal classic, Die Hard. Released on July 15th, 1988 starring Bruce Willis and Alan Rickman, the story revolves around a criminal mastermind, Hans Gruber, and his taking over of the Nakatomi Plaza building over Christmas as John McClane works in the background to disrupt his plans. Hans appears to have taken over Kringle Castle and it is your job to stop him from accessing Santa's Vault! Are you up for the challenge?</p>
       </div>
     </div>
 
@@ -150,54 +158,51 @@
         <tbody>
           <tr>
             <th scope="row"><a href="#obj1">1</a></th>
-            <td>What phrase is revealed when you answer all of the KringleCon Holiday Hack History questions? <i>For hints on achieving this objective, please visit <a href="#npcBushy">Bushy Evergreen</a> and help him with the <a href="#termViescape"><b>Essential Editor Skills</b></a> Cranberry Pi terminal challenge.</i></td>
+            <td>What phrase is revealed when you answer all of the KringleCon Holiday Hack History questions?</td>
             <td class="text-nowrap" data-toggle="tooltip" title="John McClane says this to Hans Gruber after shooting him">Happy Trails</td>
           <tr>
           <tr>
             <th scope="row"><a href="#obj2">2</a></th>
-            <td>Who submitted (First Last) the rejected talk titled Data Loss for Rainbow Teams: A Path in the Darkness? Please analyze the CFP site to find out. <i>For hints on achieving this objective, please visit <a href="#npcMinty">Minty Candycane</a> and help her with the <a href="#termPwshmenu"><b>The Name Game</b></a> Cranberry Pi terminal challenge.</i></td>
+            <td>Who submitted (First Last) the rejected talk titled Data Loss for Rainbow Teams: A Path in the Darkness? Please analyze the CFP site to find out.</td>
             <td class="text-nowrap">John McClane</td>
           <tr>
           <tr>
             <th scope="row"><a href="#obj3">3</a></th>
-            <td>The KringleCon Speaker Unpreparedness room is a place for frantic speakers to furiously complete their presentations. The room is protected by a door passcode. Upon entering the correct passcode, what message is presented to the speaker? <i>For hints on achieving this objective, please visit <a href="#npcTangle">Tangle Coalbox</a> and help him with the <a href="#termViminfo"><b>Lethal ForensicELFication</b></a> Cranberry Pi terminal challenge.</i></td>
+            <td>The KringleCon Speaker Unpreparedness room is a place for frantic speakers to furiously complete their presentations. The room is protected by a door passcode. Upon entering the correct passcode, what message is presented to the speaker?</td>
             <td class="text-nowrap">Welcome unprepared speaker!</td>
           <tr>
           <tr>
             <th scope="row"><a href="#obj4">4</a></th>
-            <td>Retrieve the encrypted ZIP file from the <a href="#artGitZip">North Pole Git repository</a>. What is the password to open this file? <i>For hints on achieving this objective, please visit <a href="#npcWunorse">Wunorse Openslae</a> and help him with <a href="#termPlaintextCreds"><b>Stall Mucking Report</b></a> Cranberry Pi terminal challenge.</td>
+            <td>Retrieve the encrypted ZIP file from the <a href="#artGitZip">North Pole Git repository</a>. What is the password to open this file?</td>
             <td class="text-nowrap" data-toggle="tooltip" title="John McClane's catch phrase from Die Hard">Yippee-ki-yay</td>
           <tr>
           <tr>
             <th scope="row"><a href="#obj5">5</a></th>
-            <td>Using the data set contained in this SANS Slingshot Linux image, find a reliable path from a Kerberoastable user to the Domain Admins group. What’s the user’s logon name (in username@domain.tld format)? Remember to avoid RDP as a control path as it depends on separate local privilege escalation flaws. <i>For hints on achieving this objective, please visit <a href="#npcHolly">Holly Evergreen</a> and help her with the <a href="#termHTTP2"><b>CURLing Master</b></a> Cranberry Pi terminal challenge.</i></td>
+            <td>Using the data set contained in this SANS Slingshot Linux image, find a reliable path from a Kerberoastable user to the Domain Admins group. What’s the user’s logon name (in username@domain.tld format)? Remember to avoid RDP as a control path as it depends on separate local privilege escalation flaws.</td>
             <td class="text-nowrap">LDUBEJ00320@AD.KRINGLECASTLE.COM</td>
           <tr>
           <tr>
             <th scope="row"><a href="#obj6">6</a></th>
-            <td>Bypass the authentication mechanism associated with the room near Pepper Minstix. <a href="#artBadge">A sample employee badge is available</a>. What is the access control number revealed by the <a href="#termScanomatic">door authentication panel</a>? <i>For hints on achieving this objective, please visit <a href="#npcPepper">Pepper Minstix</a> and help her with the <a href="#termSprayDetect"><b>Yule Log Analysis</b></a> Cranberry Pi terminal challenge.</i></td>
+            <td>Bypass the authentication mechanism associated with the room near Pepper Minstix. <a href="#artBadge">A sample employee badge is available</a>. What is the access control number revealed by the <a href="#termScanomatic">door authentication panel</a>?</td>
             <td class="text-nowrap" data-toggle="tooltip" title="Release date of Die Hard">19880715</td>
           <tr>
           <tr>
             <th scope="row"><a href="#obj7">7</a></th>
-            <td>Santa uses an Elf Resources website to look for talented information security professionals. <a href="https://careers.kringlecastle.com/">Gain access to the website</a> and fetch the document <code>C:\candidate_evaluation.docx</code>. Which terrorist organization is secretly supported by the job applicant whose name begins with "K"? <i>For hints on achieving this objective, please visit <a href="#npcSparkle">Sparkle Redberry</a> and help her with the <a href="#termGitpasshist"><b>Dev Ops Fail</b></a> Cranberry Pi terminal challenge.</i></td>
+            <td>Santa uses an Elf Resources website to look for talented information security professionals. <a href="https://careers.kringlecastle.com/">Gain access to the website</a> and fetch the document <code>C:\candidate_evaluation.docx</code>. Which terrorist organization is secretly supported by the job applicant whose name begins with "<span data-toggle="tooltip" title="Krampus">K</span>"?</td>
             <td class="text-nowrap" data-toggle="tooltip" title="Akin to Fancy Bear, a suspected Russian state backed espionage group">Fancy Beaver</td>
           <tr>
           <tr>
             <th scope="row"><a href="#obj8">8</a></th>
-            <td>Santa has introduced a <a href="https://packalyzer.kringlecastle.com/">web-based packet capture and analysis tool</a> to support the elves and their information security work. Using the system, access and decrypt HTTP/2 network activity. What is the name of the song described in the document sent from Holly Evergreen to Alabaster Snowball? <i>For hints on achieving this objective, please visit <a href="#npcSugar">SugarPlum Mary</a> and help her with the <a href="#termPythonDockerChallenge"><b>Python Escape from LA</b></a> Cranberry Pi terminal challenge.</i></td>
+            <td>Santa has introduced a <a href="https://packalyzer.kringlecastle.com/">web-based packet capture and analysis tool</a> to support the elves and their information security work. Using the system, access and decrypt HTTP/2 network activity. What is the name of the song described in the document sent from Holly Evergreen to Alabaster Snowball?</td>
             <td class="text-nowrap">mary had a little lamb</td>
           <tr>
           <tr>
             <th scope="row"><a href="#obj91">9.1</a></th>
             <td>
-              Alabaster Snowball is in dire need of your help. Santa's file server has been hit with malware. Help Alabaster Snowball deal with the malware on Santa's server by completing several tasks. For hints on achieving this objective, please visit Shinny Upatree and help him with the Sleigh Bell Lottery Cranberry Pi terminal challenge.<br/>
-              <br/>
-              To start, assist Alabaster by accessing (clicking) the snort terminal below:</br>
-              </br>
-              <a href="#termSnort"><img src="images/snort.png"></a><br/>
-              </br>
-              Then create a rule that will catch all new infections. What is the success message displayed by the Snort terminal?
+              <p>Alabaster Snowball is in dire need of your help. Santa's file server has been hit with malware. Help Alabaster Snowball deal with the malware on Santa's server by completing several tasks</p>
+              <p>To start, assist Alabaster by accessing (clicking) the snort terminal below:</p>
+              <p><a href="#termSnort"><img src="images/snort.png"></a></p>
+              <p>Then create a rule that will catch all new infections. What is the success message displayed by the Snort terminal?</p>
             </td>
             <td>Snort is alerting on all ransomware and only the ransomware!</td>
           <tr>
@@ -231,6 +236,7 @@
 
     <div class="container m-4 p-4">
       <h1><a id="trivia"></a>Trivia</h1>
+      <p class="lead">Below are some of the miscellanous trivia stumbled upon during the challenge.</p>
       <table class="table">
         <thead>
           <tr>
@@ -253,7 +259,7 @@
           </tr>
           <tr>
             <td><a id="trivPianoLock"></a>Piano Lock</td>
-            <td>The piano lock is taken straight from the 1971 classic, <a href="https://www.imdb.com/title/tt0067992/>""Willy Wonka & the Chocolate Factory"</a>. <a href="https://www.youtube.com/watch?v=5g4r-FbGivk">Mr. Wonka plays a few notes on a small piano keyboard which in turn opens a giant door into his factory.</a> Mrs. Teevee casually recognizes the tune as "Rachmaninoff", however, this is incorrect. The tune is actually from the Mozart's overture to "The Marriage of Figaro". Alabaster is also incorrect in assuming it's Rachmaninoff.</td>
+            <td>The piano lock is taken straight from the 1971 classic, <a href="https://www.imdb.com/title/tt0067992/">Willy Wonka & the Chocolate Factory</a>. <a href="https://www.youtube.com/watch?v=5g4r-FbGivk">Mr. Wonka plays a few notes on a small piano keyboard which in turn, opens a giant door into his factory.</a> Mrs. Teevee casually recognizes the tune as "Rachmaninoff", however, this is incorrect. The tune is actually from the Mozart's overture to "The Marriage of Figaro". Alabaster is also incorrect in assuming it's Rachmaninoff.</td>
           </tr>
           <tr>
             <td>19880715</td>
@@ -281,6 +287,7 @@
 
     <div class="container m-4 p-4">
       <h1><a id="hints"></a>Hints</h1>
+      <p class="lead">There were actually multiple hints throughout the game, but the ones below were those provided on the <b>hints</b> section of your in-game badge.</p>
       <table class="table">
         <thead>
           <tr>
@@ -293,133 +300,132 @@
           <tr>
             <td><a href="#npcBushy">Bushy Evergreen</a></td>
             <td>Vi Editor Basics: <a href="https://kb.iu.edu/d/afcz">Indiana University Vi Tutorials</a></td>
-            <td><a href="#termViescape"><b>Essential Editor Skills</b></a></td>
+            <td><a href="#termViescape">Essential Editor Skills</a></td>
           </tr>
           <tr>
             <td><a href="#npcMinty">Minty Candycane</a></td>
             <td>SQLite3 .dump'ing: <a href="https://www.digitalocean.com/community/questions/how-do-i-dump-an-sqlite-database">SQLite3 Data Dump</a></td>
-            <td><a href="#termPwshmenu"><b>The Name Game</b></a></td>
+            <td><a href="#termPwshmenu">The Name Game</a></td>
           </tr>
           <tr>
             <td><a href="#npcMinty">Minty Candycane</a></td>
             <td>PowerShell Command Injection: <a href="https://ss64.com/ps/call.html">PowerShell Call/& Operator</a></td>
-            <td><a href="#termPwshmenu"><b>The Name Game</b></a></td>
+            <td><a href="#termPwshmenu">The Name Game</a></td>
           </tr>
           <tr>
             <td><a href="#npcMinty">Minty Candycane</a></td>
             <td><a href="https://portswigger.net/kb/issues/00600100_directory-listing">Website Directory Browsing</a></td>
-            <td><a href="#termPwshmenu"><b>The Name Game</b></a></td>
+            <td><a href="#obj2">Objective 2</a></td>
           </tr>
           <tr>
             <td><a href="#npcMinty">Minty Candycane</a></td>
             <td>Finding Browsable Directories: <i>On a website, finding browsable directories is sometimes as simple as removing characters from the end of a URL.</i></td>
-            <td><a href="#termPwshmenu"><b>The Name Game</b></a></td>
+            <td><a href="#obj2">Objective 2</a></td>
           </tr>
           <tr>
             <td><a href="#npcTangle">Tangle Coalbox</a></td>
             <td>Vim Artifacts: <a href="https://tm4n6.com/2017/11/15/forensic-relevance-of-vim-artifacts/">Forensic Relevance of Vim Artifacts</a></td>
-            <td><a href="#termViminfo"><b>Lethal ForensicELFication</b></a></td>
+            <td><a href="#termViminfo">Lethal ForensicELFication</a></td>
           </tr>
           <tr>
             <td><a href="#npcTangle">Tangle Coalbox</a></td>
             <td><a href="https://hackaday.com/2018/06/18/opening-a-ford-with-a-robot-and-the-de-bruijn-sequence/">Opening a Ford with a Robot and the de Bruijn Sequence</a></td>
-            <td><a href="#termDoorPasscode"><b>Door Passcode</b></a></td>
+            <td><a href="#obj3">Objective 3</a></td>
           </tr>
           <tr>
             <td><a href="#npcTangle">Tangle Coalbox</a></td>
-            <td><a href="de Bruijn Sequence Generator">http://www.hakank.org/comb/debruijn.cgi</a></td>
-            <td><a href="#termDoorPasscode"><b>Door Passcode</b></a></td>
-          </tr>
-
-          <tr>
-            <td><a href="#npcHolly">Holly Evergreen</a></td>
-            <td><a href="https://youtu.be/gOpsLiJFI1o">Bloodhound Demo</a></td>
-            <td>app</td>
+            <td><a href="http://www.hakank.org/comb/debruijn.cgi">de Bruijn Sequence Generator</a></td>
+            <td><a href="#obj3">Objective 3</a></td>
           </tr>
           <tr>
             <td><a href="#npcWunorse">Wunorse Openslae</a></td>
             <td>Plaintext Credentials in Commands: <a href="https://blog.rackspace.com/passwords-on-the-command-line-visible-to-ps">Keeping Command Line Passwords Out of PS</a></td>
-            <td>app</td>
-          </tr>
-          <tr>
-            <td><a href="#npcHolly">Holly Evergreen</a></td>
-            <td><a href="https://developers.google.com/web/fundamentals/performance/http2/">HTTP/2.0 Basics</a></td>
-            <td>app</td>
-          </tr>
-          <tr>
-            <td><a href="#npcShinny">Shinny Upatree</a></td>
-            <td><a href="https://pen-testing.sans.org/blog/2018/12/11/using-gdb-to-call-random-functions">Using gdb to Call Random Functions!</a></td>
-            <td>app</td>
-          </tr>
-          <tr>
-            <td><a href="#npcSparkle">Sparkle Redberry</a></td>
-            <td><a href="https://www.owasp.org/index.php/CSV_Injection">OWASP CSV Injection Page</a></td>
-            <td>app</td>
+            <td><a href="#termPlaintextCreds">Stall Mucking Report</a></td>
           </tr>
           <tr>
             <td><a href="#npcWunorse">Wunorse Openslae</a></td>
             <td><a href="https://youtu.be/myKrWVaq3Cw?t=185">Brian Hostetler is giving a great Trufflehog talk upstairs</a></td>
-            <td>app</td>
-          </tr>
-          <tr>
-            <td><a href="#npcPepper">Pepper Minstix</a></td>
-            <td>Password Spraying: <a href="https://securityweekly.com/2017/07/21/tsw11/">Password Spraying with MailSniper.ps1</a></td>
-            <td>app</td>
-          </tr>
-          <tr>
-            <td><a href="#npcSparkle">Sparkle Redberry</a></td>
-            <td>CSV Injection Talk: <a href="https://www.youtube.com/watch?v=Z3qpcKVv2Bg">Somehow Brian Hostetler is giving a talk on CSV injection WHILE he's giving a talk on Trufflehog. Whatta' guy!</a></td>
-            <td>app</td>
-          </tr>
-          <tr>
-            <td><a href="#npcSparkle">Sparkle Redberry</a></td>
-            <td><a href="https://gist.github.com/hofmannsven/6814451">Git Cheat Sheet</a></td>
-            <td>app</td>
-          </tr>
-          <tr>
-            <td><a href="#npcPepper">Pepper Minstix</a></td>
-            <td><a href="https://www.owasp.org/index.php/SQL_Injection_Bypassing_WAF#Auth_Bypass">SQL Injection</a></td>
-            <td>app</td>
-          </tr>
-          <tr>
-            <td><a href="#npcAlabaster">Alabaster Snowball</a></td>
-            <td>Malware Reverse Engineering: <a href="https://www.youtube.com/watch?v=wd12XRq2DNk">Whoa, Chris Davis' talk on PowerShell malware is crazy pants! You should check it out!</a></td>
-            <td>app</td>
-          </tr>
-          <tr>
-            <td><a href="#npcPepper">Pepper Minstix</a></td>
-            <td>Barcode Creation: <a href="https://www.the-qrcode-generator.com/">Creating QR Codes</a></td>
-            <td>app</td>
-          </tr>
-          <tr>
-            <td><a href="#npcSugar">SugarPlum Mary</a></td>
-            <td>Python Escape: <a href="https://www.youtube.com/watch?v=ZVx2Sxl3B9c">Check out Mark Baggett's talk upstairs</a></td>
-            <td>app</td>
-          </tr>
-          <tr>
-            <td><a href="#npcSparkle">Sparkle Redberry</a></td>
-            <td>Finding Passwords in Git: <a href="https://en.internetwache.org/dont-publicly-expose-git-or-how-we-downloaded-your-websites-sourcecode-an-analysis-of-alexas-1m-28-07-2015/">Search Git for Passwords</a></td>
-            <td>app</td>
-          </tr>
-          <tr>
-            <td><a href="#npcAlabaster">Alabaster Snowball</a></td>
-            <td>Dropper Download: Word docm macros can be extracted using <a href="https://github.com/decalage2/oletools/wiki/olevba">olevba</a>. Perhaps we can use this to grab the ransomware source.</td>
-            <td>app</td>
-          </tr>
-          <tr>
-            <td><a href="#npcHolly">Holly Evergreen</a></td>
-            <td><a href="https://github.com/BloodHoundAD/BloodHound">Bloodhound Tool</a></td>
-            <td>app</td>
+            <td><a href="#obj4">Objective 4</a></td>
           </tr>
           <tr>
             <td><a href="#npcWunorse">Wunorse Openslae</a></td>
             <td><a href="https://github.com/dxa4481/truffleHog">Trufflehog Tool</a></td>
-            <td>app</td>
+            <td><a href="#obj4">Objective 4</a></td>
+          </tr>
+          <tr>
+            <td><a href="#npcHolly">Holly Evergreen</a></td>
+            <td><a href="https://developers.google.com/web/fundamentals/performance/http2/">HTTP/2.0 Basics</a></td>
+            <td><a href="#termHTTP2">CURLing Master</a></td>
+          </tr>
+          <tr>
+            <td><a href="#npcHolly">Holly Evergreen</a></td>
+            <td><a href="https://github.com/BloodHoundAD/BloodHound">Bloodhound Tool</a></td>
+            <td><a href="#obj5">Objective 5</a></td>
+          </tr>
+          <tr>
+            <td><a href="#npcHolly">Holly Evergreen</a></td>
+            <td><a href="https://youtu.be/gOpsLiJFI1o">Bloodhound Demo</a></td>
+            <td><a href="#obj5">Objective 5</a></td>
+          </tr>
+          <tr>
+            <td><a href="#npcPepper">Pepper Minstix</a></td>
+            <td>Password Spraying: <a href="https://securityweekly.com/2017/07/21/tsw11/">Password Spraying with MailSniper.ps1</a></td>
+            <td><a href="#termSprayDetect">Yule Log Analysis</a></td>
+          </tr>
+          <tr>
+            <td><a href="#npcPepper">Pepper Minstix</a></td>
+            <td><a href="https://www.owasp.org/index.php/SQL_Injection_Bypassing_WAF#Auth_Bypass">SQL Injection</a></td>
+            <td><a href="#obj6">Objective 6</a></td>
+          </tr>
+          <tr>
+            <td><a href="#npcPepper">Pepper Minstix</a></td>
+            <td>Barcode Creation: <a href="https://www.the-qrcode-generator.com/">Creating QR Codes</a></td>
+            <td><a href="#obj6">Objective 6</a></td>
+          </tr>
+          <tr>
+            <td><a href="#npcSparkle">Sparkle Redberry</a></td>
+            <td><a href="https://gist.github.com/hofmannsven/6814451">Git Cheat Sheet</a></td>
+            <td><a href="#termGitpasshist">Dev Ops Fail</a></td>
+          </tr>
+          <tr>
+            <td><a href="#npcSparkle">Sparkle Redberry</a></td>
+            <td>Finding Passwords in Git: <a href="https://en.internetwache.org/dont-publicly-expose-git-or-how-we-downloaded-your-websites-sourcecode-an-analysis-of-alexas-1m-28-07-2015/">Search Git for Passwords</a></td>
+            <td><a href="#termGitpasshist">Dev Ops Fail</a></td>
+          </tr>
+          <tr>
+            <td><a href="#npcSparkle">Sparkle Redberry</a></td>
+            <td><a href="https://www.owasp.org/index.php/CSV_Injection">OWASP CSV Injection Page</a></td>
+            <td><a href="#obj7">Objective 7</a></td>
+          </tr>
+          <tr>
+            <td><a href="#npcSparkle">Sparkle Redberry</a></td>
+            <td>CSV Injection Talk: <a href="https://www.youtube.com/watch?v=Z3qpcKVv2Bg">Somehow Brian Hostetler is giving a talk on CSV injection WHILE he's giving a talk on Trufflehog. Whatta' guy!</a></td>
+            <td><a href="#obj7">Objective 7</a></td>
+          </tr>
+          <tr>
+            <td><a href="#npcSugar">SugarPlum Mary</a></td>
+            <td>Python Escape: <a href="https://www.youtube.com/watch?v=ZVx2Sxl3B9c">Check out Mark Baggett's talk upstairs</a></td>
+            <td><a href="#termPythonDockerChallenge">Python Escape from LA</a></td>
           </tr>
           <tr>
             <td><a href="#npcSugar">SugarPlum Mary</a></td>
             <td>HTTP/2.0 Intro and Decryption: <a href="https://www.youtube.com/watch?v=9E-8HkDs-kQ">Did you see Chris' & Chris' talk on HTTP/2.0?</a></td>
-            <td>app</td>
+            <td><a href="#obj8">Objective 8</a></td>
+          </tr>
+          <tr>
+            <td><a href="#npcShinny">Shinny Upatree</a></td>
+            <td><a href="https://pen-testing.sans.org/blog/2018/12/11/using-gdb-to-call-random-functions">Using gdb to Call Random Functions!</a></td>
+            <td><a href="#termUnlinkedFunction">Sleigh Bell Lottery</a></td>
+          </tr>
+          <tr>
+            <td><a href="#npcAlabaster">Alabaster Snowball</a></td>
+            <td>Dropper Download: Word docm macros can be extracted using <a href="https://github.com/decalage2/oletools/wiki/olevba">olevba</a>. Perhaps we can use this to grab the ransomware source.</td>
+            <td><a href="#obj92">Objective 9.2</a></td>
+          </tr>
+          <tr>
+            <td><a href="#npcAlabaster">Alabaster Snowball</a></td>
+            <td>Malware Reverse Engineering: <a href="https://www.youtube.com/watch?v=wd12XRq2DNk">Whoa, Chris Davis' talk on PowerShell malware is crazy pants! You should check it out!</a></td>
+            <td><a href="#obj93">Objective 9.3</a></td>
           </tr>
         </tbody>
       </table>
@@ -452,7 +458,7 @@
 
       <div class="border p-2 m-2">
         <h2><a id="obj5"></a>Objective 5</h2>
-        <p>Using the data set contained in this <a href="https://download.holidayhackchallenge.com/HHC2018-DomainHack_2018-12-19.ova">SANS Slingshot Linux image</a>, find a reliable path from a Kerberoastable user to the Domain Admins group. What’s the user’s logon name (in username@domain.tld format)? Remember to avoid RDP as a control path as it depends on separate local privilege escalation flaws. <i>For hints on achieving this objective, please visit <a href="#npcHolly">Holly Evergreen</a> and help her with the <a href="#termHTTP2"><b>CURLing Master</b></a> Cranberry Pi terminal challenge.</i></p>
+        <p>Using the data set contained in this <a href="#artSling">SANS Slingshot Linux image</a>, find a reliable path from a Kerberoastable user to the Domain Admins group. What’s the user’s logon name (in username@domain.tld format)? Remember to avoid RDP as a control path as it depends on separate local privilege escalation flaws. <i>For hints on achieving this objective, please visit <a href="#npcHolly">Holly Evergreen</a> and help her with the <a href="#termHTTP2"><b>CURLing Master</b></a> Cranberry Pi terminal challenge.</i></p>
       </div>
 
       <div class="border p-2 m-2">
@@ -472,7 +478,7 @@
 
       <div class="border p-2 m-2">
         <h2><a id="obj91"></a>Objective 9.1</h2>
-        <p>Alabaster Snowball is in dire need of your help. Santa's file server has been hit with malware. Help Alabaster Snowball deal with the malware on Santa's server by completing several tasks. For hints on achieving this objective, please visit Shinny Upatree and help him with the Sleigh Bell Lottery Cranberry Pi terminal challenge.</p>
+        <p>Alabaster Snowball is in dire need of your help. Santa's file server has been hit with malware. Help Alabaster Snowball deal with the malware on Santa's server by completing several tasks. <i>For hints on achieving this objective, please visit <a href="#npcShinny">Shinny Upatree</a> and help him with the <a href="#termUnlinkedFunction"><b>Sleigh Bell Lottery</b></a> Cranberry Pi terminal challenge.</i></p>
 
         <p>To start, assist Alabaster by accessing (clicking) the snort terminal below:</p>
 
@@ -609,8 +615,16 @@
 
       <div class="row border rounded p-2 m-2">
         <div class="col-3">
-          <h2><a id="npcBushy"></a>Bushy Evergreen</h2>
-          <img src="images/elf-bushy-evergreen.png">
+          <div class="dropdown">
+            <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a id="npcBushy"></a>Bushy Evergreen
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#obj1">Objective 1</a>
+              <a class="dropdown-item" href="#termViescape">Essential Editor Skills</a>
+            </div>
+          </div>
+          <p><img src="images/elf-bushy-evergreen.png"></p>
         </div>
         <div class="col-9">
           <blockquote class="blockquote border rounded p-2">
@@ -631,7 +645,15 @@
 
       <div class="row border rounded p-2 m-2">
         <div class="col-3">
-          <h2><a id="npcMinty"></a>Minty Candycane</h2>
+          <div class="dropdown">
+            <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a id="npcMinty"></a>Minty Candycane
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#obj2">Objective 2</a>
+              <a class="dropdown-item" href="#termPwshmenu">The Name Game</a>
+            </div>
+          </div>
           <img src="images/elf-minty-candycane.png">
         </div>
         <div class="col-9">
@@ -659,7 +681,15 @@
 
       <div class="row border rounded p-2 m-2">
         <div class="col-3">
-          <h2><a id="npcTangle"></a>Tangle Coalbox</h2>
+          <div class="dropdown">
+            <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a id="npcTangle"></a>Tangle Coalbox
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#obj3">Objective 3</a>
+              <a class="dropdown-item" href="#termViminfo">Lethal ForensicELFication</a>
+            </div>
+          </div>
           <img src="images/elf-tangle-coalbox.png">
         </div>
         <div class="col-9">
@@ -687,7 +717,15 @@
 
       <div class="row border rounded p-2 m-2">
         <div class="col-3">
-          <h2><a id="npcWunorse"></a>Wunorse Openslae</h2>
+          <div class="dropdown">
+            <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a id="npcWunorse"></a>Wunorse Openslae
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#obj4">Objective 4</a>
+              <a class="dropdown-item" href="#termPlaintextCreds">Stall Mucking Report</a>
+            </div>
+          </div>
           <img src="images/elf-wunorse-openslae.png">
         </div>
         <div class="col-9">
@@ -717,7 +755,15 @@
 
       <div class="row border rounded p-2 m-2">
         <div class="col-3">
-          <h2><a id="npcHolly"></a>Holly Evergreen</h2>
+          <div class="dropdown">
+            <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a id="npcHolly"></a>Holly Evergreen
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#obj5">Objective 5</a>
+              <a class="dropdown-item" href="#termHTTP2">CURLing Master</a>
+            </div>
+          </div>
           <img src="images/elf-holly-evergreen.png">
         </div>
         <div class="col-9">
@@ -741,7 +787,16 @@
 
       <div class="row border rounded p-2 m-2">
         <div class="col-3">
-          <h2><a id="npcPepper"></a>Pepper Minstix</h2>
+          <div class="dropdown">
+            <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a id="npcPepper"></a>Pepper Minstix
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#obj6">Objective 6</a>
+              <a class="dropdown-item" href="#termSprayDetect">Yule Log Analysis</a>
+              <a class="dropdown-item" href="#termScanomatic">Scan-O-Matic</a>
+            </div>
+          </div>
           <img src="images/elf-pepper-minstix.png">
         </div>
         <div class="col-9">
@@ -765,7 +820,15 @@
 
       <div class="row border rounded p-2 m-2">
         <div class="col-3">
-          <h2><a id="npcSparkle"></a>Sparkle Redberry</h2>
+          <div class="dropdown">
+            <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a id="npcSparkle"></a>Sparkle Redberry
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#obj7">Objective 7</a>
+              <a class="dropdown-item" href="#termGitpasshist">Dev Ops Fail</a>
+            </div>
+          </div>
           <img src="images/elf-sparkle-redberry.png">
         </div>
         <div class="col-9">
@@ -789,7 +852,15 @@
 
       <div class="row border rounded p-2 m-2">
         <div class="col-3">
-          <h2><a id="npcSugar"></a>SugarPlum Mary</h2>
+          <div class="dropdown">
+            <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a id="npcSugar"></a>SugarPlum Mary
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#obj8">Objective 8</a>
+              <a class="dropdown-item" href="#termPythonDockerChallenge">Python Escape from LA</a>
+            </div>
+          </div>
           <img src="images/elf-sugarplum-mary.png">
         </div>
         <div class="col-9">
@@ -814,7 +885,58 @@
 
       <div class="row border rounded p-2 m-2">
         <div class="col-3">
+          <div class="dropdown">
+            <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a id="npcShinny"></a>Shinny Upatree
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#obj91">Objective 9.1</a>
+              <a class="dropdown-item" href="#termUnlinkedFunction">Sleigh Bell Lottery</a>
+            </div>
+          </div>
+          <img src="images/elf-shinny-upatree.png">
+        </div>
+        <div class="col-9">
+          <blockquote class="blockquote border rounded p-2">
+            <p class="mb-2">Hey! Mind giving ole' Shinny Upatree some help? There's a contest I HAVE to win.</p>
+            <p class="mb-2">As long as no one else wins first, I can just keep trying to win the Sleigh Bell Lotto, but this could take forever!</p>
+            <p class="mb-2">I'll bet the GNU Debugger can help us. With the PEDA modules installed, it can be prettier. I mean easier.</p>
+            <footer class="blockquote-footer text-right">Shinny Upatree before solving <a href="#termUnlinkedFunction"><b>Sleigh Bell Lottery</b></a></footer>
+          </blockquote>
+          <blockquote class="blockquote border rounded p-2">
+            <p class="mb-2">Sweet candy goodness - I win! Thank you so much!</p>
+            <p class="mb-2">Have you heard that Kringle Castle was hit by a new ransomware called Wannacookie?</p>
+            <p class="mb-2">Several elves reported receiving a cookie recipe Word doc. When opened, a PowerShell screen flashed by and their files were encrypted.</p>
+            <p class="mb-2">Many elves were affected, so Alabaster went to go see if he could help out.</p>
+            <p class="mb-2">I hope Alabaster watched the <a href="http://www.youtube.com/watch?v=wd12XRq2DNk">PowerShell Malware talk at KringleCon</a> before he tried analyzing Wannacookie on his computer.</p>
+            <p class="mb-2">An elf I follow online said he analyzed Wannacookie and that it communicates over DNS.</p>
+            <p class="mb-2">He also said that Wannacookie transfers files over DNS and that it looks like it grabs a public key this way.</p>
+            <p class="mb-2">Another recent ransomware made it possible to retrieve crypto keys from memory. Hopefully the same is true for Wannacookie!</p>
+            <p class="mb-2">Of course, this all depends how the key was encrypted and managed in memory. Proper public key encryption requires a private key to decrypt.</p>
+            <p class="mb-2">Perhaps there is a flaw in the wannacookie author's DNS server that we can manipulate to retrieve what we need.</p>
+            <p class="mb-2">If so, we can retrieve our keys from memory, decrypt the key, and then decrypt our ransomed files.</p>
+            <footer class="blockquote-footer text-right">Shinny Upatree after solving <a href="#termUnlinkedFunction"><b>Sleigh Bell Lottery</b></a></footer>
+          </blockquote>
+        </div>
+      </div>
+
+      <div class="row border rounded p-2 m-2">
+        <div class="col-3">
           <h2><a id="npcAlabaster"></a>Alabaster Snowball</h2>
+          <div class="dropdown">
+            <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a id="npcAlabaster"></a>Alabaster Snowball
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#obj92">Objective 9.2</a>
+              <a class="dropdown-item" href="#obj93">Objective 9.3</a>
+              <a class="dropdown-item" href="#obj94">Objective 9.4</a>
+              <a class="dropdown-item" href="#obj10">Objective 10</a>
+              <a class="dropdown-item" href="#termSnort">Snort Challenge</a>
+              <a class="dropdown-item" href="#termHoHoHoDaddy">HoHoHo Daddy</a>
+              <a class="dropdown-item" href="#termPianoLock">Piano Lock</a>
+            </div>
+          </div>
           <img src="images/elf-alabaster-snowball.png">
         </div>
         <div class="col-9">
@@ -859,71 +981,115 @@
 
       <div class="border rounded p-2 m-2">
         <h2><a id="termViescape"></a>Essential Editor Skills</h2>
-
-        <p>This is the walkthrough for <a href="https://docker.kringlecon.com/?challenge=http2"></a> Cranberry Pi Terminal.</p>
+        <div id="divViescape" style="display: inline-block" onclick='if (!$(this).html().includes("iframe")) {$(this).html(atob("PGlmcmFtZSBzdHlsZT0ibWluLXdpZHRoOiA4MDBweDsgbWF4LXdpZHRoOiAxMDAwcHg7IGhlaWdodDogODAwcHg7IGJvcmRlcjogbm9uZTsiIHNyYz0iaHR0cHM6Ly9kb2NrZXIua3JpbmdsZWNvbi5jb20vP2NoYWxsZW5nZT12aWVzY2FwZSZhbXA7aWQ9ZmFsc2U7aWQ9ZmFsc2UiPjwvaWZyYW1lPjxwPjxhIGhyZWY9IiMhIiBjbGFzcz0iYnRuIGJ0bi1pbmZvIiAgb25tb3VzZXVwPSIkKCcjZGl2Vmllc2NhcGUnKS5odG1sKGF0b2IoJ1BHRWdhSEpsWmowaUl5RWlJR05zWVhOelBTSmlkRzRnWW5SdUxXbHVabThpUGtOc2FXTnJJR2hsY21VZ2RHOGdQR0krYjNCbGJqd3ZZajRnUlhOelpXNTBhV0ZzSUVWa2FYUnZjaUJUYTJsc2JITWdWR1Z5YldsdVlXdzhMMkUrJykpIj5DbGljayBoZXJlIHRvIDxiPmNsb3NlPC9iPiBFc3NlbnRpYWwgRWRpdG9yIFNraWxscyBUZXJtaW5hbDwvYT48L3A+"))}'>
+          <a href="#!" class="btn btn-info">Click here to <b>open</b> Essential Editor Skills Terminal</a>
+        </div>
       </div>
       <div class="border rounded p-2 m-2">
         <h2><a id="termPwshmenu"></a>The Name Game</h2>
-        <p>This is the walkthrough for <a href="https://docker.kringlecon.com/?challenge=http2"></a> Cranberry Pi Terminal.</p>
+        <div id="divPwshmenu" style="display: inline-block" onclick='if (!$(this).html().includes("iframe")) {$(this).html(atob("PGlmcmFtZSBzdHlsZT0ibWluLXdpZHRoOiA4MDBweDsgbWF4LXdpZHRoOiAxMDAwcHg7IGhlaWdodDogODAwcHg7IGJvcmRlcjogbm9uZTsiIHNyYz0iaHR0cHM6Ly9kb2NrZXIua3JpbmdsZWNvbi5jb20vP2NoYWxsZW5nZT1wd3NobWVudSZhbXA7aWQ9ZmFsc2U7aWQ9ZmFsc2UiPjwvaWZyYW1lPjxwPjxhIGhyZWY9IiMhIiBjbGFzcz0iYnRuIGJ0bi1pbmZvIiAgb25tb3VzZXVwPSIkKCcjZGl2UHdzaG1lbnUnKS5odG1sKGF0b2IoJ1BHRWdhSEpsWmowaUl5RWlJR05zWVhOelBTSmlkRzRnWW5SdUxXbHVabThpUGtOc2FXTnJJR2hsY21VZ2RHOGdQR0krYjNCbGJqd3ZZajRnVkdobElFNWhiV1VnUjJGdFpTQlVaWEp0YVc1aGJEd3ZZVDQ9JykpIj5DbGljayBoZXJlIHRvIDxiPmNsb3NlPC9iPiBUaGUgTmFtZSBHYW1lIFRlcm1pbmFsPC9hPjwvcD4="))}'>
+          <a href="#!" class="btn btn-info">Click here to <b>open</b> The Name Game Terminal</a>
+        </div>
       </div>
       <div class="border rounded p-2 m-2">
         <h2><a id="termViminfo"></a>Lethal ForensicELFication</h2>
-        <p>This is the walkthrough for <a href="https://docker.kringlecon.com/?challenge=http2"></a> Cranberry Pi Terminal.</p>
+        <div id="divViminfo" style="display: inline-block" onclick='if (!$(this).html().includes("iframe")) {$(this).html(atob("PGlmcmFtZSBzdHlsZT0ibWluLXdpZHRoOiA4MDBweDsgbWF4LXdpZHRoOiAxMDAwcHg7IGhlaWdodDogODAwcHg7IGJvcmRlcjogbm9uZTsiIHNyYz0iaHR0cHM6Ly9kb2NrZXIua3JpbmdsZWNvbi5jb20vP2NoYWxsZW5nZT12aW1pbmZvJmFtcDtpZD1mYWxzZTtpZD1mYWxzZSI+PC9pZnJhbWU+PHA+PGEgaHJlZj0iIyEiIGNsYXNzPSJidG4gYnRuLWluZm8iICBvbm1vdXNldXA9IiQoJyNkaXZWaW1pbmZvJykuaHRtbChhdG9iKCdQR0VnYUhKbFpqMGlJeUVpSUdOc1lYTnpQU0ppZEc0Z1luUnVMV2x1Wm04aVBrTnNhV05ySUdobGNtVWdkRzhnUEdJK2IzQmxiand2WWo0Z1RHVjBhR0ZzSUVadmNtVnVjMmxqUlV4R2FXTmhkR2x2YmlCVVpYSnRhVzVoYkR3dllUND0nKSkiPkNsaWNrIGhlcmUgdG8gPGI+Y2xvc2U8L2I+IExldGhhbCBGb3JlbnNpY0VMRmljYXRpb24gVGVybWluYWw8L2E+PC9wPg=="))}'>
+          <a href="#!" class="btn btn-info">Click here to <b>open</b> Lethal ForensicELFication Terminal</a>
+        </div>
       </div>
       <div class="border rounded p-2 m-2">
         <h2><a id="termPlaintextCreds"></a>Stall Mucking Report</h2>
-        <p>This is the walkthrough for <a href="https://docker.kringlecon.com/?challenge=http2"></a> Cranberry Pi Terminal.</p>
+        <div id="divPlaintextCreds" style="display: inline-block" onclick='if (!$(this).html().includes("iframe")) {$(this).html(atob("PGlmcmFtZSBzdHlsZT0ibWluLXdpZHRoOiA4MDBweDsgbWF4LXdpZHRoOiAxMDAwcHg7IGhlaWdodDogODAwcHg7IGJvcmRlcjogbm9uZTsiIHNyYz0iaHR0cHM6Ly9kb2NrZXIua3JpbmdsZWNvbi5jb20vP2NoYWxsZW5nZT1wbGFpbnRleHQtY3JlZHMmYW1wO2lkPWZhbHNlO2lkPWZhbHNlIj48L2lmcmFtZT48cD48YSBocmVmPSIjISIgY2xhc3M9ImJ0biBidG4taW5mbyIgIG9ubW91c2V1cD0iJCgnI2RpdlBsYWludGV4dENyZWRzJykuaHRtbChhdG9iKCdQR0VnYUhKbFpqMGlJeUVpSUdOc1lYTnpQU0ppZEc0Z1luUnVMV2x1Wm04aVBrTnNhV05ySUdobGNtVWdkRzhnUEdJK2IzQmxiand2WWo0Z1UzUmhiR3dnVFhWamEybHVaeUJTWlhCdmNuUWdWR1Z5YldsdVlXdzhMMkUrJykpIj5DbGljayBoZXJlIHRvIDxiPmNsb3NlPC9iPiBTdGFsbCBNdWNraW5nIFJlcG9ydCBUZXJtaW5hbDwvYT48L3A+"))}'>
+          <a href="#!" class="btn btn-info">Click here to <b>open</b> Stall Mucking Report Terminal</a>
+        </div>
       </div>
       <div class="border rounded p-2 m-2">
         <h2><a id="termHTTP2"></a>CURLing Master</h2>
-        <p>This is the walkthrough for <a href="https://docker.kringlecon.com/?challenge=http2"></a> Cranberry Pi Terminal.</p>
+        <div id="divHTTP2" style="display: inline-block" onclick='if (!$(this).html().includes("iframe")) {$(this).html(atob("PGlmcmFtZSBzdHlsZT0ibWluLXdpZHRoOiA4MDBweDsgbWF4LXdpZHRoOiAxMDAwcHg7IGhlaWdodDogODAwcHg7IGJvcmRlcjogbm9uZTsiIHNyYz0iaHR0cHM6Ly9kb2NrZXIua3JpbmdsZWNvbi5jb20vP2NoYWxsZW5nZT1odHRwMiZhbXA7aWQ9ZmFsc2U7aWQ9ZmFsc2UiPjwvaWZyYW1lPjxwPjxhIGhyZWY9IiMhIiBjbGFzcz0iYnRuIGJ0bi1pbmZvIiAgb25tb3VzZXVwPSIkKCcjZGl2SFRUUDInKS5odG1sKGF0b2IoJ1BHRWdhSEpsWmowaUl5RWlJR05zWVhOelBTSmlkRzRnWW5SdUxXbHVabThpUGtOc2FXTnJJR2hsY21VZ2RHOGdQR0krYjNCbGJqd3ZZajRnUTFWU1RHbHVaeUJOWVhOMFpYSWdWR1Z5YldsdVlXdzhMMkUrJykpIj5DbGljayBoZXJlIHRvIDxiPmNsb3NlPC9iPiBDVVJMaW5nIE1hc3RlciBUZXJtaW5hbDwvYT48L3A+"))}'>
+          <a href="#!" class="btn btn-info">Click here to <b>open</b> CURLing Master Terminal</a>
+        </div>
       </div>
       <div class="border rounded p-2 m-2">
         <h2><a id="termSprayDetect"></a>Yule Log Analysis</h2>
-        <p>This is the walkthrough for <a href="https://docker.kringlecon.com/?challenge=http2"></a> Cranberry Pi Terminal.</p>
+        <div id="divSprayDetect" style="display: inline-block" onclick='if (!$(this).html().includes("iframe")) {$(this).html(atob("PGlmcmFtZSBzdHlsZT0ibWluLXdpZHRoOiA4MDBweDsgbWF4LXdpZHRoOiAxMDAwcHg7IGhlaWdodDogODAwcHg7IGJvcmRlcjogbm9uZTsiIHNyYz0iaHR0cHM6Ly9kb2NrZXIua3JpbmdsZWNvbi5jb20vP2NoYWxsZW5nZT1zcHJheS1kZXRlY3QmYW1wO2lkPWZhbHNlO2lkPWZhbHNlIj48L2lmcmFtZT48cD48YSBocmVmPSIjISIgY2xhc3M9ImJ0biBidG4taW5mbyIgIG9ubW91c2V1cD0iJCgnI2RpdlNwcmF5RGV0ZWN0JykuaHRtbChhdG9iKCdQR0VnYUhKbFpqMGlJeUVpSUdOc1lYTnpQU0ppZEc0Z1luUnVMV2x1Wm04aVBrTnNhV05ySUdobGNtVWdkRzhnUEdJK2IzQmxiand2WWo0Z1dYVnNaU0JNYjJjZ1FXNWhiSGx6YVhNZ1ZHVnliV2x1WVd3OEwyRSsnKSkiPkNsaWNrIGhlcmUgdG8gPGI+Y2xvc2U8L2I+IFl1bGUgTG9nIEFuYWx5c2lzIFRlcm1pbmFsPC9hPjwvcD4="))}'>
+          <a href="#!" class="btn btn-info">Click here to <b>open</b> Yule Log Analysis Terminal</a>
+        </div>
       </div>
       <div class="border rounded p-2 m-2">
         <h2><a id="termGitpasshist"></a>Dev Ops Fail</h2>
-        <p>This is the walkthrough for <a href="https://docker.kringlecon.com/?challenge=http2"></a> Cranberry Pi Terminal.</p>
+        <div id="divGitpasshist" style="display: inline-block" onclick='if (!$(this).html().includes("iframe")) {$(this).html(atob("PGlmcmFtZSBzdHlsZT0ibWluLXdpZHRoOiA4MDBweDsgbWF4LXdpZHRoOiAxMDAwcHg7IGhlaWdodDogODAwcHg7IGJvcmRlcjogbm9uZTsiIHNyYz0iaHR0cHM6Ly9kb2NrZXIua3JpbmdsZWNvbi5jb20vP2NoYWxsZW5nZT1naXRwYXNzaGlzdCZhbXA7aWQ9ZmFsc2U7aWQ9ZmFsc2UiPjwvaWZyYW1lPjxwPjxhIGhyZWY9IiMhIiBjbGFzcz0iYnRuIGJ0bi1pbmZvIiAgb25tb3VzZXVwPSIkKCcjZGl2R2l0cGFzc2hpc3QnKS5odG1sKGF0b2IoJ1BHRWdhSEpsWmowaUl5RWlJR05zWVhOelBTSmlkRzRnWW5SdUxXbHVabThpUGtOc2FXTnJJR2hsY21VZ2RHOGdQR0krYjNCbGJqd3ZZajRnUkdWMklFOXdjeUJHWVdsc0lGUmxjbTFwYm1Gc1BDOWhQZz09JykpIj5DbGljayBoZXJlIHRvIDxiPmNsb3NlPC9iPiBEZXYgT3BzIEZhaWwgVGVybWluYWw8L2E+PC9wPg=="))}'>
+          <a href="#!" class="btn btn-info">Click here to <b>open</b> Dev Ops Fail Terminal</a>
+        </div>
       </div>
       <div class="border rounded p-2 m-2">
         <h2><a id="termPythonDockerChallenge"></a>Python Escape from LA</h2>
-        <p>This is the walkthrough for <a href="https://docker.kringlecon.com/?challenge=http2"></a> Cranberry Pi Terminal.</p>
+        <div id="divPythonDockerChallenge" style="display: inline-block" onclick='if (!$(this).html().includes("iframe")) {$(this).html(atob("PGlmcmFtZSBzdHlsZT0ibWluLXdpZHRoOiA4MDBweDsgbWF4LXdpZHRoOiAxMDAwcHg7IGhlaWdodDogODAwcHg7IGJvcmRlcjogbm9uZTsiIHNyYz0iaHR0cHM6Ly9kb2NrZXIua3JpbmdsZWNvbi5jb20vP2NoYWxsZW5nZT1weXRob25fZG9ja2VyX2NoYWxsZW5nZSZhbXA7aWQ9ZmFsc2U7aWQ9ZmFsc2UiPjwvaWZyYW1lPjxwPjxhIGhyZWY9IiMhIiBjbGFzcz0iYnRuIGJ0bi1pbmZvIiAgb25tb3VzZXVwPSIkKCcjZGl2UHl0aG9uRG9ja2VyQ2hhbGxlbmdlJykuaHRtbChhdG9iKCdQR0VnYUhKbFpqMGlJeUVpSUdOc1lYTnpQU0ppZEc0Z1luUnVMV2x1Wm04aVBrTnNhV05ySUdobGNtVWdkRzhnUEdJK2IzQmxiand2WWo0Z1VIbDBhRzl1SUVWelkyRndaU0JtY205dElFeEJJRlJsY20xcGJtRnNQQzloUGc9PScpKSI+Q2xpY2sgaGVyZSB0byA8Yj5jbG9zZTwvYj4gUHl0aG9uIEVzY2FwZSBmcm9tIExBIFRlcm1pbmFsPC9hPjwvcD4="))}'>
+          <a href="#!" class="btn btn-info">Click here to <b>open</b> Python Escape from LA Terminal</a>
+        </div>
+      </div>
+      <div class="border rounded p-2 m-2">
+        <h2><a id="termUnlinkedFunction"></a>Sleigh Bell Lottery</h2>
+        <div id="divUnlinkedFunction" style="display: inline-block" onclick='if (!$(this).html().includes("iframe")) {$(this).html(atob("PGlmcmFtZSBzdHlsZT0ibWluLXdpZHRoOiA4MDBweDsgbWF4LXdpZHRoOiAxMDAwcHg7IGhlaWdodDogODAwcHg7IGJvcmRlcjogbm9uZTsiIHNyYz0iaHR0cHM6Ly9kb2NrZXIua3JpbmdsZWNvbi5jb20vP2NoYWxsZW5nZT11bmxpbmtlZC1mdW5jdGlvbiZhbXA7aWQ9ZmFsc2U7aWQ9ZmFsc2UiPjwvaWZyYW1lPjxwPjxhIGhyZWY9IiMhIiBjbGFzcz0iYnRuIGJ0bi1pbmZvIiAgb25tb3VzZXVwPSIkKCcjZGl2VW5saW5rZWRGdW5jdGlvbicpLmh0bWwoYXRvYignUEdFZ2FISmxaajBpSXlFaUlHTnNZWE56UFNKaWRHNGdZblJ1TFdsdVptOGlQa05zYVdOcklHaGxjbVVnZEc4Z1BHSStiM0JsYmp3dllqNGdVMnhsYVdkb0lFSmxiR3dnVEc5MGRHVnllU0JVWlhKdGFXNWhiRHd2WVQ0PScpKSI+Q2xpY2sgaGVyZSB0byA8Yj5jbG9zZTwvYj4gU2xlaWdoIEJlbGwgTG90dGVyeSBUZXJtaW5hbDwvYT48L3A+"))}'>
+          <a href="#!" class="btn btn-info">Click here to <b>open</b> Sleigh Bell Lottery Terminal</a>
+        </div>
       </div>
       <div class="border rounded p-2 m-2">
         <h2><a id="termVentMaze"></a>Google Ventilation</h2>
-        <p>This is the walkthrough for <a href="https://docker.kringlecon.com/?challenge=http2"></a> Cranberry Pi Terminal.</p>
+        <a href="https://vents.kringlecastle.com?challenge=ventmaze&id=false" target="_blank" class="btn btn-info">Click here to open the Google Ventilation Maze in a new window</a>
       </div>
       <div class="border rounded p-2 m-2">
         <h2><a id="termDoorPasscode"></a>Door Passcode</h2>
-        <p>This is the walkthrough for <a href="https://docker.kringlecon.com/?challenge=http2"></a> Cranberry Pi Terminal.</p>
+        <a href="https://doorpasscoden.kringlecastle.com/" target="_blank" class="btn btn-info">Click here to open the Door Passcode Challenge in a new window</a>
       </div>
       <div class="border rounded p-2 m-2">
         <h2><a id="termScanomatic"></a>Scan-O-Matic</h2>
-        <p>This is the walkthrough for <a href="https://docker.kringlecon.com/?challenge=http2"></a> Cranberry Pi Terminal.</p>
+        <a href="https://scanomatic.kringlecastle.com/index.html" target="_blank" class="btn btn-info">Click here to open the Door Passcode Challenge in a new window</a>
       </div>
       <div class="border rounded p-2 m-2">
         <h2><a id="termSnort"></a>Snort Challenge</h2>
-        <p>This is the walkthrough for <a href="https://docker.kringlecon.com/?challenge=http2"></a> Cranberry Pi Terminal.</p>
+        <div id="divSnort" style="display: inline-block" onclick='if (!$(this).html().includes("iframe")) {$(this).html(atob("PGlmcmFtZSBzdHlsZT0ibWluLXdpZHRoOiA4MDBweDsgbWF4LXdpZHRoOiAxMDAwcHg7IGhlaWdodDogODAwcHg7IGJvcmRlcjogbm9uZTsiIHNyYz0iaHR0cHM6Ly9kb2NrZXIua3JpbmdsZWNvbi5jb20vP2NoYWxsZW5nZT1zbm9ydCZhbXA7aWQ9ZmFsc2U7aWQ9ZmFsc2UiPjwvaWZyYW1lPjxwPjxhIGhyZWY9IiMhIiBjbGFzcz0iYnRuIGJ0bi1pbmZvIiAgb25tb3VzZXVwPSIkKCcjZGl2U25vcnQnKS5odG1sKGF0b2IoJ1BHRWdhSEpsWmowaUl5RWlJR05zWVhOelBTSmlkRzRnWW5SdUxXbHVabThpUGtOc2FXTnJJR2hsY21VZ2RHOGdQR0krYjNCbGJqd3ZZajRnVTI1dmNuUWdRMmhoYkd4bGJtZGxJRlJsY20xcGJtRnNQQzloUGc9PScpKSI+Q2xpY2sgaGVyZSB0byA8Yj5jbG9zZTwvYj4gU25vcnQgQ2hhbGxlbmdlIFRlcm1pbmFsPC9hPjwvcD4="))}'>
+          <a href="#!" class="btn btn-info">Click here to <b>open</b> Snort Challenge Terminal</a>
+        </div>
       </div>
       <div class="border rounded p-2 m-2">
         <h2><a id="termHoHoHoDaddy"></a>HoHoHo Daddy</h2>
-        <p>This is the walkthrough for <a href="https://docker.kringlecon.com/?challenge=http2"></a> Cranberry Pi Terminal.</p>
+        <a href="https://hohohodaddy.kringlecastle.com/index.html" target="_blank" class="btn btn-info">Click here to open the HoHoHo Daddy Challenge in a new window</a>
       </div>
       <div class="border rounded p-2 m-2">
         <h2><a id="termPianoLock"></a>Piano Lock</h2>
-        <p>This is the walkthrough for <a href="https://docker.kringlecon.com/?challenge=http2"></a> Cranberry Pi Terminal.</p>
+        <a href="https://pianolockn.kringlecastle.com/" target="_blank" class="btn btn-info">Click here to open the Piano Lock Challenge in a new window</a>
       </div>
     </div>
 
     <div class="container m-4 p-4">
       <h1>Artefacts/Materials</h1>
-      <h2><a id="artBadge"></a>Sample Employee Badge</h2>
-      <img src="https://www.holidayhackchallenge.com/2018/challenges/alabaster_badge.jpg">
-      <h2><a id="artDocument"></a>Chocolate Chip Cookie Document</h2>
-      <a href="https://www.holidayhackchallenge.com/2018/challenges/CHOCOLATE_CHIP_COOKIE_RECIPE.zip">CHOCOLATE_CHIP_COOKIE_RECIPE.zip</a> with docm document and a password of <b>elves</b>
-      <h2><a id="artZipFile"></a>Memory Dump and WannaCookie encrypted database</h2>
-      <a href="https://www.holidayhackchallenge.com/2018/challenges/forensic_artifacts.zip">forensic_artifacts.zip</a>
+      <div class="border rounded p-2 m-2">
+        <h2><a id="artSling"></a>SANS Slingshot Image</h2>
+        <a href="#obj5" class="btn btn-info">Objective 5</a>
+        <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Holly Evergreen Hints
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#npcHolly">Holly Evergreen Dialog</a>
+          <a class="dropdown-item" href="https://github.com/BloodHoundAD/BloodHound">Bloodhound tool</a>
+          <a class="dropdown-item" href="https://youtu.be/gOpsLiJFI1o">Bloodhound Demo</a>
+        </div>
+        <a href="https://download.holidayhackchallenge.com/HHC2018-DomainHack_2018-12-19.ova" class="btn btn-info">SANS Slingshot Image Download</a>
+      </div>
+      <div class="border rounded p-2 m-2">
+        <h2><a id="artBadge"></a>Sample Employee Badge</h2>
+        <a href="#obj6" class="btn btn-info">Objective 6</a>
+        <a href="https://www.holidayhackchallenge.com/2018/challenges/alabaster_badge.jpg" class="btn btn-info">Sample Badge Download</a>
+      </div>
+      <div class="border rounded p-2 m-2">
+        <h2><a id="artDocument"></a>Chocolate Chip Cookie Document</h2>
+        <a href="#obj92" class="btn btn-info">Objective 9.2</a>
+        <a href="https://www.holidayhackchallenge.com/2018/challenges/CHOCOLATE_CHIP_COOKIE_RECIPE.zip" class="btn btn-info">CHOCOLATE_CHIP_COOKIE_RECIPE.zip password:<b>elves</b></a>
+      </div>
+      <div class="border rounded p-2 m-2">
+        <h2><a id="artZipFile"></a>Memory Dump and WannaCookie encrypted database</h2>
+        <a href="https://www.holidayhackchallenge.com/2018/challenges/forensic_artifacts.zip" class="btn btn-info">forensic_artifacts.zip</a>
+      </div>
     </div>
 
     <script src="js/jquery-3.2.1.slim.min.js"></script>
