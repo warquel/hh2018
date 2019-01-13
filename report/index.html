@@ -298,12 +298,23 @@
         </thead>
         <tbody>
           <tr>
-            <td><a href="#npcBushy">Bushy Evergreen</a></td>
+            <td>
+              <div class="dropdown">
+                <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <a id="hntBushy"></a>Bushy Evergreen
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#npcBushy">Bushy Evergreen</a>
+                  <a class="dropdown-item" href="#obj1">Objective 1</a>
+                  <a class="dropdown-item" href="#termViescape">Essential Editor Skills</a>
+                </div>
+              </div>
+            </td>
             <td>Vi Editor Basics: <a href="https://kb.iu.edu/d/afcz">Indiana University Vi Tutorials</a></td>
             <td><a href="#termViescape">Essential Editor Skills</a></td>
           </tr>
           <tr>
-            <td><a href="#npcMinty">Minty Candycane</a></td>
+            <td><a href="#hntMinty"></a><a href="#npcMinty">Minty Candycane</a></td>
             <td>SQLite3 .dump'ing: <a href="https://www.digitalocean.com/community/questions/how-do-i-dump-an-sqlite-database">SQLite3 Data Dump</a></td>
             <td><a href="#termPwshmenu">The Name Game</a></td>
           </tr>
@@ -323,7 +334,7 @@
             <td><a href="#obj2">Objective 2</a></td>
           </tr>
           <tr>
-            <td><a href="#npcTangle">Tangle Coalbox</a></td>
+            <td><a href="#hntTangle"></a><a href="#npcTangle">Tangle Coalbox</a></td>
             <td>Vim Artifacts: <a href="https://tm4n6.com/2017/11/15/forensic-relevance-of-vim-artifacts/">Forensic Relevance of Vim Artifacts</a></td>
             <td><a href="#termViminfo">Lethal ForensicELFication</a></td>
           </tr>
@@ -338,7 +349,7 @@
             <td><a href="#obj3">Objective 3</a></td>
           </tr>
           <tr>
-            <td><a href="#npcWunorse">Wunorse Openslae</a></td>
+            <td><a href="#hntWunorse"></a><a href="#npcWunorse">Wunorse Openslae</a></td>
             <td>Plaintext Credentials in Commands: <a href="https://blog.rackspace.com/passwords-on-the-command-line-visible-to-ps">Keeping Command Line Passwords Out of PS</a></td>
             <td><a href="#termPlaintextCreds">Stall Mucking Report</a></td>
           </tr>
@@ -353,7 +364,7 @@
             <td><a href="#obj4">Objective 4</a></td>
           </tr>
           <tr>
-            <td><a href="#npcHolly">Holly Evergreen</a></td>
+            <td><a href="#hntHolly"></a><a href="#npcHolly">Holly Evergreen</a></td>
             <td><a href="https://developers.google.com/web/fundamentals/performance/http2/">HTTP/2.0 Basics</a></td>
             <td><a href="#termHTTP2">CURLing Master</a></td>
           </tr>
@@ -368,7 +379,7 @@
             <td><a href="#obj5">Objective 5</a></td>
           </tr>
           <tr>
-            <td><a href="#npcPepper">Pepper Minstix</a></td>
+            <td><a href="#hntPepper"></a><a href="#npcPepper">Pepper Minstix</a></td>
             <td>Password Spraying: <a href="https://securityweekly.com/2017/07/21/tsw11/">Password Spraying with MailSniper.ps1</a></td>
             <td><a href="#termSprayDetect">Yule Log Analysis</a></td>
           </tr>
@@ -383,7 +394,7 @@
             <td><a href="#obj6">Objective 6</a></td>
           </tr>
           <tr>
-            <td><a href="#npcSparkle">Sparkle Redberry</a></td>
+            <td><a href="#hntSparkle"></a><a href="#npcSparkle">Sparkle Redberry</a></td>
             <td><a href="https://gist.github.com/hofmannsven/6814451">Git Cheat Sheet</a></td>
             <td><a href="#termGitpasshist">Dev Ops Fail</a></td>
           </tr>
@@ -403,7 +414,7 @@
             <td><a href="#obj7">Objective 7</a></td>
           </tr>
           <tr>
-            <td><a href="#npcSugar">SugarPlum Mary</a></td>
+            <td><a href="#hntSugar"></a><a href="#npcSugar">SugarPlum Mary</a></td>
             <td>Python Escape: <a href="https://www.youtube.com/watch?v=ZVx2Sxl3B9c">Check out Mark Baggett's talk upstairs</a></td>
             <td><a href="#termPythonDockerChallenge">Python Escape from LA</a></td>
           </tr>
@@ -413,12 +424,12 @@
             <td><a href="#obj8">Objective 8</a></td>
           </tr>
           <tr>
-            <td><a href="#npcShinny">Shinny Upatree</a></td>
+            <td><a href="#hntShinny"></a><a href="#npcShinny">Shinny Upatree</a></td>
             <td><a href="https://pen-testing.sans.org/blog/2018/12/11/using-gdb-to-call-random-functions">Using gdb to Call Random Functions!</a></td>
             <td><a href="#termUnlinkedFunction">Sleigh Bell Lottery</a></td>
           </tr>
           <tr>
-            <td><a href="#npcAlabaster">Alabaster Snowball</a></td>
+            <td><a href="#hntAlabaster"></a><a href="#npcAlabaster">Alabaster Snowball</a></td>
             <td>Dropper Download: Word docm macros can be extracted using <a href="https://github.com/decalage2/oletools/wiki/olevba">olevba</a>. Perhaps we can use this to grab the ransomware source.</td>
             <td><a href="#obj92">Objective 9.2</a></td>
           </tr>
@@ -433,51 +444,178 @@
 
     <div class="container m-4 p-4">
       <h1><a id="obj"></a>Objectives</h1>
-
+      <p class="lead">The following section walks through the different challenges of this years Holiday Hack.</p>
       <div class="border p-2 m-2">
-        <h2><a id="obj1"></a>Objective 1</h2>
-        <div>
-          <p>What phrase is revealed when you answer all of the <a href="https://www.holidayhackchallenge.com/2018/challenges/osint_challenge_windows.html">KringleCon Holiday Hack History questions</a>? <i>For hints on achieving this objective, please visit <a href="#npcBushy">Bushy Evergreen</a> and help him with the <a href="#termViescape"><b>Essential Editor Skills</b></a> Cranberry Pi terminal challenge.</i></p>
+        <div class="dropdown">
+          <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a id="obj1"></a>Objective 1
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#npcBushy">Bushy Evergreen</a>
+            <a class="dropdown-item" href="#termViescape">Essential Editor Skills</a>
+          </div>
         </div>
+        <div>
+          <p>What phrase is revealed when you answer all of the <a href="https://www.holidayhackchallenge.com/2018/challenges/osint_challenge_windows.html" target="_blank">KringleCon Holiday Hack History questions</a>? <i>For hints on achieving this objective, please visit <a href="#npcBushy">Bushy Evergreen</a> and help him with the <a href="#termViescape"><b>Essential Editor Skills</b></a> Cranberry Pi terminal challenge.</i></p>
+        </div>
+        <hr class="my-4">
+        <p>This challenge is pretty straightforward. Find out some history about previous Holiday Hack Challenges. For a clue on where to begin you need to speak with <a href="#npcBushy">Bushy Evergreen</a> and work on <a href="#termViescape"><b>Essential Editor Skills</b></a> Cranberry Pi terminal challenge.</i></p>
+        <p>Bushy's clue says to listen to Ed Skoudis' talk to get our answers for the orientation challenge.</p>
+        <table class="table">
+          <thead>
+            <th>Question</th>
+            <th>Video Reference</th>
+            <th>Answer</th>
+          </thead>
+          <tbody>
+            <td>In 2015, the Dosis siblings asked for help understanding what piece of their "Gnome in Your Home" toy?</td>
+            <td><a href="https://youtu.be/31JsKzsbFUo?t=216">3 minutes 36 seconds</a></td>
+            <td nowrap>Firmware</td>
+          </tbody>
+          <tbody>
+            <td>In 2015, the Dosis siblings disassembled the conspiracy dreamt up by which corporation?</td>
+            <td><a href="https://youtu.be/31JsKzsbFUo?t=294">4 minutes 54 seconds</a></td>
+            <td nowrap>ATNAS</td>
+          </tbody>
+          <tbody>
+            <td>In 2016, participants were sent off on a problem-solving quest based on what artifact that Santa left?</td>
+            <td><a href="https://youtu.be/31JsKzsbFUo?t=373">6 minutes 13 seconds</a></td>
+            <td nowrap>Business Card</td>
+          </tbody>
+          <tbody>
+            <td>In 2016, Linux terminals at the North Pole could be accessed with what kind of computer?</td>
+            <td>
+              <p><a href="https://youtu.be/31JsKzsbFUo?t=559">16 minutes 40 seconds</a></p>
+              <p><i>Note that the video does not mention the term "Cranberry Pi" until 16 minutes and 40 seconds in. There no actual portion of the video that directly associates the term "Cranberry Pi" and the 2016 Dosis challenge.</i></p>
+            </td>
+            <td nowrap>Cranberry Pi</td>
+          </tbody>
+          <tbody>
+            <td>In 2017, the North Pole was being bombarded by giant objects. What were they?</td>
+            <td><a href="https://youtu.be/31JsKzsbFUo?t=559">9 minutes 19 seconds</a></td>
+            <td nowrap>Snowballs</td>
+          </tbody>
+          <tbody>
+            <td>In 2017, Sam the snowman needed help reassembling pages torn from what?</td>
+            <td><a href="https://youtu.be/31JsKzsbFUo?t=579">9 minutes 39 seconds</a></td>
+            <td nowrap>The Great Book</td>
+          </tbody>
+        </table>
+        <p>Once you entered all the correct answers you are provided the final answer:</p>
+        <p><button type="button" class="btn btn-success">Happy Trails</button></p>
       </div>
 
       <div class="border p-2 m-2">
-        <h2><a id="obj2"></a>Objective 2</h2>
+        <div class="dropdown">
+          <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a id="obj2"></a>Objective2
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#npcMinty">Minty Candycane</a>
+            <a class="dropdown-item" href="#termPwshmenu">The Name Game</a>
+            <a class="dropdown-item" href="#artMenuPS1">menu.ps1 from The Name Game terminal</a>
+          </div>
+        </div>
         <p>Who submitted (First Last) the rejected talk titled <b>Data Loss for Rainbow Teams: A Path in the Darkness</b>? <a href="https://cfp.kringlecastle.com/">Please analyze the CFP site to find out</a>. <i>For hints on achieving this objective, please visit <a href="#npcMinty">Minty Candycane</a> and help her with the <a href="#termPwshmenu"><b>The Name Game</b></a> Cranberry Pi terminal challenge.</i></p>
+        <hr class="my-4">
       </div>
 
       <div class="border p-2 m-2">
-        <h2><a id="obj3"></a>Objective 3</h2>
+        <div class="dropdown">
+          <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a id="obj3"></a>Objective 3
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#npcTangle">Tangle Coalbox 3</a>
+            <a class="dropdown-item" href="#termViminfo">Lethal ForensicELFication</a>
+          </div>
+        </div>
         <p>The KringleCon Speaker Unpreparedness room is a place for frantic speakers to furiously complete their presentations. The room is protected by a <a href="https://doorpasscoden.kringlecastle.com/">door passcode</a>. Upon entering the correct passcode, what message is presented to the speaker? <i>For hints on achieving this objective, please visit <a href="#npcTangle">Tangle Coalbox</a> and help him with the <a href="#termViminfo"><b>Lethal ForensicELFication</b></a> Cranberry Pi terminal challenge.</i></p>
+        <hr class="my-4">
       </div>
 
       <div class="border p-2 m-2">
-        <h2><a id="obj4"></a>Objective 4</h2>
-        <p>Retrieve the encrypted ZIP file from the <a href="https://git.kringlecastle.com/Upatree/santas_castle_automation">North Pole Git repository</a>. What is the password to open this file? <i>For hints on achieving this objective, please visit <a href="#npcWunorse">Wunorse Openslae</a> and help him with <a href="#termPlaintextCreds"><b>Stall Mucking Report</b></a> Cranberry Pi terminal challenge.</p>
+        <div class="dropdown">
+          <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a id="obj4"></a>Objective 4
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#npcWunorse">Wunorse Openslae</a>
+            <a class="dropdown-item" href="#termPlaintextCreds">Stall Mucking Report</a>
+          </div>
+        </div>
+
+        <p>Retrieve the encrypted ZIP file from the <a href="https://git.kringlecastle.com/Upatree/santas_castle_automation">North Pole Git repository</a>. What is the password to open this file? <i>For hints on achieving this objective, please visit <a href="#npcWunorse">Wunorse Openslae</a> and help him with <a href="#termPlaintextCreds"><b>Stall Mucking Report</b></a> Cranberry Pi terminal challenge.</i></p>
+        <hr class="my-4">
       </div>
 
       <div class="border p-2 m-2">
-        <h2><a id="obj5"></a>Objective 5</h2>
+        <div class="dropdown">
+          <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a id="obj5"></a>Objective 5
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#npcHolly">Holly Evergreen</a>
+            <a class="dropdown-item" href="#termHTTP2">CURLing Master</a>
+          </div>
+        </div>
         <p>Using the data set contained in this <a href="#artSling">SANS Slingshot Linux image</a>, find a reliable path from a Kerberoastable user to the Domain Admins group. What’s the user’s logon name (in username@domain.tld format)? Remember to avoid RDP as a control path as it depends on separate local privilege escalation flaws. <i>For hints on achieving this objective, please visit <a href="#npcHolly">Holly Evergreen</a> and help her with the <a href="#termHTTP2"><b>CURLing Master</b></a> Cranberry Pi terminal challenge.</i></p>
+        <hr class="my-4">
       </div>
 
       <div class="border p-2 m-2">
-        <h2><a id="obj6"></a>Objective 6</h2>
+        <div class="dropdown">
+          <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a id="obj6"></a>Objective 6
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#npcPepper">Pepper Minstix</a>
+            <a class="dropdown-item" href="#termSprayDetect">Yule Log Analysis</a>
+            <a class="dropdown-item" href="#termScanomatic">Scan-O-Matic</a>
+          </div>
+        </div>
         <p>Bypass the authentication mechanism associated with the room near Pepper Minstix. <a href="https://www.holidayhackchallenge.com/2018/challenges/alabaster_badge.jpg">A sample employee badge is available</a>. What is the access control number revealed by the <a href="https://scanomatic.kringlecastle.com/index.html">door authentication panel</a>? <i>For hints on achieving this objective, please visit <a href="#npcPepper">Pepper Minstix</a> and help her with the <a href="#termSprayDetect"><b>Yule Log Analysis</b></a> Cranberry Pi terminal challenge.</i></p>
+        <hr class="my-4">
       </div>
 
       <div class="border p-2 m-2">
-        <h2><a id="obj7"></a>Objective 7</h2>
+        <div class="dropdown">
+          <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a id="obj7"></a>Objective 7
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#npcSparkle">Sparkle Redberry</a>
+            <a class="dropdown-item" href="#termGitpasshist">Dev Ops Fail</a>
+          </div>
+        </div>
         <p>Santa uses an Elf Resources website to look for talented information security professionals. <a href="https://careers.kringlecastle.com/">Gain access to the website</a> and fetch the document <code>C:\candidate_evaluation.docx</code>. Which terrorist organization is secretly supported by the job applicant whose name begins with "K"? <i>For hints on achieving this objective, please visit <a href="#npcSparkle">Sparkle Redberry</a> and help her with the <a href="#termGitpasshist"><b>Dev Ops Fail</b></a> Cranberry Pi terminal challenge.</i></p>
+        <hr class="my-4">
       </div>
 
       <div class="border p-2 m-2">
-        <h2><a id="obj8"></a>Objective 8</h2>
+        <div class="dropdown">
+          <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a id="obj8"></a>Objective 8
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#npcSugar">SugarPlum Mary</a>
+            <a class="dropdown-item" href="#termPythonDockerChallenge">Python Escape from LA</a>
+          </div>
+        </div>
         <p>Santa has introduced a <a href="https://packalyzer.kringlecastle.com/">web-based packet capture and analysis tool</a> to support the elves and their information security work. Using the system, access and decrypt HTTP/2 network activity. What is the name of the song described in the document sent from Holly Evergreen to Alabaster Snowball? <i>For hints on achieving this objective, please visit <a href="#npcSugar">SugarPlum Mary</a> and help her with the <a href="#termPythonDockerChallenge"><b>Python Escape from LA</b></a> Cranberry Pi terminal challenge.</i></p>
+        <hr class="my-4">
       </div>
 
       <div class="border p-2 m-2">
-        <h2><a id="obj91"></a>Objective 9.1</h2>
+        <div class="dropdown">
+          <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a id="obj91"></a>Objective 9.1
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#npcShinny">Shinny Upatree</a>
+            <a class="dropdown-item" href="#termUnlinkedFunction">Sleigh Bell Lottery</a>
+          </div>
+        </div>
         <p>Alabaster Snowball is in dire need of your help. Santa's file server has been hit with malware. Help Alabaster Snowball deal with the malware on Santa's server by completing several tasks. <i>For hints on achieving this objective, please visit <a href="#npcShinny">Shinny Upatree</a> and help him with the <a href="#termUnlinkedFunction"><b>Sleigh Bell Lottery</b></a> Cranberry Pi terminal challenge.</i></p>
 
         <p>To start, assist Alabaster by accessing (clicking) the snort terminal below:</p>
@@ -485,27 +623,64 @@
         <p><a href="https://docker.kringlecon.com/?challenge=snort"><img src="images/snort.png"></a></p>
 
         <p>Then create a rule that will catch all new infections. What is the success message displayed by the Snort terminal?</p>
+        <hr class="my-4">
       </div>
 
       <div class="border p-2 m-2">
-        <h2><a id="obj92"></a>Objective 9.2</h2>
+        <div class="dropdown">
+          <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a id="obj92"></a>Objective 9.2
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#npcAlabaster">Alabaster Snowball</a>
+            <a class="dropdown-item" href="#artDocument">Chocolate Chip Cookie Document</a>
+          </div>
+        </div>
         <p>After completing the prior question, Alabaster gives you a document he suspects downloads the malware. What is the domain name the malware in the document downloads from?</p>
+        <hr class="my-4">
       </div>
 
       <div class="border p-2 m-2">
-        <h2><a id="obj93"></a>Objective 9.3</h2>
+        <div class="dropdown">
+          <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a id="obj93"></a>Objective 9.3
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#npcAlabaster">Alabaster Snowball</a>
+            <a class="dropdown-item" href="#artMalware">Malware Sourcecode</a>
+            <a class="dropdown-item" href="https://hohohodaddy.kringlecastle.com/index.html">HoHoHo Daddy</a>
+          </div>
+        </div>
         <p>Analyze the full malware source code to find a kill-switch and activate it at the North Pole's domain registrar <a href="https://hohohodaddy.kringlecastle.com/index.html">HoHoHo Daddy</a>.</p>
         <p>What is the full sentence text that appears on the domain registration success message (bottom sentence)?</p>
+        <hr class="my-4">
       </div>
 
       <div class="border p-2 m-2">
-        <h2><a id="obj94"></a>Objective 9.4</h2>
-        <p>After activating the kill-switch domain in the last question, Alabaster gives you <a href="https://www.holidayhackchallenge.com/2018/challenges/forensic_artifacts.zip">a zip file</a> with a memory dump and encrypted password database. Use these files to decrypt Alabaster's password database. What is the password entered in the database for the <b>Vault</b> entry?</p>
+        <div class="dropdown">
+          <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a id="obj94"></a>Objective 9.4
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#npcAlabaster">Alabaster Snowball</a>
+            <a class="dropdown-item" href="#artZipFile">Memory Dump and WannaCookie encrypted database</a>
+          </div>
+        </div>
+        <p>After activating the kill-switch domain in the last question, Alabaster gives you <a href="#artZipFile">a zip file</a> with a memory dump and encrypted password database. Use these files to decrypt Alabaster's password database. What is the password entered in the database for the <b>Vault</b> entry?</p>
+        <hr class="my-4">
       </div>
 
       <div class="border p-2 m-2">
-        <h2><a id="objx"></a>Objective 10</h2>
+        <div class="dropdown">
+          <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a id="objx"></a>Objective 10
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#termPianoLock">Piano Lock</a>
+          </div>
+        </div>
         <p>Use what you have learned from previous challenges to open the <a href="https://pianolockn.kringlecastle.com/">door to Santa's vault</a>. What message do you get when you unlock the door?</p>
+        <hr class="my-4">
       </div>
     </div>
 
@@ -620,6 +795,7 @@
               <a id="npcBushy"></a>Bushy Evergreen
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#hntBushy">Bushy Evergreen Hints</a>
               <a class="dropdown-item" href="#obj1">Objective 1</a>
               <a class="dropdown-item" href="#termViescape">Essential Editor Skills</a>
             </div>
@@ -638,6 +814,11 @@
           </blockquote>
           <blockquote class="blockquote border rounded p-2">
             <p class="mb-2">Wow, it seems so easy now that you've shown me how!</p>
+            <p class="mb-2">To thank you, I'd like to share some other tips with you.</p>
+            <p class="mb-2">Have you taken a look at the Orientation Challenge?</p>
+            <p class="mb-2">This challenge is limited to past SANS Holiday Hack Challenges from 2015, 2016, and 2017. You DO NOT need to play those challenges.</p>
+            <p class="mb-2">If you listen closely to Ed Skoudis' talk at the con, you might even pick up all the answers you need...</p>
+            <p class="mb-2">It may take a little poking around, but with your skills, I'm sure it'll be a wintergreen breeze!</p>
             <footer class="blockquote-footer text-right">Bushy Evergreen after solving <a href="#termViescape"><b>Essential Editor Skills</b></a></footer>
           </blockquote>
         </div>
@@ -922,7 +1103,6 @@
 
       <div class="row border rounded p-2 m-2">
         <div class="col-3">
-          <h2><a id="npcAlabaster"></a>Alabaster Snowball</h2>
           <div class="dropdown">
             <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <a id="npcAlabaster"></a>Alabaster Snowball
@@ -970,33 +1150,418 @@
             <p class="mb-2">Of course I transposed it it before I entered it into my database for extra security.</p>
             <footer class="blockquote-footer text-right">Alabaster Snowball after solving <a href="#termPianoLock"><b>Piano Lock</b></a></footer>
           </blockquote>
-
-
         </div>
       </div>
     </div>
 
     <div class="container m-4 p-4">
-      <h1><a id="term"></a>Terminals</h1>
+      <h1>Terminals</h1>
 
       <div class="border rounded p-2 m-2">
-        <h2><a id="termViescape"></a>Essential Editor Skills</h2>
+        <div class="dropdown">
+          <button class="btn btn-dark dropdown-toggle mb-1" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a id="termViescape"></a>Essential Editor Skills
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#hntBushy">Bushy Evergreen Hints</a>
+            <a class="dropdown-item" href="#npcBushy">Bushy Evergreen</a>
+            <a class="dropdown-item" href="#obj1">Objective 1</a>
+          </div>
+        </div>
         <div id="divViescape" style="display: inline-block" onclick='if (!$(this).html().includes("iframe")) {$(this).html(atob("PGlmcmFtZSBzdHlsZT0ibWluLXdpZHRoOiA4MDBweDsgbWF4LXdpZHRoOiAxMDAwcHg7IGhlaWdodDogODAwcHg7IGJvcmRlcjogbm9uZTsiIHNyYz0iaHR0cHM6Ly9kb2NrZXIua3JpbmdsZWNvbi5jb20vP2NoYWxsZW5nZT12aWVzY2FwZSZhbXA7aWQ9ZmFsc2U7aWQ9ZmFsc2UiPjwvaWZyYW1lPjxwPjxhIGhyZWY9IiMhIiBjbGFzcz0iYnRuIGJ0bi1pbmZvIiAgb25tb3VzZXVwPSIkKCcjZGl2Vmllc2NhcGUnKS5odG1sKGF0b2IoJ1BHRWdhSEpsWmowaUl5RWlJR05zWVhOelBTSmlkRzRnWW5SdUxXbHVabThpUGtOc2FXTnJJR2hsY21VZ2RHOGdQR0krYjNCbGJqd3ZZajRnUlhOelpXNTBhV0ZzSUVWa2FYUnZjaUJUYTJsc2JITWdWR1Z5YldsdVlXdzhMMkUrJykpIj5DbGljayBoZXJlIHRvIDxiPmNsb3NlPC9iPiBFc3NlbnRpYWwgRWRpdG9yIFNraWxscyBUZXJtaW5hbDwvYT48L3A+"))}'>
           <a href="#!" class="btn btn-info">Click here to <b>open</b> Essential Editor Skills Terminal</a>
         </div>
+        <hr class="my-4">
+        <p>For this terminal challenge you are immediately dropped into a vi editor session. Your objective is to get out. <a href="#npcBushy">Bushy Evergreen</a> provides you with a single hint, <a href="https://kb.iu.edu/d/afcz">Indiana University VI Tutorials</a>. The Instructions are pretty straight forward. </p>
+        <ul>
+          <li>If you are currently in insert or append mode, press <kbd>Esc</kbd>.</li>
+          <li>Press <kbd data-toggle="tooltip" data-placement="top" title="This puts you into colon mode to be able to specify commands">:</kbd> (colon). The cursor should reappear at the lower left corner of the screen beside a colon prompt.</li>
+          <li>Enter the following: <kbd data-toggle="tooltip" data-placement="top" title="This means to abort all changes and exit">q!</kbd></li>
+        </ul>
+        <p>Some other colon commands to exit include:</p>
+        <ul>
+          <li><kbd>:wq!</kbd></li>
+          <li><kbd>:quit!</kbd></li>
+        </ul>
+        <p>Not including the <kbd>!</kbd> will simply prompt you to accept any changes to the document if any were made.</p>
+        <p>When you first enter this challenge you are already in movement mode so there is no need to press <kbd>Esc</kbd> first.</p>
+        <p>Once you have exited the vi session a program <code>/usr/local/bin/sucessfulescape</code> is executed indicating your completion of the challenge with the final message:</p>
+        <pre class="text-monospace bg-dark text-light p-2">You did it! Congratulations!</pre>
       </div>
       <div class="border rounded p-2 m-2">
-        <h2><a id="termPwshmenu"></a>The Name Game</h2>
+        <div class="dropdown">
+          <button class="btn btn-dark dropdown-toggle mb-1" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a id="termPwshmenu"></a>The Name Game
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#obj2">Objective 2</a>
+            <a class="dropdown-item" href="#npcMinty">Minty Candycane</a>
+            <a class="dropdown-item" href="#artMenuPS1">menu.ps1 from The Name Game terminal</a>
+          </div>
+        </div>
         <div id="divPwshmenu" style="display: inline-block" onclick='if (!$(this).html().includes("iframe")) {$(this).html(atob("PGlmcmFtZSBzdHlsZT0ibWluLXdpZHRoOiA4MDBweDsgbWF4LXdpZHRoOiAxMDAwcHg7IGhlaWdodDogODAwcHg7IGJvcmRlcjogbm9uZTsiIHNyYz0iaHR0cHM6Ly9kb2NrZXIua3JpbmdsZWNvbi5jb20vP2NoYWxsZW5nZT1wd3NobWVudSZhbXA7aWQ9ZmFsc2U7aWQ9ZmFsc2UiPjwvaWZyYW1lPjxwPjxhIGhyZWY9IiMhIiBjbGFzcz0iYnRuIGJ0bi1pbmZvIiAgb25tb3VzZXVwPSIkKCcjZGl2UHdzaG1lbnUnKS5odG1sKGF0b2IoJ1BHRWdhSEpsWmowaUl5RWlJR05zWVhOelBTSmlkRzRnWW5SdUxXbHVabThpUGtOc2FXTnJJR2hsY21VZ2RHOGdQR0krYjNCbGJqd3ZZajRnVkdobElFNWhiV1VnUjJGdFpTQlVaWEp0YVc1aGJEd3ZZVDQ9JykpIj5DbGljayBoZXJlIHRvIDxiPmNsb3NlPC9iPiBUaGUgTmFtZSBHYW1lIFRlcm1pbmFsPC9hPjwvcD4="))}'>
           <a href="#!" class="btn btn-info">Click here to <b>open</b> The Name Game Terminal</a>
         </div>
+        <hr class="my-4">
+        <p>According to <a href="#npcMinty">Minty Candycane</a>, she needs the first name of an employee that can only be found in the Cranberry Pi terminal, <b>The Name Game</b>. Two other clues indicate the onboarding system uses Powershell and that a SQLite database may be involved.</p>
+        <p>Opening <b>The Name Game</b> terminal challenge you are presented with a menu with 3 options.</p>
+        <ul>
+          <li> Press  1 to start the onboard process.</li>
+          <li> Press  2 to verify the system.</li>
+          <li> Press  q to quit.</li>
+        </ul>
+        <p>The <kbd>q</kbd> option simply quits the program and does nothing else.</p>
+        <p>The <kbd>1</kbd> option brings you to a menu to enter some employee information afterwhich a message saying</p>
+        <samp>Save to sqlite DB using command line</samp>
+        </p>is shown. You can then return to the main menu.</p>
+        <p>The <kbd>2</kbd> option brings you a validation routine asking for a servername. Once you enter a server "e.g. 127.0.0.1" the system appears to try to ping that adddress. This is then followed by a curious line:</p>
+        <pre class="text-monospace bg-dark text-light p-2">onboard.db: SQLite 3.x database</pre>
+        <p><a href="#npcMinty">Minty Candycane</a> specifically says "Special characters such as & and ; can be used to inject commands." So lets try that. If we try option <kbd>2</kbd> with our knowledge of the filename <code>onboard.db</code> we craft the following input:</p>
+        <pre class="text-monospace bg-dark text-light p-2">; sqlite3 onboard.db .dump</pre>
+        <p>Doing so results in the following output:</p>
+        <pre class="border text-light bg-dark p-2">
+          PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE onboard (
+    id INTEGER PRIMARY KEY,
+    fname TEXT NOT NULL,
+    lname TEXT NOT NULL,
+    street1 TEXT,
+    street2 TEXT,
+    city TEXT,
+    postalcode TEXT,
+    phone TEXT,
+    email TEXT
+);
+INSERT INTO "onboard" VALUES(10,'Karen','Duck','52 Annfield Rd',NULL,'BEAL','DN14 7AU','077 8656 6609','karensduck@einrot.com');
+INSERT INTO "onboard" VALUES(11,'Josephine','Harrell','3 Victoria Road',NULL,'LITTLE ASTON','B74 8XD','079 5532 7917','josephinedharrell@einrot.com');
+INSERT INTO "onboard" VALUES(12,'Jason','Madsen','4931 Cliffside Drive',NULL,'Worcester','12197','607-397-0037','jasonlmadsen@einrot.com');
+INSERT INTO "onboard" VALUES(13,'Nichole','Murphy','53 St. John Street',NULL,'Craik','S4P 3Y2','306-734-9091','nicholenmurphy@teleworm.us');
+INSERT INTO "onboard" VALUES(14,'Mary','Lyons','569 York Mills Rd',NULL,'Toronto','M3B 1Y2','416-274-6639','maryjlyons@superrito.com');
+INSERT INTO "onboard" VALUES(15,'Luz','West','1307 Poe Lane',NULL,'Paola','66071','913-557-2372','luzcwest@rhyta.com');
+INSERT INTO "onboard" VALUES(16,'Walter','Savell','4782 Neville Street',NULL,'Seymour','47274','812-580-5138','walterdsavell@fleckens.hu');
+INSERT INTO "onboard" VALUES(17,'Michelle','Hicks','82 Middlewich Road',NULL,'FIRTH','ZE2 1BQ','070 2607 0997','michellejhicks@jourrapide.com');
+INSERT INTO "onboard" VALUES(18,'Carolyn','Harvey','94 Friar Street',NULL,'CLEETHORPES','DN35 7YP','078 3359 6177','carolynmharvey@teleworm.us');
+INSERT INTO "onboard" VALUES(19,'Julie','Westrick','4261 Corpening Drive',NULL,'Troy','48083','248-457-6093','julieswestrick@jourrapide.com');
+INSERT INTO "onboard" VALUES(20,'Cara','Hodge','6 Clasper Way',NULL,'HEYSHOTT','GU29 3ZX','079 8870 5836','cararhodge@armyspy.com');
+INSERT INTO "onboard" VALUES(21,'Ashley','Ramos','2326 Lauzon Parkway',NULL,'Leamington','N8H 3B9','519-329-7102','ashleywramos@superrito.com');
+INSERT INTO "onboard" VALUES(22,'Marcia','Yee','17 Holburn Lane',NULL,'HELPERBY','YO6 2FT','070 2717 2611','marciamyee@armyspy.com');
+INSERT INTO "onboard" VALUES(23,'Erica','McIntosh','4894 Port Washington Road',NULL,'Leslieville','T0M 1H0','403-729-0320','ericaamcintosh@cuvox.de');
+INSERT INTO "onboard" VALUES(24,'Franklyn','Goldsmith','25 Hillside Street',NULL,'Paradise Valley','85253','480-513-4464','franklynngoldsmith@teleworm.us');
+INSERT INTO "onboard" VALUES(25,'Christopher','Green','4896 Lynden Road',NULL,'Moonstone','L0K 1N0','705-835-6976','christopherngreen@fleckens.hu');
+INSERT INTO "onboard" VALUES(26,'Reggie','Little','285 Kidd Avenue',NULL,'Anchorage','99501','907-932-8909','reggiehlittle@gustr.com');
+INSERT INTO "onboard" VALUES(27,'Mary','Hawes','91 George Avenue',NULL,'Belle Fontaine','36607','251-245-0433','maryrhawes@gustr.com');
+INSERT INTO "onboard" VALUES(28,'Blanche','Webster','2695 Airport Blvd',NULL,'Gander','A1V 2M7','709-234-5453','blancherwebster@dayrep.com');
+INSERT INTO "onboard" VALUES(29,'Antonio','Herbert','637 Lynden Road',NULL,'Lefroy','L0L 1W0','705-456-6107','antoniogherbert@einrot.com');
+INSERT INTO "onboard" VALUES(30,'Elisabeth','George','4667 Harley Brook Lane',NULL,'Johnstown','15904','814-592-3905','elisabethmgeorge@teleworm.us');
+INSERT INTO "onboard" VALUES(31,'Mark','Dinkins','3593 Private Lane',NULL,'Albany','31701','229-281-7470','markndinkins@einrot.com');
+INSERT INTO "onboard" VALUES(32,'Melody','Mendoza','2900 Reserve St',NULL,'Castleton','K0K 1M0','905-344-8354','melodywmendoza@gustr.com');
+INSERT INTO "onboard" VALUES(33,'Reginald','Duncan','3606 Michigan Avenue',NULL,'Bolivar','15923','724-676-9897','reginaldvduncan@jourrapide.com');
+INSERT INTO "onboard" VALUES(34,'Jessica','Munk','51 Cunnery Rd',NULL,'MAESYCRUGIAU','SA39 8FJ','078 6965 8387','jessicaamunk@fleckens.hu');
+INSERT INTO "onboard" VALUES(35,'Aaron','Pasley','41 Glenurquhart Road',NULL,'BALLIEMORE','PA34 5WH','077 6882 0012','aaronrpasley@rhyta.com');
+INSERT INTO "onboard" VALUES(36,'Randy','Johnson','1545 Woodvale Drive',NULL,'Fingal','N0L 1K0','519-769-3889','randydjohnson@fleckens.hu');
+INSERT INTO "onboard" VALUES(37,'Mary','Tucker','1306 Winding Way',NULL,'Providence','2906','401-692-8503','marybtucker@jourrapide.com');
+INSERT INTO "onboard" VALUES(38,'Timothy','Montgomery','83 Academy Street',NULL,'BETHEL','LL21 1HD','070 6084 3545','timothyrmontgomery@superrito.com');
+INSERT INTO "onboard" VALUES(39,'Elizabeth','Fox','1044 Tanner Street',NULL,'Vancouver','V5R 2T4','604-436-2749','elizabethmfox@jourrapide.com');
+INSERT INTO "onboard" VALUES(40,'Clifford','Moore','41 Telford Street',NULL,'BARKHAM','RG41 9TQ','079 5681 0730','cliffordlmoore@fleckens.hu');
+INSERT INTO "onboard" VALUES(41,'Clifford','Williams','24 Tonbridge Rd',NULL,'COOKNEY','AB3 5DY','078 6260 1601','cliffordcwilliams@dayrep.com');
+INSERT INTO "onboard" VALUES(42,'Diane','Stewart','3825 Tully Street',NULL,'Livonia','48150','313-721-7835','dianewstewart@gustr.com');
+INSERT INTO "onboard" VALUES(43,'Jane','Purdue','4522 Maple Court',NULL,'Macks Creek','65786','573-363-6930','janejpurdue@armyspy.com');
+INSERT INTO "onboard" VALUES(44,'Donna','Reynolds','15 Folkestone Road',NULL,'WINCHMORE HILL','HP7 6UG','077 3596 0968','donnajreynolds@teleworm.us');
+INSERT INTO "onboard" VALUES(45,'Mae','Gonzalez','4982 Yonge Street',NULL,'Toronto','M4W 1J7','416-318-6431','maedgonzalez@rhyta.com');
+INSERT INTO "onboard" VALUES(46,'Julia','Mullenix','98 Graham Road',NULL,'CHEVITHORNE','EX16 9WE','079 4511 1929','juliapmullenix@armyspy.com');
+INSERT INTO "onboard" VALUES(47,'Kathleen','Hudson','2102 rue Saint-Édouard',NULL,'Trois Rivieres','G9A 5S8','819-694-7235','kathleenshudson@dayrep.com');
+INSERT INTO "onboard" VALUES(48,'Jose','Salas','801 Paradise Crescent',NULL,'Hauterive','G5C 1M1','418-589-3293','joseasalas@armyspy.com');
+INSERT INTO "onboard" VALUES(49,'Suzanne','Ziegler','90 East Street',NULL,'MARK','TA9 7JE','078 2398 8807','suzannejziegler@fleckens.hu');
+INSERT INTO "onboard" VALUES(50,'Stella','Worsham','910 Hart Country Lane',NULL,'Atlanta','30303','706-530-2741','stellasworsham@fleckens.hu');
+INSERT INTO "onboard" VALUES(51,'Donald','Dupree','85 Glenurquhart Road',NULL,'BALLAUGH','IM7 9LT','070 2322 3531','donaldvdupree@teleworm.us');
+INSERT INTO "onboard" VALUES(52,'Dolores','Carroll','81 Guildford Rd',NULL,'EAST HYDE','LU1 8ZF','070 5400 2455','dolorespcarroll@teleworm.us');
+INSERT INTO "onboard" VALUES(53,'Danny','Pink','3962 Walnut Drive',NULL,'Fargo','58103','701-371-7143','dannycpink@fleckens.hu');
+INSERT INTO "onboard" VALUES(54,'Dorothy','Rowe','4402 St Marys Rd',NULL,'Winnipeg','R3C 3N9','204-951-1482','dorothydrowe@rhyta.com');
+INSERT INTO "onboard" VALUES(55,'Verna','Mashburn','4870 Trymore Road',NULL,'Clements','56224','507-692-6468','vernafmashburn@fleckens.hu');
+INSERT INTO "onboard" VALUES(56,'Patsy','Mendez','629 Deer Ridge Drive',NULL,'Wayne','7477','973-641-9131','patsyamendez@cuvox.de');
+INSERT INTO "onboard" VALUES(57,'Stan','Neel','4327 Embro St',NULL,'Innerkip','N0J 1M0','519-469-7243','stanjneel@gustr.com');
+INSERT INTO "onboard" VALUES(58,'Scott','Casperson','402 Echo Lane',NULL,'Middleville','49333','269-795-1629','scottfcasperson@cuvox.de');
+INSERT INTO "onboard" VALUES(59,'Roger','Waller','4974 Wiseman Street',NULL,'Jefferson City','37760','865-471-2287','rogertwaller@jourrapide.com');
+INSERT INTO "onboard" VALUES(60,'Cary','Hurst','3567 Cooks Mine Road',NULL,'Las Cruces','88005','505-679-9488','caryghurst@jourrapide.com');
+INSERT INTO "onboard" VALUES(61,'Tyler','Joseph','177 James Street',NULL,'Aldergrove','V5G 4S4','604-866-1097','tylersjoseph@rhyta.com');
+INSERT INTO "onboard" VALUES(62,'Susie','Higa','80 Broad Street',NULL,'LOWER PENNINGTON','SO41 4BA','070 7312 1513','susiekhiga@dayrep.com');
+INSERT INTO "onboard" VALUES(63,'Linda','Crawford','4060 Ross Street',NULL,'Smiths Falls','K7A 1C2','613-284-5165','lindakcrawford@jourrapide.com');
+INSERT INTO "onboard" VALUES(64,'Katherine','Charney','622 137th Avenue',NULL,'Edmonton','T5J 0X2','780-669-4710','katherinefcharney@einrot.com');
+INSERT INTO "onboard" VALUES(65,'Gretchen','Barthel','31 Kingsway North',NULL,'HOLSWORTHY','EX22 8EB','070 6551 4496','gretchencbarthel@gustr.com');
+INSERT INTO "onboard" VALUES(66,'Marvin','Kennedy','34 Lamphey Road',NULL,'THE WYKE','TF11 1YR','078 6972 2991','marvinlkennedy@jourrapide.com');
+INSERT INTO "onboard" VALUES(67,'Oretha','Wyss','4446 Davis Street',NULL,'Augusta','30901','706-365-8842','orethajwyss@fleckens.hu');
+INSERT INTO "onboard" VALUES(68,'Brenda','Lowe','41 West Lane',NULL,'DALGONAR','DG3 8DP','070 5591 8305','brendaclowe@gustr.com');
+INSERT INTO "onboard" VALUES(69,'Christina','Lewis','70 Thames Street',NULL,'BONNYBANK','KY8 1BG','070 1509 9499','christinaflewis@fleckens.hu');
+INSERT INTO "onboard" VALUES(70,'Beatrice','Bullock','77 Abingdon Road',NULL,'BRANTWOOD','LA21 5PZ','079 6195 4027','beatricefbullock@superrito.com');
+INSERT INTO "onboard" VALUES(71,'William','Higgins','65 Roman Rd',NULL,'LEDBURY','HR8 5JJ','079 2677 5229','williamchiggins@superrito.com');
+INSERT INTO "onboard" VALUES(72,'Francis','Fails','1382 Papineau Avenue',NULL,'Montreal','H2K 4J5','514-402-7359','francispfails@armyspy.com');
+INSERT INTO "onboard" VALUES(73,'Anthony','Gould','1689 Hammarskjold Dr',NULL,'Burnaby','V5B 3C9','604-293-7978','anthonyjgould@armyspy.com');
+INSERT INTO "onboard" VALUES(74,'John','Gaston','2090 St Jean Baptiste St',NULL,'St Ludger','G0M 1W0','819-548-7107','johnegaston@gustr.com');
+INSERT INTO "onboard" VALUES(75,'Judy','Franklin','15 Broomfield Place',NULL,'STONE STREET','IP19 3NA','078 6676 2490','judycfranklin@rhyta.com');
+INSERT INTO "onboard" VALUES(76,'Vanessa','Hartsock','92 Middlewich Road',NULL,'FIVE ASH DOWN','TN22 0JT','077 2279 2150','vanessashartsock@einrot.com');
+INSERT INTO "onboard" VALUES(77,'Lois','Martin','74 Consett Rd',NULL,'HIGHLAWS','CA5 6SD','077 2846 0658','loisjmartin@cuvox.de');
+INSERT INTO "onboard" VALUES(78,'Charles','Mejia','64 Newgate Street',NULL,'JACKTON','G75 8QB','078 0038 5514','charlesbmejia@fleckens.hu');
+INSERT INTO "onboard" VALUES(79,'Francisco','Guajardo','2074 Kerry Way',NULL,'Irvine','92614','562-832-4500','franciscolguajardo@dayrep.com');
+INSERT INTO "onboard" VALUES(80,'Danny','Williams','4736 47th Avenue',NULL,'Boyle','T0A 0M0','780-689-7571','dannynwilliams@rhyta.com');
+INSERT INTO "onboard" VALUES(81,'Juan','Bowen','1968 Danforth Avenue',NULL,'Toronto','M4K 1A6','416-476-9751','juanabowen@teleworm.us');
+INSERT INTO "onboard" VALUES(82,'Jim','Hill','3518 Main St',NULL,'Wolfville','B0P 1X0','902-697-6163','jimchill@teleworm.us');
+INSERT INTO "onboard" VALUES(83,'Joseph','Johnson','3443 Delaware Avenue',NULL,'San Francisco','94108','415-274-4354','josephjjohnson@cuvox.de');
+INSERT INTO "onboard" VALUES(84,'Scott','Chan','48 Colorado Way',NULL,'Los Angeles','90067','4017533509','scottmchan90067@gmail.com');
+INSERT INTO "onboard" VALUES(85,'Pat','Shaffer','97 Southern Way',NULL,'NORTH SCARLE','LN6 7SE','070 5181 8156','patcshaffer@superrito.com');
+INSERT INTO "onboard" VALUES(86,'John','Bishop','59 North Road',NULL,'NETHER HEYFORD','NN7 3TE','077 7175 9692','johnebishop@jourrapide.com');
+INSERT INTO "onboard" VALUES(87,'Mattie','Rodriguez','2993 Yonge Street',NULL,'Toronto','M4W 1J7','416-720-2724','mattierrodriguez@armyspy.com');
+INSERT INTO "onboard" VALUES(88,'Pearl','McCord','11 Boughton Rd',NULL,'WICKHAM ST PAUL','CO9 0QG','078 3015 0064','pearldmccord@superrito.com');
+INSERT INTO "onboard" VALUES(89,'Laurie','Ng','1652 Higginsville Road',NULL,'Windsor','B0N 2T0','902-472-1603','lauriejng@fleckens.hu');
+INSERT INTO "onboard" VALUES(90,'Tanya','Thomason','2386 Center Street',NULL,'Eugene','97401','541-915-2732','tanyamthomason@cuvox.de');
+INSERT INTO "onboard" VALUES(91,'Sherry','Hinton','87 Southend Avenue',NULL,'BLACKFORDBY','DE11 5QN','070 8154 8258','sherrythinton@gustr.com');
+INSERT INTO "onboard" VALUES(92,'Dwayne','Straight','3870 Ottis Street',NULL,'Minco','73059','405-352-0132','dwaynejstraight@gustr.com');
+INSERT INTO "onboard" VALUES(93,'Tina','Houser','4195 Quayside Dr',NULL,'New Westminster','V3M 6A1','778-238-8700','tinaahouser@teleworm.us');
+INSERT INTO "onboard" VALUES(94,'Deborah','Soileau','3938 Goyeau Ave',NULL,'Windsor','N9A 1H9','519-890-6446','deborahjsoileau@teleworm.us');
+INSERT INTO "onboard" VALUES(95,'Sharon','Leitch','4608 Snowbird Lane',NULL,'Omaha','68104','402-689-8335','sharonjleitch@superrito.com');
+INSERT INTO "onboard" VALUES(96,'Julia','Nunn','3166 rue des Églises Est',NULL,'Arntfield','J0Z 1B0','819-279-8802','julialnunn@fleckens.hu');
+INSERT INTO "onboard" VALUES(97,'Emma','Anton','950 Carling Avenue',NULL,'Ottawa','K1Z 7B5','613-799-8843','emmawanton@einrot.com');
+INSERT INTO "onboard" VALUES(98,'Margaret','Janes','1476 Boone Street',NULL,'Alice','78332','361-207-8407','margaretcjanes@fleckens.hu');
+INSERT INTO "onboard" VALUES(99,'Terry','Morgan','441 Fallon Drive',NULL,'Mount Forest','N0G 2L2','519-321-3224','terryjmorgan@fleckens.hu');
+INSERT INTO "onboard" VALUES(100,'Adam','Cooper','4791 Waterton Avenue',NULL,'Pincher Creek','T0K 1W0','403-632-1856','adamhcooper@superrito.com');
+INSERT INTO "onboard" VALUES(101,'Diane','McCartney','845 Lauzon Parkway',NULL,'Leamington','N8H 3B1','519-322-3658','dianekmccartney@cuvox.de');
+INSERT INTO "onboard" VALUES(102,'Thomas','Buss','57 Canterbury Road',NULL,'UPWARE','CB7 3NH','078 7137 8440','thomaspbuss@cuvox.de');
+INSERT INTO "onboard" VALUES(103,'Amanda','Johnson','40 Whatlington Road',NULL,'COULSTON','BA13 9BA','070 2755 4430','amandacjohnson@gustr.com');
+INSERT INTO "onboard" VALUES(104,'Stella','Jones','90 Maidstone Road',NULL,'WENTNOR','SY9 1NN','078 6029 1533','stellajjones@gustr.com');
+INSERT INTO "onboard" VALUES(105,'Angela','Linder','83 Roman Rd',NULL,'LEE MILL BRIDGE','PL7 5NW','079 3061 8143','angelaelinder@teleworm.us');
+INSERT INTO "onboard" VALUES(106,'Lance','Schill','1488 Oakway Lane',NULL,'Los Angeles','90017','818-253-8238','lancesschill@jourrapide.com');
+INSERT INTO "onboard" VALUES(107,'Mary','Smith','42 Fulford Road',NULL,'PENPONT','DG3 2SN','078 4426 8667','maryjsmith@rhyta.com');
+INSERT INTO "onboard" VALUES(108,'Joseph','Beck','20 Seaford Road',NULL,'CULLIPOOL','PA34 8BP','078 4405 7430','josephsbeck@gustr.com');
+INSERT INTO "onboard" VALUES(109,'Edward','Dawkins','1259 Selah Way',NULL,'Winooski','5404','802-654-3001','edwardhdawkins@superrito.com');
+INSERT INTO "onboard" VALUES(110,'Kevin','Torres','714 Myra Street',NULL,'Providence','2903','401-488-9912','kevindtorres@superrito.com');
+INSERT INTO "onboard" VALUES(111,'Cameron','Wells','4822 Rhapsody Street',NULL,'Gainesville','32601','352-337-5273','cameronrwells@armyspy.com');
+INSERT INTO "onboard" VALUES(112,'Louis','Garcia','4217 Burwell Heights Road',NULL,'Houston','77027','409-555-7232','louisvgarcia@armyspy.com');
+INSERT INTO "onboard" VALUES(113,'Stacey','White','82 Well Lane',NULL,'PATRIXBOURNE','CT4 6SZ','079 7426 2830','staceywwhite@teleworm.us');
+INSERT INTO "onboard" VALUES(114,'Jean','Cruise','798 40th Street',NULL,'Calgary','T2K 0P7','403-275-7274','jeanbcruise@armyspy.com');
+INSERT INTO "onboard" VALUES(115,'Omega','Stamm','15 Whatlington Road',NULL,'COWAN BRIDGE','LA6 9WU','077 5586 6506','omegafstamm@jourrapide.com');
+INSERT INTO "onboard" VALUES(116,'Claudia','Cantrell','24 Trehafod Road',NULL,'BUCKLEBURY','RG7 2TS','078 5083 3233','claudiatcantrell@jourrapide.com');
+INSERT INTO "onboard" VALUES(117,'Joann','Kellar','80 Petworth Rd',NULL,'DUNSTON','ST18 9BR','079 7011 8965','joannskellar@cuvox.de');
+INSERT INTO "onboard" VALUES(118,'Dexter','Figueroa','2294 Broadmoor Blvd',NULL,'Sherwood Park','T8A 1V6','780-662-7299','dexterbfigueroa@cuvox.de');
+INSERT INTO "onboard" VALUES(119,'Debbie','Gee','49 Sandyhill Rd',NULL,'GAICK LODGE','PH21 7WE','070 8515 8276','debbiergee@armyspy.com');
+INSERT INTO "onboard" VALUES(120,'Lilian','Finn','1836 Reserve St',NULL,'Long Sault','K0L 1P0','613-534-6303','liliankfinn@einrot.com');
+INSERT INTO "onboard" VALUES(121,'Estelle','Avila','45 Ash Lane',NULL,'YIEWSLEY','UB7 5YQ','078 6560 6052','estelleravila@jourrapide.com');
+INSERT INTO "onboard" VALUES(122,'John','Gill','2268 Red Bud Lane',NULL,'Rochelle Park','7662','862-370-8712','johnagill@gustr.com');
+INSERT INTO "onboard" VALUES(123,'Lisa','Arsenault','92 West Lane',NULL,'DARENTH','DA2 1ZJ','078 7094 2406','lisajarsenault@gustr.com');
+INSERT INTO "onboard" VALUES(124,'John','Garcia','56 Golden Knowes Road',NULL,'FRIESTHORPE','LN3 0HE','070 1447 9983','johnsgarcia@cuvox.de');
+INSERT INTO "onboard" VALUES(125,'Melvin','Carlucci','2232 Yonge Street',NULL,'Toronto','M4W 1J7','416-961-5670','melvinlcarlucci@cuvox.de');
+INSERT INTO "onboard" VALUES(126,'Stefan','Sanchez','36 Trehafod Road',NULL,'BUCKLAND BREWER','EX39 8YL','077 3783 9813','stefanksanchez@rhyta.com');
+INSERT INTO "onboard" VALUES(127,'Sylvia','Shaver','1317 47th Avenue',NULL,'Lac La Biche','T0A 2C0','780-404-8373','sylviaoshaver@dayrep.com');
+INSERT INTO "onboard" VALUES(128,'Ka','Venne','4953 Doctors Drive',NULL,'El Segundo','90245','310-364-8308','kagvenne@cuvox.de');
+INSERT INTO "onboard" VALUES(129,'Ofelia','Graham','88 Broomfield Place',NULL,'STONEBRIDGE','CV7 9JE','070 4014 2835','ofeliahgraham@teleworm.us');
+INSERT INTO "onboard" VALUES(130,'Teresa','Clayton','2121 Elk Rd Little',NULL,'Tucson','85712','520-237-6700','teresajclayton@teleworm.us');
+INSERT INTO "onboard" VALUES(131,'Ronald','Killion','663 40th Street',NULL,'Calgary','T2P 2V7','403-539-0482','ronaldbkillion@cuvox.de');
+INSERT INTO "onboard" VALUES(132,'Diane','Moore','346 Dundas St',NULL,'Toronto','M2N 2G8','416-218-0180','dianebmoore@dayrep.com');
+INSERT INTO "onboard" VALUES(133,'Eva','Dahlstrom','92 47th Avenue',NULL,'Waskatenau','T0A 3P0','780-358-8646','evacdahlstrom@superrito.com');
+INSERT INTO "onboard" VALUES(134,'Marie','Davis','86 Sea Road',NULL,'LAMLOCH','DG7 9GF','077 6603 5676','mariemdavis@cuvox.de');
+INSERT INTO "onboard" VALUES(135,'Linda','Broomfield','4780 Woodstock Drive',NULL,'El Monte','91731','626-456-3955','lindambroomfield@dayrep.com');
+INSERT INTO "onboard" VALUES(136,'Daniel','Reed','84 Buckingham Rd',NULL,'THORNTON-LE-BEANS','DL6 8HP','079 7101 0192','danieldreed@rhyta.com');
+INSERT INTO "onboard" VALUES(137,'Douglas','Porter','17 Scarcroft Road',NULL,'PORTH','CF39 9EU','079 5441 7939','douglasfporter@jourrapide.com');
+INSERT INTO "onboard" VALUES(138,'Lawrence','Heck','4919 Speers Road',NULL,'Brampton','L6T 3W9','905-793-4570','lawrencerheck@fleckens.hu');
+INSERT INTO "onboard" VALUES(139,'Rachel','Trent','4653 Haaglund Rd',NULL,'Lower Post','V0H 0H0','250-779-0723','racheljtrent@teleworm.us');
+INSERT INTO "onboard" VALUES(140,'Iva','Johnson','2939 Quilly Lane',NULL,'Westerville','43081','614-544-2873','ivadjohnson@jourrapide.com');
+INSERT INTO "onboard" VALUES(141,'Lance','Arceo','86 Kingsway North',NULL,'HOLMSIDE','DH7 9EW','070 5772 3162','lancemarceo@cuvox.de');
+INSERT INTO "onboard" VALUES(142,'Valerie','Howell','1142 rue Levy',NULL,'Montreal','H3C 5K4','514-774-5866','valeriedhowell@superrito.com');
+INSERT INTO "onboard" VALUES(143,'Mary','Poirier','2038 Stutler Lane',NULL,'Bedford','15522','814-423-2173','marydpoirier@einrot.com');
+INSERT INTO "onboard" VALUES(144,'Susanne','Camp','4146 Galts Ave',NULL,'Red Deer','T4N 5Z9','403-373-2195','susannewcamp@armyspy.com');
+INSERT INTO "onboard" VALUES(145,'Ron','Peters','1364 137th Avenue',NULL,'Edmonton','T5M 3K3','780-454-1668','ronlpeters@rhyta.com');
+INSERT INTO "onboard" VALUES(146,'Marjory','Bryant','4129 Court Street',NULL,'Eureka','63025','636-587-5083','marjorykbryant@dayrep.com');
+INSERT INTO "onboard" VALUES(147,'Betty','Pratt','68 Oxford Rd',NULL,'WOOTTON','CT4 5WA','070 4977 6152','bettygpratt@gustr.com');
+INSERT INTO "onboard" VALUES(148,'Regina','Chen','3930 Chestnut Street',NULL,'Tampa','33619','727-482-0568','reginalchen@cuvox.de');
+INSERT INTO "onboard" VALUES(149,'Charles','Atkins','418 Hood Avenue',NULL,'San Diego','92111','858-694-9634','charlesmatkins@gustr.com');
+INSERT INTO "onboard" VALUES(150,'Lawrence','Taylor','91 Scarcroft Road',NULL,'PORT LOGAN','DG9 5LG','077 3050 1172','lawrencejtaylor@cuvox.de');
+INSERT INTO "onboard" VALUES(151,'Pam','Goudy','1785 Russell Street',NULL,'Woburn','1801','978-853-5666','pamgoudy@einrot.com');
+INSERT INTO "onboard" VALUES(152,'Evelyn','Evans','2438 Reserve St',NULL,'Parham','K0H 2K0','613-375-6041','evelyndevans@cuvox.de');
+INSERT INTO "onboard" VALUES(153,'Janice','Atkin','85 Oxford Rd',NULL,'WORK','KW15 5EF','078 8718 3013','janicebatkin@dayrep.com');
+INSERT INTO "onboard" VALUES(154,'Hazel','Merrick','3751 Owen Lane',NULL,'Naples','33940','239-263-5968','hazelbmerrick@cuvox.de');
+INSERT INTO "onboard" VALUES(155,'Pearlene','Ferrell','1410 Dominion St',NULL,'Finch','K0C 1K0','613-984-2873','pearlenetferrell@teleworm.us');
+INSERT INTO "onboard" VALUES(156,'Peggy','Harper','1846 Davis Street',NULL,'Chickamauga','30707','706-382-7319','peggyaharper@armyspy.com');
+INSERT INTO "onboard" VALUES(157,'Carol','Lindsey','4211 40th Street',NULL,'Calgary','T2M 0X4','403-210-8234','carolglindsey@gustr.com');
+INSERT INTO "onboard" VALUES(158,'Santiago','Field','4783 Merivale Road',NULL,'Kanata','K2K 1L9','613-592-3285','santiagobfield@einrot.com');
+INSERT INTO "onboard" VALUES(159,'Hugh','Torres','3773 Northumberland Street',NULL,'Baden','N0B 1G0','519-634-7229','hughbtorres@teleworm.us');
+INSERT INTO "onboard" VALUES(160,'Claudia','Halpin','3248 Colonial Drive',NULL,'College Station','77840','979-764-7262','claudiajhalpin@armyspy.com');
+INSERT INTO "onboard" VALUES(161,'Christopher','Windham','2310 Barton Street',NULL,'Stoney Creek','L8G 2V1','905-664-5559','christopheruwindham@fleckens.hu');
+INSERT INTO "onboard" VALUES(162,'Theodore','Young','4201 Providence Lane',NULL,'Anaheim','92801','626-803-1180','theodoresyoung@cuvox.de');
+INSERT INTO "onboard" VALUES(163,'Lauren','Casey','4455 Fallon Drive',NULL,'Hensall','N0M 1X0','519-263-7462','laurenjcasey@jourrapide.com');
+INSERT INTO "onboard" VALUES(164,'Molly','Logan','1544 St George Street',NULL,'Vancouver','V5T 1Z7','604-871-8098','mollyhlogan@jourrapide.com');
+INSERT INTO "onboard" VALUES(165,'Alan','Guinn','3395 Galts Ave',NULL,'Red Deer','T4N 2A6','403-309-5523','alanmguinn@fleckens.hu');
+INSERT INTO "onboard" VALUES(166,'Brenda','Johnson','65 Northgate Street',NULL,'BETLEY','CW3 1TE','070 1362 3463','brendatjohnson@gustr.com');
+INSERT INTO "onboard" VALUES(167,'Catherine','Priest','1144 McDonald Avenue',NULL,'Orlando','32810','407-924-7464','catherinebpriest@superrito.com');
+INSERT INTO "onboard" VALUES(168,'William','McCoy','1019 Benson Park Drive',NULL,'Newcastle','73065','405-387-6925','williammmccoy@superrito.com');
+INSERT INTO "onboard" VALUES(169,'Stephanie','Jaynes','1854 Tycos Dr',NULL,'Toronto','M5T 1T4','416-605-0198','stephaniejjaynes@rhyta.com');
+COMMIT;
+</pre>
+        <p>When we first logged into <b>The Name Game</b> the rhyme at the beginning asks us to look for <b>"Chan!"</b>. That could only be one line from above</p>
+        <pre class="border text-light bg-dark p-2">INSERT INTO "onboard" VALUES(84,'Scott','Chan','48 Colorado Way',NULL,'Los Angeles','90067','4017533509','scottmchan90067@gmail.com');</pre>
+        <p>That gives us the firstname of <b>Scott</b> as our answer. Since we can now run commands, we can also perform the completion of the challenge which is to execute <code>runtoanswer</code>. which we do by crafting the the following input for option <kbd>2</kbd>:</p>
+        <pre class="border text-light bg-dark p-2">; runtoanswer</pre>
+        <pre class="text-monospace bg-dark text-light p-2">
+Validating data store for employee onboard information.
+
+Enter address of server: ; runtoanswer
+
+Usage: ping [-aAbBdDfhLnOqrRUvV] [-c count] [-i interval] [-I interface]
+            [-m mark] [-M pmtudisc_option] [-l preload] [-p pattern] [-Q tos]
+            [-s packetsize] [-S sndbuf] [-t ttl] [-T timestamp_option]
+            [-w deadline] [-W timeout] [hop1 ...] destination
+Loading, please wait......
+
+
+
+Enter Mr. Chan's first name: Scott
+
+
+<span style="color: rgb(211, 215, 207);">        </span>                                                                <span style="color: rgb(211, 215, 207);">        </span>
+<span style="color: rgb(211, 215, 207);">   </span> <span style="color: rgb(78, 154, 6);">.;looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooool:'</span> <span style="color: rgb(211, 215, 207);">   </span>
+<span style="color: rgb(211, 215, 207);"> </span> <span style="color: rgb(78, 154, 6);">'ooooooooooookOOooooxOOdodOOOOOOOdoxOOdoooooOOkoooooooxO</span><span style="color: rgb(211, 215, 207);">000</span><span style="color: rgb(78, 154, 6);">Okdooooooooooooo;</span> <span style="color: rgb(211, 215, 207);"> </span>
+<span style="color: rgb(211, 215, 207);"> </span><span style="color: rgb(78, 154, 6);">'ooooooooooooo</span>X<span style="color: rgb(211, 215, 207);">M</span>W<span style="color: rgb(78, 154, 6);">ooooO</span><span style="color: rgb(211, 215, 207);">M</span>M<span style="color: rgb(78, 154, 6);">xod</span>MMNKKKK<span style="color: rgb(78, 154, 6);">xoO</span><span style="color: rgb(211, 215, 207);">M</span>M<span style="color: rgb(78, 154, 6);">xooooo</span>W<span style="color: rgb(211, 215, 207);">M</span>X<span style="color: rgb(78, 154, 6);">oooook</span>NMWK<span style="color: rgb(78, 154, 6);">0</span><span style="color: rgb(211, 215, 207);">K</span>NMW<span style="color: rgb(78, 154, 6);">Oooooooooooooo;</span><span style="color: rgb(211, 215, 207);"> </span>
+<span style="color: rgb(211, 215, 207);"> </span><span style="color: rgb(78, 154, 6);">:ooooooooooooo</span>X<span style="color: rgb(211, 215, 207);">M</span>W<span style="color: rgb(78, 154, 6);">ooooO</span><span style="color: rgb(211, 215, 207);">M</span>M<span style="color: rgb(78, 154, 6);">xod</span>MM<span style="color: rgb(78, 154, 6);">0ooooooO</span><span style="color: rgb(211, 215, 207);">M</span>M<span style="color: rgb(78, 154, 6);">xooooo</span>W<span style="color: rgb(211, 215, 207);">M</span>X<span style="color: rgb(78, 154, 6);">oooox</span>MMK<span style="color: rgb(78, 154, 6);">ooooo</span>K<span style="color: rgb(211, 215, 207);">M</span>M<span style="color: rgb(78, 154, 6);">kooooooooooooo</span>
+ <span style="color: rgb(78, 154, 6);">cooooooooooooo</span>X<span style="color: rgb(211, 215, 207);">M</span>MMMMMM<span style="color: rgb(211, 215, 207);">M</span>M<span style="color: rgb(78, 154, 6);">xod</span>MMWWWW<span style="color: rgb(78, 154, 6);">0ooO</span><span style="color: rgb(211, 215, 207);">M</span>M<span style="color: rgb(78, 154, 6);">xooooo</span>W<span style="color: rgb(211, 215, 207);">M</span>X<span style="color: rgb(78, 154, 6);">ooooO</span>M<span style="color: rgb(211, 215, 207);">M</span><span style="color: rgb(78, 154, 6);">koooook</span>M<span style="color: rgb(211, 215, 207);">M</span><span style="color: rgb(78, 154, 6);">0ooooooooooooo</span>
+ <span style="color: rgb(78, 154, 6);">cooooooooooooo</span>X<span style="color: rgb(211, 215, 207);">M</span>W<span style="color: rgb(78, 154, 6);">dddd0</span><span style="color: rgb(211, 215, 207);">M</span>M<span style="color: rgb(78, 154, 6);">xod</span>MM<span style="color: rgb(78, 154, 6);">0ddddooO</span><span style="color: rgb(211, 215, 207);">M</span>M<span style="color: rgb(78, 154, 6);">xooooo</span>W<span style="color: rgb(211, 215, 207);">M</span>X<span style="color: rgb(78, 154, 6);">ooooO</span>MM<span style="color: rgb(78, 154, 6);">OoooooO</span>MM<span style="color: rgb(78, 154, 6);">kooooooooooooo</span>
+ <span style="color: rgb(78, 154, 6);">cooooooooooooo</span>X<span style="color: rgb(211, 215, 207);">M</span>W<span style="color: rgb(78, 154, 6);">ooooO</span><span style="color: rgb(211, 215, 207);">M</span>M<span style="color: rgb(78, 154, 6);">xod</span>MM<span style="color: rgb(78, 154, 6);">KxxxxdoO</span><span style="color: rgb(211, 215, 207);">M</span>M<span style="color: rgb(78, 154, 6);">Okkkxo</span>W<span style="color: rgb(211, 215, 207);">M</span>X<span style="color: rgb(78, 154, 6);">kkkkd</span>XMW<span style="color: rgb(78, 154, 6);">0xxk0</span>MMK<span style="color: rgb(78, 154, 6);">oooooooooooooo</span>
+ <span style="color: rgb(78, 154, 6);">cooooooooooooo0</span>NX<span style="color: rgb(78, 154, 6);">ooook</span>NN<span style="color: rgb(78, 154, 6);">dod</span>XNNNNNN<span style="color: rgb(78, 154, 6);">kok</span>NNNNNN<span style="color: rgb(78, 154, 6);">Oo</span>KNNNNNX<span style="color: rgb(78, 154, 6);">ook</span>KNNWNX<span style="color: rgb(78, 154, 6);">Kxooooooooooooooo</span>
+ <span style="color: rgb(78, 154, 6);">cooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo</span>
+ <span style="color: rgb(78, 154, 6);">coooooooooooooooooooooooooooooooooo</span>MY<span style="color: rgb(78, 154, 6);">c</span>NAME<span style="color: rgb(78, 154, 6);">c</span>IS<span style="color: rgb(78, 154, 6);">ooooooooooooooooooooooooooooooooo</span>
+<span style="color: rgb(211, 215, 207);"> </span><span style="color: rgb(78, 154, 6);">cddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddo</span>
+<span style="color: rgb(211, 215, 207);"> O</span>MMMMMMMMMMMMMMMNXXWMMMMMMMNXXWMMMMMMWXKXWMMMMWWWWWWWWWMWWWWWWWWWMMMMMMMMMMMM<span style="color: rgb(211, 215, 207);">W </span>
+<span style="color: rgb(211, 215, 207);"> OMMMMMMMMMMMMW:  .. ;MMMk'     .NMX:. </span> <span style="color: rgb(211, 215, 207);">.  .lWO         d         xMMMMMMMMMMMW </span>
+<span style="color: rgb(211, 215, 207);"> OMMMMMMMMMMMMo  OMMWXMMl  lNMMNxWK  ,XMMMO  .MMMM. .MMMMMMM, .MMMMMMMMMMMMMMMW </span>
+<span style="color: rgb(211, 215, 207);"> OMMMMMMMMMMMMX.  .cOWMN  'MMMMMMM;  WMMMMMc  KMMM. .MMMMMMM, .MMMMMMMMMMMMMMMW </span>
+<span style="color: rgb(211, 215, 207);"> OMMMMMMMMMMMMMMKo,   KN  ,MMMMMMM,  WMMMMMc  KMMM. .MMMMMMM, .MMMMMMMMMMMMMMMW </span>
+<span style="color: rgb(211, 215, 207);"> OMMMMMMMMMMMMKNMMMO  oM,  dWMMWOWk  cWMMMO</span> <span style="color: rgb(211, 215, 207);"> ,MMMM. .MMMMMMM, </span>.<span style="color: rgb(211, 215, 207);">MMMMMMMMMMMMMMMW </span>
+<span style="color: rgb(211, 215, 207);"> OMMMMMMMMMMMMc ...  cWMWl.  ..</span> <span style="color: rgb(211, 215, 207);">.NMk.  ..  .oMMMMM. .MMMMMMM, </span>.<span style="color: rgb(211, 215, 207);">MMMMMMMMMMMMMMMW </span>
+<span style="color: rgb(211, 215, 207);"> </span>xXXXXXXXXXXXXXKOxk0XXXXXXX0kkkKXXXXXKOkxkKXXXXXXXKOKXXXXXXXKO0XXXXXXXXXXXXXXXK<span style="color: rgb(211, 215, 207);"> </span>
+<span style="color: rgb(211, 215, 207);"> </span>.<span style="color: rgb(78, 154, 6);">oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo,</span><span style="color: rgb(211, 215, 207);"> </span>
+<span style="color: rgb(211, 215, 207);"> </span> .<span style="color: rgb(78, 154, 6);">looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo,</span> <span style="color: rgb(211, 215, 207);"> </span>
+<span style="color: rgb(211, 215, 207);">   </span> .<span style="color: rgb(78, 154, 6);">,cllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllc;</span>. <span style="color: rgb(211, 215, 207);">   </span>
+<span style="color: rgb(211, 215, 207);">                                                                                </span>
+
+Congratulations!
+
+onboard.db: SQLite 3.x database
+Press Enter to continue...:
+</pre>
       </div>
+
       <div class="border rounded p-2 m-2">
-        <h2><a id="termViminfo"></a>Lethal ForensicELFication</h2>
+        <div class="dropdown">
+          <button class="btn btn-dark dropdown-toggle mb-1" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a id="termViminfo"></a>Lethal ForensicELFication
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#npcTangle">Tangle Coalbox 3</a>
+            <a class="dropdown-item" href="#obj3">Objective 3</a>
+          </div>
+        </div>
         <div id="divViminfo" style="display: inline-block" onclick='if (!$(this).html().includes("iframe")) {$(this).html(atob("PGlmcmFtZSBzdHlsZT0ibWluLXdpZHRoOiA4MDBweDsgbWF4LXdpZHRoOiAxMDAwcHg7IGhlaWdodDogODAwcHg7IGJvcmRlcjogbm9uZTsiIHNyYz0iaHR0cHM6Ly9kb2NrZXIua3JpbmdsZWNvbi5jb20vP2NoYWxsZW5nZT12aW1pbmZvJmFtcDtpZD1mYWxzZTtpZD1mYWxzZSI+PC9pZnJhbWU+PHA+PGEgaHJlZj0iIyEiIGNsYXNzPSJidG4gYnRuLWluZm8iICBvbm1vdXNldXA9IiQoJyNkaXZWaW1pbmZvJykuaHRtbChhdG9iKCdQR0VnYUhKbFpqMGlJeUVpSUdOc1lYTnpQU0ppZEc0Z1luUnVMV2x1Wm04aVBrTnNhV05ySUdobGNtVWdkRzhnUEdJK2IzQmxiand2WWo0Z1RHVjBhR0ZzSUVadmNtVnVjMmxqUlV4R2FXTmhkR2x2YmlCVVpYSnRhVzVoYkR3dllUND0nKSkiPkNsaWNrIGhlcmUgdG8gPGI+Y2xvc2U8L2I+IExldGhhbCBGb3JlbnNpY0VMRmljYXRpb24gVGVybWluYWw8L2E+PC9wPg=="))}'>
           <a href="#!" class="btn btn-info">Click here to <b>open</b> Lethal ForensicELFication Terminal</a>
         </div>
+        <hr class="my-4">
+        <p>On initial login we're given a rhyme that asks for the first name of the elf of whom a love poem was written. The elf associated with this puzzle is <a href="#npcTangle">Tangle Coalbox</a></p>
+<pre class="text-monospace bg-dark text-light p-2">
+<span style="color: rgb(211, 215, 207);">  </span>  <span style="color: rgb(211, 215, 207);">       </span> <span style="color: rgb(211, 215, 207);">          </span> <span style="color: rgb(211, 215, 207);">....</span>.<span style="color: rgb(211, 215, 207);">.......'''',,,;;;::ccclloooddxxkkOO00KKXXNNWWMMMMMM</span>
+<span style="color: rgb(211, 215, 207);">  </span> <span style="color: rgb(211, 215, 207);">        </span> <span style="color: rgb(211, 215, 207);">           ....</span>.<span style="color: rgb(211, 215, 207);">.......'''',,,;;;::ccclloooddxxkkOO00KKXXNNWWMMMMMM</span>
+<span style="color: rgb(211, 215, 207);">   </span><span style="color: rgb(204, 0, 0);">.,.</span><span style="color: rgb(211, 215, 207);"> </span> <span style="color: rgb(211, 215, 207);"> </span><span style="color: rgb(204, 0, 0);">,.</span><span style="color: rgb(211, 215, 207);"> </span><span style="color: rgb(78, 154, 6);">......</span><span style="color: rgb(204, 0, 0);">.,</span><span style="color: rgb(211, 215, 207);">.  </span>.<span style="color: rgb(204, 0, 0);">',</span><span style="color: rgb(211, 215, 207);">.</span><span style="color: rgb(78, 154, 6);">.'',,</span>.<span style="color: rgb(211, 215, 207);">.</span><span style="color: rgb(204, 0, 0);">:::::</span><span style="color: rgb(211, 215, 207);">,,</span>;<span style="color: rgb(78, 154, 6);">:c:</span><span style="color: rgb(211, 215, 207);">::c</span>c<span style="color: rgb(78, 154, 6);">oo</span>oo<span style="color: rgb(211, 215, 207);">odx</span><span style="color: rgb(204, 0, 0);">kk</span><span style="color: rgb(211, 215, 207);">OOk</span>OO0KKXXX<span style="color: rgb(211, 215, 207);">NNWMMMMMMM</span>
+<span style="color: rgb(211, 215, 207);">  </span> <span style="color: rgb(204, 0, 0);">ldd:</span><span style="color: rgb(211, 215, 207);"> </span><span style="color: rgb(204, 0, 0);">.d'</span><span style="color: rgb(211, 215, 207);"> </span><span style="color: rgb(78, 154, 6);">';...</span> <span style="color: rgb(204, 0, 0);">.o:</span><span style="color: rgb(211, 215, 207);"> </span> <span style="color: rgb(204, 0, 0);">.d;</span><span style="color: rgb(211, 215, 207);">.</span><span style="color: rgb(78, 154, 6);">;:...</span>.<span style="color: rgb(211, 215, 207);">'</span><span style="color: rgb(204, 0, 0);">dl</span><span style="color: rgb(211, 215, 207);">,</span><span style="color: rgb(204, 0, 0);">;do</span><span style="color: rgb(211, 215, 207);">,</span><span style="color: rgb(78, 154, 6);">:lloc</span>:c<span style="color: rgb(78, 154, 6);">oddd</span><span style="color: rgb(211, 215, 207);">od</span><span style="color: rgb(204, 0, 0);">OO</span><span style="color: rgb(211, 215, 207);">xxk</span><span style="color: rgb(204, 0, 0);">0K</span><span style="color: rgb(211, 215, 207);">O</span>O<span style="color: rgb(78, 154, 6);">KK</span>KKXNN<span style="color: rgb(211, 215, 207);">NWMMMMMMM</span>
+<span style="color: rgb(211, 215, 207);">  </span> <span style="color: rgb(204, 0, 0);">lo.ol.d'</span><span style="color: rgb(211, 215, 207);"> </span><span style="color: rgb(78, 154, 6);">';'..</span>  <span style="color: rgb(204, 0, 0);">,d'</span><span style="color: rgb(211, 215, 207);">.</span><span style="color: rgb(204, 0, 0);">lc</span><span style="color: rgb(211, 215, 207);">..</span><span style="color: rgb(78, 154, 6);">;:,,,</span><span style="color: rgb(211, 215, 207);">.'</span><span style="color: rgb(204, 0, 0);">docod:</span>,<span style="color: rgb(78, 154, 6);">:l:lo</span>c<span style="color: rgb(78, 154, 6);">ld</span>l<span style="color: rgb(78, 154, 6);">dd</span>o<span style="color: rgb(204, 0, 0);">kO</span><span style="color: rgb(211, 215, 207);">xdxxO</span><span style="color: rgb(204, 0, 0);">K</span><span style="color: rgb(211, 215, 207);">0</span>O<span style="color: rgb(78, 154, 6);">KK</span>KXXXN<span style="color: rgb(211, 215, 207);">NWMMMMMMM</span>
+<span style="color: rgb(211, 215, 207);">  </span> <span style="color: rgb(204, 0, 0);">lo</span><span style="color: rgb(211, 215, 207);"> </span><span style="color: rgb(204, 0, 0);"> lod'</span><span style="color: rgb(211, 215, 207);"> </span><span style="color: rgb(78, 154, 6);">'; </span>   <span style="color: rgb(211, 215, 207);">  </span><span style="color: rgb(204, 0, 0);">co:o</span><span style="color: rgb(211, 215, 207);">.</span>.<span style="color: rgb(211, 215, 207);">.</span><span style="color: rgb(78, 154, 6);">;:</span>....<span style="color: rgb(211, 215, 207);">'</span><span style="color: rgb(204, 0, 0);">dl</span><span style="color: rgb(211, 215, 207);">'</span><span style="color: rgb(204, 0, 0);">:dl</span><span style="color: rgb(211, 215, 207);">,</span><span style="color: rgb(78, 154, 6);">:l:</span>:<span style="color: rgb(78, 154, 6);">oodl</span><span style="color: rgb(211, 215, 207);">c</span><span style="color: rgb(78, 154, 6);">dd</span>o<span style="color: rgb(204, 0, 0);">xOk</span><span style="color: rgb(211, 215, 207);">xxk</span><span style="color: rgb(204, 0, 0);">0K</span><span style="color: rgb(211, 215, 207);">O</span>O<span style="color: rgb(78, 154, 6);">K</span>KKKXNN<span style="color: rgb(211, 215, 207);">NWMMMMMMM</span>
+<span style="color: rgb(211, 215, 207);">  </span> <span style="color: rgb(204, 0, 0);">,,</span><span style="color: rgb(211, 215, 207);">   </span><span style="color: rgb(204, 0, 0);">,;.</span><span style="color: rgb(211, 215, 207);"> </span><span style="color: rgb(78, 154, 6);">......</span><span style="color: rgb(211, 215, 207);"> </span> <span style="color: rgb(211, 215, 207);">.</span><span style="color: rgb(204, 0, 0);">;:.</span>.<span style="color: rgb(211, 215, 207);">.</span>.<span style="color: rgb(78, 154, 6);">',,,,'</span><span style="color: rgb(211, 215, 207);">'</span><span style="color: rgb(204, 0, 0);">c:</span><span style="color: rgb(211, 215, 207);">''</span><span style="color: rgb(204, 0, 0);">:l</span><span style="color: rgb(211, 215, 207);">;</span>;<span style="color: rgb(78, 154, 6);">c</span>:;:<span style="color: rgb(78, 154, 6);">ll</span>cc<span style="color: rgb(78, 154, 6);">oo</span><span style="color: rgb(211, 215, 207);">o</span>o<span style="color: rgb(211, 215, 207);">d</span><span style="color: rgb(204, 0, 0);">kkOO</span><span style="color: rgb(211, 215, 207);">Ok</span>OO0K<span style="color: rgb(211, 215, 207);">K</span>KXNN<span style="color: rgb(211, 215, 207);">NWMMMMMMM</span>
+<span style="color: rgb(211, 215, 207);">  </span> <span style="color: rgb(211, 215, 207);">        </span> <span style="color: rgb(211, 215, 207);">           ....</span>.<span style="color: rgb(211, 215, 207);">.......'''',,,;;;::ccclloooddxxkkOO00KKXXNNWWMMMMMM</span>
+<span style="color: rgb(211, 215, 207);">  </span>  <span style="color: rgb(211, 215, 207);">       </span> <span style="color: rgb(211, 215, 207);">          </span> <span style="color: rgb(211, 215, 207);">....</span>.<span style="color: rgb(211, 215, 207);">.......'''',,,;;;::ccclloooddxxkkOO00KKXXNNWWMMMMMM</span>
+
+Christmas is coming, and so it would seem,
+ER (Elf Resources) crushes elves' dreams.
+One tells me she was disturbed by a bloke.
+He tells me this must be some kind of joke.
+
+Please do your best to determine what's real.
+Has this jamoke, for this elf, got some feels?
+Lethal forensics ain't my cup of tea;
+If YOU can fake it, my hero you'll be.
+
+One more quick note that might help you complete,
+Clearing this mess up that's now at your feet.
+Certain text editors can leave some clue.
+Did our young Romeo leave one for you?
+
+- Tangle Coalbox, ER Investigator
+
+  Find the first name of the elf of whom a love poem
+  was written.  Complete this challenge by submitting
+  that name to runtoanswer.
+elf@2923736825d9:~$
+</pre>
+
+        <p>We do see some interesting bash history from this terminal</p>
+
+<pre class="text-monospace bg-dark text-light p-2">
+set -o history
+whoami
+echo "No, really...  /-:"
+mkdir -p .secrets/her/
+firefox https://www.google.com/search?q=love+poetry
+vim
+ls -lAR
+exit
+set -o history
+df -h
+who
+firefox https://www.google.com/search?q=replacing+strings+in+vim
+time vim
+ls -lAR
+exit
+set -o history
+vim
+exit
+
+ls -lA
+cat .bash_history
+echo "" >> .bash_history
+firefox https://www.google.com/search?q=turn+off+bash+history
+set +o history
+set +o history
+</pre>
+        <p>We do see some interesting bash history from this terminal</p>
+
+<pre class="text-monospace bg-dark text-light p-2">
+elf@83d210731e30:~$ runtoanswer
+Loading, please wait......
+
+
+
+Who was the poem written about? Elinore
+
+
+<span style="color: rgb(211, 215, 207);">WWNXXK00OOkkxddoolllcc::;;;,,,'''........</span>.<span style="color: rgb(211, 215, 207);">....         </span> <span style="color: rgb(211, 215, 207);">  </span> <span style="color: rgb(211, 215, 207);">            </span>  <span style="color: rgb(211, 215, 207);">      </span>
+<span style="color: rgb(211, 215, 207);">WWNXXK00OOkkxddoolllcc::;;;,,,'''........</span>.<span style="color: rgb(211, 215, 207);">....         </span> <span style="color: rgb(211, 215, 207);">  </span> <span style="color: rgb(211, 215, 207);">            </span>  <span style="color: rgb(211, 215, 207);">      </span>
+<span style="color: rgb(211, 215, 207);">WWNX</span>XK<span style="color: rgb(211, 215, 207);">00</span>OOkkx<span style="color: rgb(211, 215, 207);">ddoolllcc</span>:<span style="color: rgb(211, 215, 207);">:</span>;;<span style="color: rgb(211, 215, 207);">;</span>,<span style="color: rgb(211, 215, 207);">,,'</span>'<span style="color: rgb(211, 215, 207);">'..</span>...<span style="color: rgb(211, 215, 207);">...</span>.<span style="color: rgb(211, 215, 207);">.</span>...<span style="color: rgb(211, 215, 207);">           </span> <span style="color: rgb(211, 215, 207);">       </span> <span style="color: rgb(211, 215, 207);">  </span>     <span style="color: rgb(211, 215, 207);">      </span>
+<span style="color: rgb(211, 215, 207);">WWNX</span>X<span style="color: rgb(211, 215, 207);">KK00OOOxd</span>dddo<span style="color: rgb(211, 215, 207);">llccc</span><span style="color: rgb(204, 0, 0);">ll</span><span style="color: rgb(211, 215, 207);">:</span>;,;:;,'<span style="color: rgb(211, 215, 207);">..</span>.,,.<span style="color: rgb(211, 215, 207);">....</span><span style="color: rgb(204, 0, 0);">'',,''.</span><span style="color: rgb(211, 215, 207);"> </span> <span style="color: rgb(211, 215, 207);"> </span> .<span style="color: rgb(78, 154, 6);">.....</span>.   <span style="color: rgb(211, 215, 207);"> </span><span style="color: rgb(204, 0, 0);">.''''''</span><span style="color: rgb(211, 215, 207);">       </span>
+<span style="color: rgb(211, 215, 207);">WWNX</span>X<span style="color: rgb(211, 215, 207);">XKK0OOkxd</span>xxxo<span style="color: rgb(211, 215, 207);">llccc</span><span style="color: rgb(204, 0, 0);">oo</span><span style="color: rgb(211, 215, 207);">:;</span>,ccc<span style="color: rgb(78, 154, 6);">:</span>;.<span style="color: rgb(211, 215, 207);">.</span>.<span style="color: rgb(78, 154, 6);">:;</span>.<span style="color: rgb(211, 215, 207);">..</span><span style="color: rgb(204, 0, 0);">,:;'...,:;.</span><span style="color: rgb(211, 215, 207);"> </span> <span style="color: rgb(78, 154, 6);">,,.</span>..<span style="color: rgb(78, 154, 6);">.,,</span>.<span style="color: rgb(211, 215, 207);">  </span><span style="color: rgb(204, 0, 0);">::'....</span><span style="color: rgb(211, 215, 207);"> </span> <span style="color: rgb(211, 215, 207);">     </span>
+<span style="color: rgb(211, 215, 207);">WWNX</span>X<span style="color: rgb(211, 215, 207);">XKK0OOk</span>x<span style="color: rgb(211, 215, 207);">d</span>xxxo<span style="color: rgb(211, 215, 207);">llccc</span><span style="color: rgb(204, 0, 0);">oo</span><span style="color: rgb(211, 215, 207);">:;</span>,c<span style="color: rgb(78, 154, 6);">c</span>;:<span style="color: rgb(78, 154, 6);">:</span>;..<span style="color: rgb(78, 154, 6);">:;</span>..<span style="color: rgb(204, 0, 0);">,::</span><span style="color: rgb(211, 215, 207);">... </span> <span style="color: rgb(211, 215, 207);"> </span><span style="color: rgb(204, 0, 0);">;:,</span><span style="color: rgb(211, 215, 207);"> </span> <span style="color: rgb(78, 154, 6);">,,.</span>  .<span style="color: rgb(78, 154, 6);">,,</span>.<span style="color: rgb(211, 215, 207);">  </span><span style="color: rgb(204, 0, 0);">::'...</span><span style="color: rgb(211, 215, 207);"> </span> <span style="color: rgb(211, 215, 207);">      </span>
+<span style="color: rgb(211, 215, 207);">WWNX</span>X<span style="color: rgb(211, 215, 207);">XKK0OOk</span>x<span style="color: rgb(211, 215, 207);">d</span>xxxo<span style="color: rgb(211, 215, 207);">llccc</span><span style="color: rgb(204, 0, 0);">oo</span><span style="color: rgb(211, 215, 207);">:;</span>,c<span style="color: rgb(78, 154, 6);">c</span>,';<span style="color: rgb(78, 154, 6);">:</span>;'<span style="color: rgb(78, 154, 6);">:;</span>.<span style="color: rgb(211, 215, 207);">.</span><span style="color: rgb(204, 0, 0);">,::</span><span style="color: rgb(211, 215, 207);">...   </span><span style="color: rgb(204, 0, 0);">,:;</span><span style="color: rgb(211, 215, 207);"> </span> <span style="color: rgb(78, 154, 6);">,,,',,'</span>   <span style="color: rgb(211, 215, 207);"> </span><span style="color: rgb(204, 0, 0);">::,'''.</span> <span style="color: rgb(211, 215, 207);">      </span>
+<span style="color: rgb(211, 215, 207);">WWNX</span>X<span style="color: rgb(211, 215, 207);">XK0</span>OOkkx<span style="color: rgb(211, 215, 207);">d</span>xxxo<span style="color: rgb(211, 215, 207);">llc</span>c<span style="color: rgb(211, 215, 207);">c</span><span style="color: rgb(204, 0, 0);">oo</span><span style="color: rgb(211, 215, 207);">:;</span>,c<span style="color: rgb(78, 154, 6);">c</span>,<span style="color: rgb(211, 215, 207);">'</span>';<span style="color: rgb(78, 154, 6);">:;:;</span>..<span style="color: rgb(204, 0, 0);">'::'</span><span style="color: rgb(211, 215, 207);">.</span>. <span style="color: rgb(211, 215, 207);"> </span><span style="color: rgb(204, 0, 0);">.;:.</span><span style="color: rgb(211, 215, 207);"> </span> <span style="color: rgb(78, 154, 6);">,,.</span>  <span style="color: rgb(78, 154, 6);">','</span> <span style="color: rgb(211, 215, 207);">  </span><span style="color: rgb(204, 0, 0);">::.</span><span style="color: rgb(211, 215, 207);">  </span>  <span style="color: rgb(211, 215, 207);"> </span> <span style="color: rgb(211, 215, 207);">     </span>
+<span style="color: rgb(211, 215, 207);">WWNX</span>X<span style="color: rgb(211, 215, 207);">XKK00OOk</span>dxxxddooc<span style="color: rgb(211, 215, 207);">c</span><span style="color: rgb(204, 0, 0);">oo</span><span style="color: rgb(211, 215, 207);">:;</span>,c<span style="color: rgb(78, 154, 6);">c</span>,<span style="color: rgb(211, 215, 207);">''</span>.,<span style="color: rgb(78, 154, 6);">::;</span>..<span style="color: rgb(211, 215, 207);">.</span><span style="color: rgb(204, 0, 0);">.;:;,,;:,.</span><span style="color: rgb(211, 215, 207);">  </span> <span style="color: rgb(78, 154, 6);">,,.</span><span style="color: rgb(211, 215, 207);">  </span> <span style="color: rgb(78, 154, 6);">','</span> <span style="color: rgb(211, 215, 207);"> </span><span style="color: rgb(204, 0, 0);">::;;;;; </span> <span style="color: rgb(211, 215, 207);">     </span>
+<span style="color: rgb(211, 215, 207);">WWNXXKK0OOkkx</span>dddoollcc<span style="color: rgb(211, 215, 207);">:::;;,</span>,,'<span style="color: rgb(211, 215, 207);">''.</span>.....<span style="color: rgb(211, 215, 207);">..</span>..<span style="color: rgb(211, 215, 207);">..... </span>  <span style="color: rgb(211, 215, 207);">  </span>    <span style="color: rgb(211, 215, 207);"> </span>       <span style="color: rgb(211, 215, 207);">       </span>  <span style="color: rgb(211, 215, 207);">     </span>
+<span style="color: rgb(211, 215, 207);">WWNXXK00OOkkxddoolllcc::;;;,,,'''........</span>.<span style="color: rgb(211, 215, 207);">....         </span> <span style="color: rgb(211, 215, 207);">  </span> <span style="color: rgb(211, 215, 207);">            </span>  <span style="color: rgb(211, 215, 207);">      </span>
+<span style="color: rgb(211, 215, 207);">WWNXXK00OOkkxddoolllcc::;;;,,,'''........</span>.<span style="color: rgb(211, 215, 207);">....         </span> <span style="color: rgb(211, 215, 207);">  </span> <span style="color: rgb(211, 215, 207);">            </span>  <span style="color: rgb(211, 215, 207);">      </span>
+
+Thank you for solving this mystery, Slick.
+Reading the .viminfo sure did the trick.
+Leave it to me; I will handle the rest.
+Thank you for giving this challenge your best.
+
+-Tangle Coalbox
+-ER Investigator
+
+Congratulations!
+</pre>
+
       </div>
+
       <div class="border rounded p-2 m-2">
         <h2><a id="termPlaintextCreds"></a>Stall Mucking Report</h2>
         <div id="divPlaintextCreds" style="display: inline-block" onclick='if (!$(this).html().includes("iframe")) {$(this).html(atob("PGlmcmFtZSBzdHlsZT0ibWluLXdpZHRoOiA4MDBweDsgbWF4LXdpZHRoOiAxMDAwcHg7IGhlaWdodDogODAwcHg7IGJvcmRlcjogbm9uZTsiIHNyYz0iaHR0cHM6Ly9kb2NrZXIua3JpbmdsZWNvbi5jb20vP2NoYWxsZW5nZT1wbGFpbnRleHQtY3JlZHMmYW1wO2lkPWZhbHNlO2lkPWZhbHNlIj48L2lmcmFtZT48cD48YSBocmVmPSIjISIgY2xhc3M9ImJ0biBidG4taW5mbyIgIG9ubW91c2V1cD0iJCgnI2RpdlBsYWludGV4dENyZWRzJykuaHRtbChhdG9iKCdQR0VnYUhKbFpqMGlJeUVpSUdOc1lYTnpQU0ppZEc0Z1luUnVMV2x1Wm04aVBrTnNhV05ySUdobGNtVWdkRzhnUEdJK2IzQmxiand2WWo0Z1UzUmhiR3dnVFhWamEybHVaeUJTWlhCdmNuUWdWR1Z5YldsdVlXdzhMMkUrJykpIj5DbGljayBoZXJlIHRvIDxiPmNsb3NlPC9iPiBTdGFsbCBNdWNraW5nIFJlcG9ydCBUZXJtaW5hbDwvYT48L3A+"))}'>
@@ -1063,6 +1628,137 @@
 
     <div class="container m-4 p-4">
       <h1>Artefacts/Materials</h1>
+
+      <div class="border rounded p-2 m-2">
+        <div class="dropdown">
+          <button class="btn btn-dark dropdown-toggle mb-1" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a id="artMenuPS1"></a>menu.ps1 program from The Name Game terminal
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#obj2">Objective 2</a>
+            <a class="dropdown-item" href="#npcMinty">Minty Candycane</a>
+            <a class="dropdown-item" href="#termPwshmenu">The Name Game</a>
+          </div>
+        </div>
+        <a href="scripts/menu.ps1">menu.ps1</a>
+        <hr class="my-4">
+<pre class="border text-light bg-dark p-2">
+$global:firstrun = $TRUE
+
+function Show-Menu
+{
+    $intro = @(
+        "We just hired this new worker,",
+        "Californian or New Yorker?",
+        "Think he's making some new toy bag...",
+        "My job is to make his name tag.",
+        "",
+        "Golly gee, I'm glad that you came,",
+        "I recall naught but his last name!",
+        "Use our system or your own plan,",
+        "Find the first name of our guy `"Chan!`"",
+        "",
+        "-Bushy Evergreen",
+        "",
+        "To solve this challenge, determine the new worker's first name and submit to runtoanswer."
+    )
+    $header = @(
+        "===================================================================="
+        "=                                                                  =",
+        "= S A N T A ' S  C A S T L E  E M P L O Y E E  O N B O A R D I N G =",
+        "=                                                                  =",
+        "===================================================================="
+    )
+
+    cls
+    if ($global:firstrun -eq $TRUE) {
+        Write-Host "`n`n"
+        for ($i = 0; $i -lt $intro.length; $i++) {
+            Write-Host $intro[$i]
+        }
+        $global:firstrun = $FALSE
+    }
+
+    Write-Host "`n`n`n"
+    for ($i = 0; $i -lt $header.length; $i++) {
+        Write-Host $header[$i]
+    }
+    Write-Host "`n`n`n"
+    Write-Host ' Press '1' to start the onboard process.'
+    Write-Host ' Press '2' to verify the system.'
+    Write-Host ' Press 'q' to quit.'
+    Write-Host "`n"
+}
+
+function Employee-Onboarding-Form
+{
+    Write-Host "`n`nWelcome to Santa's Castle!`n`n"
+    Write-Host "At Santa's Castle, our employees are our family. We care for each other,"
+    Write-Host "and support everyone in our common goals.`n"
+    Write-Host "Your first test at Santa's Castle is to complete the new employee onboarding paperwork."
+    Write-Host "Don't worry, it's an easy test! Just complete the required onboarding information below.`n`n"
+
+    $efirst = Read-Host "Enter your first name.`n"
+    $elast = Read-Host "Enter your last name.`n"
+    $estreet1 = Read-Host "Enter your street address (line 1 of 2).`n"
+    $estreet2 = Read-Host "Enter your street address (line 2 of 2).`n"
+    $ecity = Read-Host "Enter your city.`n"
+    $epostalcode = Read-Host "Enter your postal code.`n"
+    $ephone = Read-Host "Enter your phone number.`n"
+    $eemail = Read-Host "Enter your email address.`n"
+
+    Write-Host "`n`nIs this correct?`n`n"
+    Write-Host "$efirst $elast"
+    Write-Host "$estreet1"
+    if ($estreet2) {
+        Write-Host "$estreet2"
+    }
+    Write-Host "$ecity, $epostalcode"
+    Write-Host "$ephone"
+    Write-Host "$eemail"
+
+    $input = Read-Host 'y/n'
+    if ($input -eq 'y' -Or $input -eq 'Y') {
+        Write-Host "Save to sqlite DB using command line"
+        Start-Process -FilePath "./sqlite3" -ArgumentList "onboard.db `"INSERT INTO onboard (fname, lname, street1, street2, city, postalcode, phone, email) VALUES (`'$efirst`',`'$elast`', `'$estreet1`', `'$estreet2`', `'$ecity`', `'$epostalcode`', `'$ephone`', `'$eemail`')`""
+    }
+}
+
+try
+{
+    do
+    {
+        Show-Menu
+        $input = Read-Host 'Please make a selection'
+        switch ($input)
+        {
+            '1' {
+                cls
+                Employee-Onboarding-Form
+            } '2' {
+                cls
+                Write-Host "Validating data store for employee onboard information."
+                $server = Read-Host 'Enter address of server'
+                /bin/bash -c "/bin/ping -c 3 $server"
+                /bin/bash -c "/usr/bin/file onboard.db"
+            } '9' {
+                /usr/bin/pwsh
+                return
+            } 'q' {
+                return
+            } default {
+                Write-Host "Invalid entry."
+            }
+        }
+        pause
+    }
+    until ($input -eq 'q')
+} finally {
+}
+
+</pre>
+      </div>
+
       <div class="border rounded p-2 m-2">
         <h2><a id="artSling"></a>SANS Slingshot Image</h2>
         <a href="#obj5" class="btn btn-info">Objective 5</a>
@@ -1085,6 +1781,10 @@
         <h2><a id="artDocument"></a>Chocolate Chip Cookie Document</h2>
         <a href="#obj92" class="btn btn-info">Objective 9.2</a>
         <a href="https://www.holidayhackchallenge.com/2018/challenges/CHOCOLATE_CHIP_COOKIE_RECIPE.zip" class="btn btn-info">CHOCOLATE_CHIP_COOKIE_RECIPE.zip password:<b>elves</b></a>
+      </div>
+      <div class="border rounded p-2 m-2">
+        <h2><a id="artMalware"></a>Malware Source Code</h2>
+        <a href="#obj93" class="btn btn-info">Objective 9.3</a>
       </div>
       <div class="border rounded p-2 m-2">
         <h2><a id="artZipFile"></a>Memory Dump and WannaCookie encrypted database</h2>
