@@ -1,4 +1,4 @@
-# Holiday Hack 2018
+# Holiday Hack 2018 Report
 
 ## Author: Warren Raquel
 
